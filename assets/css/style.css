@@ -9928,5 +9928,24 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  font-family: Poppins, sans-serif;
+  letter-spacing: 0.02rem;
+  font-stretch: expanded;
+}
+
+.search-bar-container {
+  width: 303px;
+  height: 56px;
+}
+.search-bar-container input {
+  height: 100%;
+}
+
+.header-navbar {
+  height: 110px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */
