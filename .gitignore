@@ -1,4 +1,10 @@
 node_modules
+.DS_Store
+
 **.css.map
 **/.sass-cache
 **/.sass-cache/*
+
+*.map
+*.js.map
+.bundle
