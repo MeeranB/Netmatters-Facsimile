@@ -4,7 +4,7 @@
   "description": "A replica of the netmatters homepage",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"sass --watch scss:assets/css"
+    "compile:sass": "sass --watch scss:assets/css"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.35.1"
+    "sass": "^1.32.12"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",

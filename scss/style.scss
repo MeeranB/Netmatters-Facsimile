@@ -1,5 +1,20 @@
-$primary: #ff0000;
+//Imports custom sass
+@use 'custom';
 
-test-1 {
-    color: $primary;
-}
+//Import components
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+//Import sections
+@use 'sections/upperheader';
+@use 'sections/navbar';
+@use 'sections/slider';
+@use 'sections/infocards';
+@use 'sections/culture';
+@use 'sections/latestcards';
+@use 'sections/brands';
+@use 'sections/signup';
+@use 'sections/footer';
+@use 'sections/endorsements';
