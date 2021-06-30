@@ -1,3 +1,5 @@
+@use '../custom' as *;
+
 .search-bar-container {
     width: 303px;
     height: 56px;
@@ -11,3 +13,15 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+//between extra large and medium screensizes
+@media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
+    #search-field {
+        //do not show search field
+        display: none;
+    }
+ }
+
+ .navbar-nav {
+     flex-direction: row;
+ }
