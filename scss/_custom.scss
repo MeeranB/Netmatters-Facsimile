@@ -1,3 +1,6 @@
+//custom button colors
+$primary: #4183d7;
+$secondary: #999aa2;
 
 //custom CSS breakpoints
 $grid-breakpoints: (
@@ -8,6 +11,7 @@ $grid-breakpoints: (
     xl: 1260px,
   );
 
+//custom container widths
   $container-max-widths: (
   sm: 540px,
   md: 750px,
