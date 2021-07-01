@@ -1,0 +1,42 @@
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 63px;
+    height: 56px;
+    cursor: pointer;
+    background-color:#333645;
+  }
+
+  .menu-btn__burger {
+    width: 33px;
+    height: 3px;
+    background: white;
+    border-radius: 1px;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    background: white;
+    border-radius: 1px;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-8px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(-16px);
+  }
+
+  .title {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    top: 33px;
+    color: white;
+  }

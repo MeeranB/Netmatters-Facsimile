@@ -1,6 +1,9 @@
 //Imports custom sass
 @use 'custom';
 
+//Imports fonts
+@use '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
 //Import components
 @use 'components/animations';
 @use 'components/buttons';
