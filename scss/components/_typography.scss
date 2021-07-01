@@ -1,7 +1,10 @@
 @use '../custom';
 
-// body {
-//     font-family: Poppins, sans-serif;
-//     letter-spacing: 0.02rem;
-//     font-stretch: expanded;
-// }
+
+$font-family-base: Poppins, sans-serif;
+
+.search-bar-container {
+    .form-control {
+        font-size: 0.875rem;
+    }
+}

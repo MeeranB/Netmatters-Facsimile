@@ -1,10 +1,15 @@
 @use '../custom' as *;
 
 .search-bar-container {
+    margin-left: 20px;
     width: 303px;
     height: 56px;
     input {
         height: 100%;
+    }
+    @media (max-width: map-get($grid-breakpoints, "xl")) {
+        justify-content: center;
+        width: auto;
     }
 }
 
@@ -12,6 +17,20 @@
     height: 110px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.navbar-brand {
+    .logo {
+        width: 370px;
+        height: 64px;
+        @media (max-width: map-get($grid-breakpoints, "sm")) {
+            @include img-fluid;
+        }
+    }
+}
+
+.navbar-nav {
+    flex-direction: row;
 }
 
 //between extra large and medium screensizes
@@ -22,7 +41,4 @@
     }
  }
 
- .navbar-nav {
-     flex-direction: row;
- }
 

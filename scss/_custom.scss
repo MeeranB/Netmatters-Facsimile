@@ -1,4 +1,5 @@
 
+//custom CSS breakpoints
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
@@ -7,14 +8,12 @@ $grid-breakpoints: (
     xl: 1260px,
   );
 
-  
-
-
-
-
-
-
-
+  $container-max-widths: (
+  sm: 540px,
+  md: 750px,
+  lg: 970px,
+  xl: 1200px
+) !default;
 
 //Import Bootstrap (import location irrelevant due to use of default flags)
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
