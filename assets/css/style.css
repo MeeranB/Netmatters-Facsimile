@@ -16147,7 +16147,7 @@ readers do not read off random characters that represent icons */
 
 .navbar-brand .logo {
   width: 370px;
-  height: 64px;
+  height: 64.42px;
 }
 @media (max-width: 576px) {
   .navbar-brand .logo {

@@ -22,7 +22,7 @@
 .navbar-brand {
     .logo {
         width: 370px;
-        height: 64px;
+        height: 64.42px;
         @media (max-width: map-get($grid-breakpoints, "sm")) {
             @include img-fluid;
         }
