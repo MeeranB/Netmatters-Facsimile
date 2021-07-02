@@ -16124,6 +16124,10 @@ readers do not read off random characters that represent icons */
   font-size: 0.875rem;
 }
 
+.fa-mouse {
+  font-size: 1.2rem;
+}
+
 .search-bar-container {
   margin-left: 20px;
   width: 303px;
@@ -16145,6 +16149,9 @@ readers do not read off random characters that represent icons */
   padding-bottom: 20px;
 }
 
+.navbar-brand {
+  margin-right: 20px;
+}
 .navbar-brand .logo {
   width: 370px;
   height: 64.42px;
@@ -16153,6 +16160,12 @@ readers do not read off random characters that represent icons */
   .navbar-brand .logo {
     max-width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand .logo {
+    width: 345px;
+    height: 60.06px;
   }
 }
 

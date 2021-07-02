@@ -20,11 +20,16 @@
 }
 
 .navbar-brand {
+    margin-right: 20px;
     .logo {
         width: 370px;
         height: 64.42px;
         @media (max-width: map-get($grid-breakpoints, "sm")) {
             @include img-fluid;
+        }
+        @media (max-width: map-get($grid-breakpoints, "lg")) {
+            width: 345px;
+            height: 60.06px;
         }
     }
 }
