@@ -16070,8 +16070,10 @@ readers do not read off random characters that represent icons */
   width: 63px;
 }
 
+.navbar .btn-primary {
+  margin-right: 20px;
+}
 .navbar .btn-secondary {
-  margin-left: 20px;
   color: white;
 }
 
