@@ -16182,5 +16182,10 @@ readers do not read off random characters that represent icons */
     display: none;
   }
 }
+@media (max-width: 992px) {
+  .row {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -46,4 +46,9 @@
     }
  }
 
+ @media (max-width: map-get($grid-breakpoints, "lg" )) {
+     .row {
+         width: 100%;
+     }
+ }
 
