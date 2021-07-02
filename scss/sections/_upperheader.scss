@@ -1,7 +1,7 @@
 @use '../custom' as *;
 
 .search-bar-container {
-    margin-left: 20px;
+    // margin-left: 20px;
     width: 303px;
     height: 56px;
     input {
@@ -20,7 +20,7 @@
 }
 
 .navbar-brand {
-    margin-right: 20px;
+    margin-right: 0px;
     .logo {
         width: 370px;
         height: 64.42px;
@@ -34,9 +34,9 @@
     }
 }
 
-.navbar-nav {
-    flex-direction: row;
-}
+// .navbar-nav {
+//     flex-direction: row;
+// }
 
 //between extra large and medium screensizes
 @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
@@ -46,9 +46,11 @@
     }
  }
 
- @media (max-width: map-get($grid-breakpoints, "lg" )) {
-     .row {
-         width: 100%;
-     }
- }
+//  @media (min-width: map-get($grid-breakpoints, "sm" )) {
+//      //This rule allows the row to fit into the container while ignoring the containers' padding
+//      .row {
+//          margin-left: 0px;
+//          margin-right: 0px;
+//      }
+//  }
 

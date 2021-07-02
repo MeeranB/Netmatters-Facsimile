@@ -16063,14 +16063,15 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.search-bar-container {
+  margin-left: 20px;
+}
 .search-bar-container .btn {
   width: 63px;
 }
 
-.navbar .btn-primary {
-  margin-right: 20px;
-}
 .navbar .btn-secondary {
+  margin-left: 20px;
   color: white;
 }
 
@@ -16133,7 +16134,6 @@ readers do not read off random characters that represent icons */
 }
 
 .search-bar-container {
-  margin-left: 20px;
   width: 303px;
   height: 56px;
 }
@@ -16154,7 +16154,7 @@ readers do not read off random characters that represent icons */
 }
 
 .navbar-brand {
-  margin-right: 20px;
+  margin-right: 0px;
 }
 .navbar-brand .logo {
   width: 370px;
@@ -16173,18 +16173,9 @@ readers do not read off random characters that represent icons */
   }
 }
 
-.navbar-nav {
-  flex-direction: row;
-}
-
 @media (min-width: 992px) and (max-width: 1260px) {
   #search-field {
     display: none;
-  }
-}
-@media (max-width: 992px) {
-  .row {
-    width: 100%;
   }
 }
 
