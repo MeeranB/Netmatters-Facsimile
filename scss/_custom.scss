@@ -16,8 +16,8 @@ $grid-breakpoints: (
   sm: 540px,
   md: 750px,
   lg: 970px,
-  xl: 1200px
-) !default;
+  xl: 1200px,
+);
 
 //Import Bootstrap (import location irrelevant due to use of default flags)
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
