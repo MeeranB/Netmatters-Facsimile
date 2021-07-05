@@ -13,6 +13,12 @@ $font-family-base: Poppins, sans-serif;
     }
 }
 
+.search-bar-container-mobile {
+    #search-mobile {
+        font-size: 0.875rem;
+        font-family: $font-family-base;
+    }
+}
 .fa-mouse {
     font-size: 1.2rem;
 }

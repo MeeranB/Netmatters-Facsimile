@@ -16114,6 +16114,11 @@ readers do not read off random characters that represent icons */
   font-family: Poppins, sans-serif;
 }
 
+.search-bar-container-mobile #search-mobile {
+  font-size: 0.875rem;
+  font-family: Poppins, sans-serif;
+}
+
 .fa-mouse {
   font-size: 1.2rem;
 }
@@ -16132,10 +16137,33 @@ readers do not read off random characters that represent icons */
   }
 }
 
+.search-bar-container-mobile {
+  width: 100%;
+  margin-top: 11px;
+  height: 47px;
+  background-color: rgba(229, 229, 229, 0.1);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.search-bar-container-mobile input,
+.search-bar-container-mobile #search-mobile {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.search-bar-container-mobile #search-mobile {
+  border: none;
+}
+
 .header-navbar {
   height: 110px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .header-navbar {
+    height: 168px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -16188,7 +16216,8 @@ readers do not read off random characters that represent icons */
 }
 
 @media (min-width: 992px) and (max-width: 1260px) {
-  #search-field {
+  #search-field,
+#search-field-mobile {
     display: none;
   }
 }
