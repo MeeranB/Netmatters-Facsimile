@@ -535,8 +535,7 @@ pre code {
 .container-fluid,
 .container-xl,
 .container-lg,
-.container-md,
-.container-sm {
+.container-md {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -544,11 +543,6 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
-  .container-sm, .container {
-    max-width: 540px;
-  }
-}
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 750px;
@@ -3934,7 +3928,6 @@ input[type=button].btn-block {
 }
 .navbar .container,
 .navbar .container-fluid,
-.navbar .container-sm,
 .navbar .container-md,
 .navbar .container-lg,
 .navbar .container-xl {
@@ -4013,7 +4006,6 @@ input[type=button].btn-block {
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
 .navbar-expand-sm > .container-fluid,
-.navbar-expand-sm > .container-sm,
 .navbar-expand-sm > .container-md,
 .navbar-expand-sm > .container-lg,
 .navbar-expand-sm > .container-xl {
@@ -4038,7 +4030,6 @@ input[type=button].btn-block {
   }
   .navbar-expand-sm > .container,
 .navbar-expand-sm > .container-fluid,
-.navbar-expand-sm > .container-sm,
 .navbar-expand-sm > .container-md,
 .navbar-expand-sm > .container-lg,
 .navbar-expand-sm > .container-xl {
@@ -4058,7 +4049,6 @@ input[type=button].btn-block {
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
 .navbar-expand-md > .container-fluid,
-.navbar-expand-md > .container-sm,
 .navbar-expand-md > .container-md,
 .navbar-expand-md > .container-lg,
 .navbar-expand-md > .container-xl {
@@ -4083,7 +4073,6 @@ input[type=button].btn-block {
   }
   .navbar-expand-md > .container,
 .navbar-expand-md > .container-fluid,
-.navbar-expand-md > .container-sm,
 .navbar-expand-md > .container-md,
 .navbar-expand-md > .container-lg,
 .navbar-expand-md > .container-xl {
@@ -4103,7 +4092,6 @@ input[type=button].btn-block {
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
 .navbar-expand-lg > .container-fluid,
-.navbar-expand-lg > .container-sm,
 .navbar-expand-lg > .container-md,
 .navbar-expand-lg > .container-lg,
 .navbar-expand-lg > .container-xl {
@@ -4128,7 +4116,6 @@ input[type=button].btn-block {
   }
   .navbar-expand-lg > .container,
 .navbar-expand-lg > .container-fluid,
-.navbar-expand-lg > .container-sm,
 .navbar-expand-lg > .container-md,
 .navbar-expand-lg > .container-lg,
 .navbar-expand-lg > .container-xl {
@@ -4148,7 +4135,6 @@ input[type=button].btn-block {
 @media (max-width: 1259.98px) {
   .navbar-expand-xl > .container,
 .navbar-expand-xl > .container-fluid,
-.navbar-expand-xl > .container-sm,
 .navbar-expand-xl > .container-md,
 .navbar-expand-xl > .container-lg,
 .navbar-expand-xl > .container-xl {
@@ -4173,7 +4159,6 @@ input[type=button].btn-block {
   }
   .navbar-expand-xl > .container,
 .navbar-expand-xl > .container-fluid,
-.navbar-expand-xl > .container-sm,
 .navbar-expand-xl > .container-md,
 .navbar-expand-xl > .container-lg,
 .navbar-expand-xl > .container-xl {
@@ -4196,7 +4181,6 @@ input[type=button].btn-block {
 }
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
-.navbar-expand > .container-sm,
 .navbar-expand > .container-md,
 .navbar-expand > .container-lg,
 .navbar-expand > .container-xl {
@@ -4215,7 +4199,6 @@ input[type=button].btn-block {
 }
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
-.navbar-expand > .container-sm,
 .navbar-expand > .container-md,
 .navbar-expand > .container-lg,
 .navbar-expand > .container-xl {
@@ -16155,12 +16138,22 @@ readers do not read off random characters that represent icons */
   padding-bottom: 20px;
 }
 
+@media (max-width: 576px) {
+  .actions {
+    width: 120px;
+    padding-left: 0;
+    margin-left: 15px;
+  }
+}
+
 .navbar-brand {
+  padding: 0;
   margin-right: 0px;
 }
-.navbar-brand .logo {
-  width: 370px;
-  height: 64.42px;
+@media (max-width: 768px) {
+  .navbar-brand {
+    flex: initial;
+  }
 }
 @media (max-width: 576px) {
   .navbar-brand .logo {
@@ -16168,16 +16161,48 @@ readers do not read off random characters that represent icons */
     height: auto;
   }
 }
-@media (max-width: 992px) {
+@media (min-width: 576px) {
+  .navbar-brand .logo {
+    width: 402px;
+  }
+}
+@media (min-width: 768px) {
   .navbar-brand .logo {
     width: 345px;
     height: 60.06px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-brand .logo {
+    width: 374.16px;
+    height: 65.14px;
+  }
+}
+@media (min-width: 1260px) {
+  .navbar-brand .logo {
+    width: 370px;
+    height: 64.2px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1260px) {
   #search-field {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #uhead-container {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    margin-left: 0;
+    height: 70px;
   }
 }
 

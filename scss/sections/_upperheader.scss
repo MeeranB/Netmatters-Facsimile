@@ -1,7 +1,6 @@
 @use '../custom' as *;
 
 .search-bar-container {
-    // margin-left: 20px;
     width: 303px;
     height: 56px;
     input {
@@ -19,33 +18,74 @@
     padding-bottom: 20px;
 }
 
+.actions {
+    @media (max-width: map-get($grid-breakpoints, "sm" )) {
+        width: 120px;
+        padding-left: 0;
+        margin-left: 15px;
+    }
+}
+
 .navbar-brand {
+    @media (max-width: map-get($grid-breakpoints, "md" )) {
+        flex: initial;
+    }
+    padding: 0;
     margin-right: 0px;
+    //TODO: fix smallest viewports to have a responsive logo and fixed margins
     .logo {
-        width: 370px;
-        height: 64.42px;
-        @media (max-width: map-get($grid-breakpoints, "sm")) {
+        @media (max-width: map-get($grid-breakpoints, "sm" )) {
             @include img-fluid;
         }
-        @media (max-width: map-get($grid-breakpoints, "lg")) {
+        @media (min-width: map-get($grid-breakpoints, "sm" )) {
+            width: 402px;
+        }
+        @media (min-width: map-get($grid-breakpoints, "md" )) {
             width: 345px;
             height: 60.06px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+            width: 374.16px;
+            height: 65.14px;
+        }
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            width: 370px;
+            height: 64.2px;
         }
     }
 }
 
-// .navbar-nav {
-//     flex-direction: row;
-// }
-
-//between extra large and medium screensizes
-@media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
-    #search-field {
-        //do not show search field
+#search-field {
+    //between extra large and medium screensizes
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
         display: none;
+    }
+}
+
+ #uhead-container {
+    @media (max-width: map-get($grid-breakpoints, "md" )) {
+        padding-left: 0;
     }
  }
 
+ .row {
+    @media (max-width: map-get($grid-breakpoints, "md" )) {
+        margin-left: 0;
+        height: 70px;
+    }
+ }
+
+//  @media (max-width: map-get($grid-breakpoints, "md" )) {
+//      #uhead-container {
+//          padding-left: 0;
+//      }
+//      .row {
+//          height: 70px;
+//      }
+//  }
 //  @media (min-width: map-get($grid-breakpoints, "sm" )) {
 //      //This rule allows the row to fit into the container while ignoring the containers' padding
 //      .row {
