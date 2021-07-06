@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MeeranB/HTML-CSS-Reflection#readme",
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "icomoon-build": "^0.2.8",
     "postcss-cli": "^8.3.1",
     "sass": "^1.32.12"
   },
