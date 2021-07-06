@@ -16123,6 +16123,14 @@ readers do not read off random characters that represent icons */
   font-size: 1.2rem;
 }
 
+.nav-ul {
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: white;
+}
+
 .search-bar-container {
   width: 303px;
   height: 56px;
@@ -16239,6 +16247,30 @@ readers do not read off random characters that represent icons */
     margin-left: 0;
     height: 70px;
   }
+}
+
+#hover-nav-container {
+  width: 100vw;
+  background-color: #343745;
+}
+
+.nav-container {
+  height: 99px;
+}
+
+.nav-ul {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  width: 940px;
+  height: 100%;
+}
+
+.nav-ul .nav-item {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+.nav-ul .nav-item:hover .nav-link {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

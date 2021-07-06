@@ -3,6 +3,7 @@
 
 $font-family-base: Poppins, sans-serif;
 
+// <upperheader>
 .search-bar-container {
     .form-control {
         border: 1px solid #ccc;
@@ -21,4 +22,16 @@ $font-family-base: Poppins, sans-serif;
 }
 .fa-mouse {
     font-size: 1.2rem;
+}
+
+// </upperheader>
+
+// <navbar>
+
+.nav-ul {
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: white;
 }

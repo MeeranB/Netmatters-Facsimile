@@ -1,6 +1,6 @@
 @use "../custom" as *;
 
-
+// <upperheader>
 .btn {
     height: 56px;
     font-size: 1.125rem;
@@ -15,6 +15,7 @@
 }
 
 .navbar {
+  //Refers to upper header
     .btn-primary {
         margin-right: 20px;
     }
@@ -23,6 +24,7 @@
     }
 }
 
+// Menu icon styling
 .menu-btn {
     position: relative;
     display: flex;
@@ -66,3 +68,7 @@
     top: 33px;
     color: white;
   }
+
+  // </upperheader>
+
+  

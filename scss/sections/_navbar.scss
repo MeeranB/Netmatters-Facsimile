@@ -1,0 +1,27 @@
+
+#hover-nav-container {
+    //These rules are required as divs with .container cannot extend beyond $container-max-width
+    width: 100vw;
+    background-color: #343745;
+}
+
+.nav-container {
+    height: 99px;
+}
+
+.nav-ul {
+    border-right: 1px solid hsla(0,0%,100%,.1);
+    border-left: 1px solid rgba(0,0,0,.25);
+    width: 940px;
+    height: 100%;
+}
+
+.nav-ul .nav-item {
+    border-right: 1px solid hsla(0,0%,100%,.1);
+    border-left: 1px solid rgba(0,0,0,.25);
+    &:hover {
+        .nav-link {
+            color: white;
+        }
+    }
+}
