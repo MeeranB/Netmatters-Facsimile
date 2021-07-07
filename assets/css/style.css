@@ -16205,6 +16205,10 @@ readers do not read off random characters that represent icons */
   font-size: 0.8125rem;
   color: white;
 }
+.hiding a, .hiding a:hover {
+  color: white;
+  text-decoration: none;
+}
 
 .search-bar-container {
   width: 303px;
@@ -16405,6 +16409,18 @@ readers do not read off random characters that represent icons */
 }
 .hiding--it {
   background-color: #286abd;
+}
+.hiding--telecoms {
+  background-color: #bc2c28;
+}
+.hiding--software {
+  background-color: #526781;
+}
+.hiding--marketing {
+  background-color: #25a25a;
+}
+.hiding--security {
+  background-color: #de093f;
 }
 
 /*# sourceMappingURL=style.css.map */

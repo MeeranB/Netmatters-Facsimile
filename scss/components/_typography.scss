@@ -108,6 +108,10 @@ $font-family-sans-serif: Poppins, sans-serif;
 }
 
 .hiding {
+    a, a:hover {
+        color: white;
+        text-decoration: none;
+    }
     letter-spacing: 0.4px;
     font-family: $font-family-sans-serif;
     font-size: 0.8125rem;
