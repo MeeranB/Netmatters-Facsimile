@@ -1,7 +1,51 @@
-@use '../custom';
-
+@use '../custom' as *;
 
 $font-family-sans-serif: Poppins, sans-serif;
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../assets/webfonts/icomoon.eot?63vkm');
+    src:  url('../../assets/webfonts/icomoon.eot?63vkm#iefix') format('embedded-opentype'),
+      url('../../assets/webfonts/icomoon.ttf?63vkm') format('truetype'),
+      url('../../assets/webfonts/icomoon.woff?63vkm') format('woff'),
+      url('../../assets/webfonts/icomoon.svg?63vkm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-bar-graph:before {
+    content: "\e900";
+  }
+  .icon-security:before {
+    content: "\e901";
+  }
+  .icon-apps:before {
+    content: "\e902";
+  }
+  .icon-phone_in_talk:before {
+    content: "\e903";
+  }
+  .icon-display:before {
+    content: "\e956";
+  }
+  .icon-embed2:before {
+    content: "\ea80";
+  }
 
 // <upperheader>
 .search-bar-container {
@@ -36,3 +80,36 @@ $font-family-sans-serif: Poppins, sans-serif;
     color: white;
 }
 
+.icon {
+    &-embed2 {
+        color: $web-color
+    }
+    &-display {
+        color: $it-color
+    }
+    &-phone_in_talk {
+        color: $telecoms-color
+    }
+    &-apps {
+        color: $software-color
+    }
+    &-bar-graph {
+        color: $marketing-color
+    }
+    &-security {
+        color: $security-color
+    }
+}
+
+.nav-item:hover {
+    .nav-link span {
+        color: white;
+    }
+}
+
+.hiding {
+    letter-spacing: 0.4px;
+    font-family: $font-family-sans-serif;
+    font-size: 0.8125rem;
+    color: white;
+}

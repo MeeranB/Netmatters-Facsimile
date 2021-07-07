@@ -5,53 +5,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- @font-face {
-  font-family: 'icomoon';
-  src:  url('../webfonts/icomoon.eot?63vkm');
-  src:  url('../webfonts/icomoon.eot?63vkm#iefix') format('embedded-opentype'),
-    url('../webfonts/icomoon.ttf?63vkm') format('truetype'),
-    url('../webfonts/icomoon.woff?63vkm') format('woff'),
-    url('../webfonts/icomoon.svg?63vkm#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-bar-graph:before {
-  content: "\e900";
-}
-.icon-security:before {
-  content: "\e901";
-}
-.icon-apps:before {
-  content: "\e902";
-}
-.icon-phone_in_talk:before {
-  content: "\e903";
-}
-.icon-display:before {
-  content: "\e956";
-}
-.icon-embed2:before {
-  content: "\ea80";
-}
-
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -16153,6 +16106,51 @@ readers do not read off random characters that represent icons */
   color: white;
 }
 
+@font-face {
+  font-family: "icomoon";
+  src: url("../../assets/webfonts/icomoon.eot?63vkm");
+  src: url("../../assets/webfonts/icomoon.eot?63vkm#iefix") format("embedded-opentype"), url("../../assets/webfonts/icomoon.ttf?63vkm") format("truetype"), url("../../assets/webfonts/icomoon.woff?63vkm") format("woff"), url("../../assets/webfonts/icomoon.svg?63vkm#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bar-graph:before {
+  content: "";
+}
+
+.icon-security:before {
+  content: "";
+}
+
+.icon-apps:before {
+  content: "";
+}
+
+.icon-phone_in_talk:before {
+  content: "";
+}
+
+.icon-display:before {
+  content: "";
+}
+
+.icon-embed2:before {
+  content: "";
+}
+
 .search-bar-container .form-control {
   border: 1px solid #ccc;
   border-radius: 0px;
@@ -16175,6 +16173,36 @@ readers do not read off random characters that represent icons */
 }
 
 .nav-link {
+  color: white;
+}
+
+.icon-embed2 {
+  color: #926fb1;
+}
+.icon-display {
+  color: #4183d7;
+}
+.icon-phone_in_talk {
+  color: #d64541;
+}
+.icon-apps {
+  color: #67809f;
+}
+.icon-bar-graph {
+  color: #2ecc71;
+}
+.icon-security {
+  color: #f62459;
+}
+
+.nav-item:hover .nav-link span {
+  color: white;
+}
+
+.hiding {
+  letter-spacing: 0.4px;
+  font-family: Poppins, sans-serif;
+  font-size: 0.8125rem;
   color: white;
 }
 
@@ -16306,6 +16334,7 @@ readers do not read off random characters that represent icons */
 }
 
 .nav-ul {
+  position: relative;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.25);
   width: 940px;
@@ -16318,6 +16347,64 @@ readers do not read off random characters that represent icons */
 }
 .nav-ul .nav-item:hover .nav-link {
   color: white;
+}
+.nav-ul .nav-item:hover .hiding {
+  display: flex;
+}
+
+.nav-item--web:hover {
+  background-color: #926fb1;
+}
+.nav-item--it:hover {
+  background-color: #4183d7;
+}
+.nav-item--telecoms:hover {
+  background-color: #d64541;
+}
+.nav-item--software:hover {
+  background-color: #67809f;
+}
+.nav-item--marketing:hover {
+  background-color: #2ecc71;
+}
+.nav-item--security:hover {
+  background-color: #f62459;
+}
+
+.hiding {
+  display: none;
+  align-items: center;
+  position: absolute;
+  padding-left: 0;
+  top: 99px;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  width: 100vw;
+  height: 45px;
+}
+.hiding::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  left: -800px;
+  width: 1000vw;
+  height: 100%;
+  background-color: inherit;
+}
+.hiding li:not(:last-child)::after {
+  content: "-";
+  padding-left: 22px;
+}
+.hiding li:not(:first-child)::before {
+  content: "";
+  padding-right: 22px;
+}
+.hiding--web {
+  background-color: #79539a;
+}
+.hiding--it {
+  background-color: #286abd;
 }
 
 /*# sourceMappingURL=style.css.map */
