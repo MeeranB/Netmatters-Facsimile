@@ -77,7 +77,22 @@ $font-family-sans-serif: Poppins, sans-serif;
 }
 
 .nav-link {
+    letter-spacing: 0.4px;
+    font-size: 1.125rem;
     color: white;
+    line-height: 0.5;
+    span {
+        font-size: 1.438rem;
+        font-weight: 400;
+        margin-bottom: -10px;
+        line-height: 1.8;
+        margin-top: 12px;
+    }
+    small {
+        margin-bottom: 10px;
+        font-size: 0.625rem;
+        line-height: 1.7;
+    }
 }
 
 .icon {

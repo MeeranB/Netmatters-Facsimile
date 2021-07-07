@@ -19,6 +19,7 @@
 }
 
 .nav-ul .nav-item {
+    //Styles nav buttons
     border-right: 1px solid hsla(0,0%,100%,.1);
     border-left: 1px solid rgba(0,0,0,.25);
     &:hover {
@@ -26,12 +27,14 @@
             color: white;
         }
         .hiding {
+            //When hovered, remove display:none from each buttons respective menu
             display: flex;
         }
     }
 }
 
 .nav-item {
+    //TODO: Sass loop to create these styles.
     &--web {
         &:hover {
             background-color: $web-color;   
@@ -65,8 +68,10 @@
 }
 
 .hiding {
+    //generic hover menu styles
     display: none;
     align-items: center;
+    //position absolute used to avoid creating spacing issues for the div below the navbar.
     position: absolute;
     padding-left: 0;
     top: 99px;
@@ -86,6 +91,7 @@
         background-color: inherit;
     }
     li:not(:last-child)::after {
+        //These styles add the appropriate spacing and break characters for the hidden menus
         content: '-';
         padding-left: 22px;
     }
