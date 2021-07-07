@@ -131,4 +131,7 @@ $font-family-sans-serif: Poppins, sans-serif;
     font-family: $font-family-sans-serif;
     font-size: 0.8125rem;
     color: white;
+    @media (min-width: map-get($grid-breakpoints, "xl" )) {
+        font-size: 1rem;
+    }
 }

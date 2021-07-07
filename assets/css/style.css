@@ -16224,6 +16224,11 @@ readers do not read off random characters that represent icons */
   color: white;
   text-decoration: none;
 }
+@media (min-width: 1260px) {
+  .hiding {
+    font-size: 1rem;
+  }
+}
 
 .search-bar-container {
   width: 303px;
@@ -16359,6 +16364,11 @@ readers do not read off random characters that represent icons */
   width: 940px;
   height: 100%;
 }
+@media (min-width: 1260px) {
+  .nav-ul {
+    width: 1170px;
+  }
+}
 
 .nav-ul .nav-item {
   border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -16415,9 +16425,19 @@ readers do not read off random characters that represent icons */
   content: "-";
   padding-left: 22px;
 }
+@media (min-width: 1260px) {
+  .hiding li:not(:last-child)::after {
+    padding-left: 32px;
+  }
+}
 .hiding li:not(:first-child)::before {
   content: "";
   padding-right: 22px;
+}
+@media (min-width: 1260px) {
+  .hiding li:not(:first-child)::before {
+    padding-right: 32px;
+  }
 }
 .hiding--web {
   background-color: #79539a;

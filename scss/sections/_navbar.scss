@@ -16,6 +16,9 @@
     border-left: 1px solid rgba(0,0,0,.25);
     width: 940px;
     height: 100%;
+    @media (min-width: map-get($grid-breakpoints, "xl" )) {
+        width: 1170px;
+    }
 }
 
 .nav-ul .nav-item {
@@ -94,11 +97,18 @@
         //These styles add the appropriate spacing and break characters for the hidden menus
         content: '-';
         padding-left: 22px;
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            padding-left: 32px;
+        }
     }
     li:not(:first-child)::before {
         content: '';
         padding-right: 22px;
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            padding-right: 32px;
+        }
     }
+    //Menu colors: TODO sass loop to create these
     &--web {
         background-color: $web-dark-color;
     }
