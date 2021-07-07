@@ -108,23 +108,11 @@
             padding-right: 32px;
         }
     }
-    //Menu colors: TODO sass loop to create these
-    &--web {
-        background-color: $web-dark-color;
-    }
-    &--it {
-        background-color: $it-dark-color;
-    }
-    &--telecoms {
-        background-color: $telecoms-dark-color;
-    }
-    &--software {
-        background-color: $software-dark-color;
-    }
-    &--marketing {
-        background-color: $marketing-dark-color;
-    }
-    &--security {
-        background-color: $security-dark-color;
+
+    //Create dark scheme for each hover nav
+    @each $menu, $color in $menu-dark {
+        &--#{$menu} {
+            background-color: $color;
+        }
     }
 }
