@@ -16407,7 +16407,7 @@ readers do not read off random characters that represent icons */
   padding-left: 0;
   top: 99px;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   list-style: none;
   width: 100vw;
   height: 45px;
@@ -16456,6 +16456,16 @@ readers do not read off random characters that represent icons */
 }
 .hiding--security {
   background-color: #de093f;
+}
+
+.container--slider {
+  height: 531px;
+}
+
+.slide--marketing {
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
