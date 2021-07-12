@@ -16230,6 +16230,13 @@ readers do not read off random characters that represent icons */
   }
 }
 
+.initial-view {
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
 .search-bar-container {
   width: 303px;
   height: 56px;
@@ -16459,13 +16466,30 @@ readers do not read off random characters that represent icons */
 }
 
 .container--slider {
-  height: 531px;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  flex: 1;
+  position: relative;
+  background: #000;
+}
+.container--slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, transparent 25%, #000);
 }
 
 .slide--marketing {
+  flex: 1;
   object-fit: cover;
-  width: 100vw;
-  height: 100%;
+  object-position: center bottom;
+  border-top: solid 1px #666;
+  width: 100%;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,56 @@
+@use '../custom' as *;
+
 .container--slider {
-    height: 531px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex: 1;
+    position: relative;
+    background: #000;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg,transparent 25%,#000);
+    }
+    // @media (min-width: map-get($grid-breakpoints, "md")) {
+    //     height: 589px;
+    // }
+    // @media (min-width: map-get($grid-breakpoints, "lg")) {
+    //     height: 490px;
+    // }
+    // @media (min-width: map-get($grid-breakpoints, "xl")) {
+    //     height: 100vh;
+    // }
 }
 
 .slide--marketing {
+    flex: 1;
     object-fit: cover;
-    width: 100vw;
-    height: 100%;
+    object-position: center bottom;
+    border-top: solid 1px #666;
+    width: 100%;
+    opacity: 0.5;
+
+    // @media (min-width: map-get($grid-breakpoints, "md")) {
+    //     object-position: left top;
+    // }
+    // @media (min-width: map-get($grid-breakpoints, "lg")) {
+    //     object-position: left -34.455px;
+    // }
+    // @media (min-width: map-get($grid-breakpoints, "xl")) {
+    //     object-position: center bottom;
+    // }
+    // position: absolute;
+    // height: 100%;
+    // left: -13.25px;
+    // @media (min-width: map-get($grid-breakpoints, "md")) {
+    //     left: -85.975px;
+    // }
+    // @media (min-width: map-get($grid-breakpoints, "lg" )) {
+    //     left: 0;
+    // }
 }
