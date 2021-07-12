@@ -16044,6 +16044,7 @@ readers do not read off random characters that represent icons */
   height: 56px;
   font-size: 1.125rem;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .search-bar-container {
@@ -16228,6 +16229,10 @@ readers do not read off random characters that represent icons */
   .hiding {
     font-size: 1rem;
   }
+}
+
+.h1 {
+  text-transform: uppercase;
 }
 
 .initial-view {
@@ -16468,6 +16473,8 @@ readers do not read off random characters that represent icons */
 .container--slider {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 100vw;
   flex: 1;
   position: relative;
@@ -16484,12 +16491,25 @@ readers do not read off random characters that represent icons */
 }
 
 .slide--marketing {
+  position: relative;
   flex: 1;
   object-fit: cover;
   object-position: center bottom;
   border-top: solid 1px #666;
   width: 100%;
   opacity: 0.5;
+}
+
+.slide-caption {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+}
+.slide-caption .marketing-caption {
+  color: white;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=style.css.map */
