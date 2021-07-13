@@ -114,20 +114,3 @@
         height: 70px;
     }
  }
-
-//  @media (max-width: map-get($grid-breakpoints, "md" )) {
-//      #uhead-container {
-//          padding-left: 0;
-//      }
-//      .row {
-//          height: 70px;
-//      }
-//  }
-//  @media (min-width: map-get($grid-breakpoints, "sm" )) {
-//      //This rule allows the row to fit into the container while ignoring the containers' padding
-//      .row {
-//          margin-left: 0px;
-//          margin-right: 0px;
-//      }
-//  }
-
