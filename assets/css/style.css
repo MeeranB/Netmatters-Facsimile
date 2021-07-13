@@ -16401,6 +16401,9 @@ readers do not read off random characters that represent icons */
 .nav-ul .nav-item:hover .hiding {
   display: flex;
 }
+.nav-ul .nav-item:hover .hiding:hover {
+  display: flex;
+}
 
 .nav-item--web:hover {
   background-color: #926fb1;
@@ -16465,36 +16468,42 @@ readers do not read off random characters that represent icons */
 }
 .hiding--web:hover {
   display: flex;
+  z-index: 2;
 }
 .hiding--it {
   background-color: #286abd;
 }
 .hiding--it:hover {
   display: flex;
+  z-index: 2;
 }
 .hiding--telecoms {
   background-color: #bc2c28;
 }
 .hiding--telecoms:hover {
   display: flex;
+  z-index: 2;
 }
 .hiding--software {
   background-color: #526781;
 }
 .hiding--software:hover {
   display: flex;
+  z-index: 2;
 }
 .hiding--marketing {
   background-color: #25a25a;
 }
 .hiding--marketing:hover {
   display: flex;
+  z-index: 2;
 }
 .hiding--security {
   background-color: #de093f;
 }
 .hiding--security:hover {
   display: flex;
+  z-index: 2;
 }
 
 .container--slider {

@@ -30,8 +30,12 @@
             color: white;
         }
         .hiding {
-            //When hovered, remove display:none from each buttons respective menu
+            //When nav buttons are hovered, remove display:none from each buttons respective menu
             display: flex;
+            &:hover {
+                //when the respective hover menu is hovered, maintain display state (necessary for IE)
+                display: flex;
+            } 
         }
     }
 }
@@ -116,6 +120,7 @@
             &:hover {
                 //This rule is necessary as children are not inheriting hover display properties in IE
                 display: flex;
+                z-index: 2;
             }
         }
     }
