@@ -77,6 +77,9 @@
     .logo {
         @media (max-width: map-get($grid-breakpoints, "sm" )) {
             @include img-fluid;
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                max-width: none;
+            }
         }
         @media (min-width: map-get($grid-breakpoints, "sm" )) {
             width: 402px;
