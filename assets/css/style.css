@@ -16463,20 +16463,38 @@ readers do not read off random characters that represent icons */
 .hiding--web {
   background-color: #79539a;
 }
+.hiding--web:hover {
+  display: flex;
+}
 .hiding--it {
   background-color: #286abd;
+}
+.hiding--it:hover {
+  display: flex;
 }
 .hiding--telecoms {
   background-color: #bc2c28;
 }
+.hiding--telecoms:hover {
+  display: flex;
+}
 .hiding--software {
   background-color: #526781;
+}
+.hiding--software:hover {
+  display: flex;
 }
 .hiding--marketing {
   background-color: #25a25a;
 }
+.hiding--marketing:hover {
+  display: flex;
+}
 .hiding--security {
   background-color: #de093f;
+}
+.hiding--security:hover {
+  display: flex;
 }
 
 .container--slider {

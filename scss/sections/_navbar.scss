@@ -113,6 +113,10 @@
     @each $menu, $color in $menu-dark {
         &--#{$menu} {
             background-color: $color;
+            &:hover {
+                //This rule is necessary as children are not inheriting hover display properties in IE
+                display: flex;
+            }
         }
     }
 }
