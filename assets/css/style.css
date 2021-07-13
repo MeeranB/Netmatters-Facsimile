@@ -16307,6 +16307,11 @@ readers do not read off random characters that represent icons */
     margin-left: 15px;
   }
 }
+@media (-ms-high-contrast: none) and (min-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) {
+  .actions {
+    flex-grow: 2;
+  }
+}
 
 .navbar-brand {
   padding: 0;
@@ -16346,6 +16351,11 @@ readers do not read off random characters that represent icons */
   .navbar-brand .logo {
     width: 370px;
     height: 64.2px;
+  }
+}
+@media (-ms-high-contrast: none) and (min-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) {
+  .navbar-brand {
+    flex-grow: 1;
   }
 }
 

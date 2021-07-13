@@ -59,6 +59,11 @@
         padding-left: 0;
         margin-left: 15px;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @media (min-width: map-get($grid-breakpoints, "xl")) {
+            flex-grow: 2;
+        }
+    }
 }
 
 
@@ -90,6 +95,11 @@
         @media (min-width: map-get($grid-breakpoints, "xl" )) {
             width: 370px;
             height: 64.2px;
+        }
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @media (min-width: map-get($grid-breakpoints, "xl")) {
+            flex-grow: 1;
         }
     }
 }
