@@ -68,6 +68,9 @@
     font-size: 0.75rem;
     top: 33px;
     color: white;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: 15.5px;
+    }
   }
 
   // </upperheader>

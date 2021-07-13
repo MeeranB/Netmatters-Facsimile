@@ -16106,6 +16106,11 @@ readers do not read off random characters that represent icons */
   top: 33px;
   color: white;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .title {
+    left: 15.5px;
+  }
+}
 
 @font-face {
   font-family: "icomoon";
