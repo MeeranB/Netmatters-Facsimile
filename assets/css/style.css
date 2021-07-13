@@ -16521,6 +16521,11 @@ readers do not read off random characters that represent icons */
   z-index: 3;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .slide-caption .marketing-caption {
+    margin-left: 0;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .slide-caption {
     top: 0;
     left: 0;
