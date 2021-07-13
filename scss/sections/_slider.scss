@@ -51,6 +51,11 @@
    }
 }
 
+.h1,
+.h1-caption {
+    pointer-events: none;
+}
+
 // .hero {
 //     background: cyan;
 //     min-height: 60vw;

@@ -16559,4 +16559,9 @@ readers do not read off random characters that represent icons */
   }
 }
 
+.h1,
+.h1-caption {
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=style.css.map */
