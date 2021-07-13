@@ -16428,7 +16428,7 @@ readers do not read off random characters that represent icons */
   padding-left: 0;
   top: 99px;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   list-style: none;
   width: 100vw;
   height: 45px;
@@ -16518,7 +16518,7 @@ readers do not read off random characters that represent icons */
 }
 .slide-caption .marketing-caption {
   color: white;
-  z-index: 3;
+  z-index: 1;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .slide-caption .marketing-caption {
