@@ -139,7 +139,7 @@ $font-family-sans-serif: Poppins, sans-serif;
 .slide-caption {
     text-align: center;
     @media (min-width: map-get($grid-breakpoints, "lg")) {
-        text-align: start;
+        text-align: left;
     }
 }
 

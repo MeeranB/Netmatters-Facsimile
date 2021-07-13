@@ -16236,7 +16236,7 @@ readers do not read off random characters that represent icons */
 }
 @media (min-width: 992px) {
   .slide-caption {
-    text-align: start;
+    text-align: left;
   }
 }
 
