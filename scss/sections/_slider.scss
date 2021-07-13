@@ -31,6 +31,7 @@
 }
 
 .slide-caption {
+    //Containing div to align marketing caption appropriately
     display: flex;
     width: 100%;
     position: absolute;
@@ -40,4 +41,53 @@
         color: white;
         z-index: 3;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        //IE specific styles
+        top: 0;
+        left: 0;
+   }
 }
+
+// .hero {
+//     background: cyan;
+//     min-height: 60vw;
+//     overflow: hidden;
+//     position: relative;
+    
+//     &:after {
+//       background: linear-gradient(
+//         180deg,
+//         rgba(0, 0, 0, 0) 0%,
+//         rgba(0, 0, 0, 0.58) 57.99%,
+//         #000000 100%
+//       );
+//       content: '';
+//       height: 100%;
+//       left: 0;
+//       position: absolute;
+//       top: 0;
+//       width: 100%;
+//     }
+  
+//     img {
+//       object-fit: cover;
+//       position: absolute;
+//       top: 0;
+//       width: 100%;
+//       height: 100%;
+//     }
+    
+    
+//     @media (min-width: 577px) {
+//       min-height: 40vw;
+      
+//       // IE11 does not support object-fit, using the below on tablet/desktop instead for that
+//       img {
+//         height: auto;
+//         object-fit: unset;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         z-index: 0;
+//       }
+//     }
+//   }
