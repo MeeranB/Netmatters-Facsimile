@@ -16390,7 +16390,7 @@ readers do not read off random characters that represent icons */
 }
 
 #hover-nav-container {
-  width: 100vw;
+  width: 100%;
   background-color: #343745;
 }
 
