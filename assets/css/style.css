@@ -16465,6 +16465,12 @@ readers do not read off random characters that represent icons */
   height: 100%;
   background-color: inherit;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .hiding li:first-child::before {
+    content: "";
+    width: 1000vw;
+  }
+}
 .hiding li:not(:last-child)::after {
   content: "-";
   padding-left: 22px;

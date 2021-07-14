@@ -97,6 +97,13 @@
         height: 100%;
         background-color: inherit;
     }
+    li:first-child::before {
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            content: '';
+            width: 1000vw;
+        }
+    }
+
     li:not(:last-child)::after {
         //These styles add the appropriate spacing and break characters for the hidden menus
         content: '-';
