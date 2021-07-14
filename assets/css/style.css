@@ -16466,9 +16466,8 @@ readers do not read off random characters that represent icons */
   background-color: inherit;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .hiding li:first-child::before {
-    content: "";
-    width: 1000vw;
+  .hiding::before {
+    top: 0px;
   }
 }
 .hiding li:not(:last-child)::after {
