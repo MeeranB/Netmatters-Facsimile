@@ -96,11 +96,8 @@
         width: 1000vw;
         height: 100%;
         background-color: inherit;
-    }
-    li:first-child::before {
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            content: '';
-            width: 1000vw;
+            top: 0;
         }
     }
 

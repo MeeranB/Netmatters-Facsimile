@@ -12,6 +12,11 @@
         ul li {
             list-style: none;
         }
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .hiding::before {
+                display: inline;
+            }
+        }
     </style>
 </head>
 <body>
