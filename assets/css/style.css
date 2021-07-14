@@ -16421,9 +16421,6 @@ readers do not read off random characters that represent icons */
 .nav-ul .nav-item:hover .hiding {
   display: flex;
 }
-.nav-ul .nav-item:hover .hiding:hover {
-  display: flex;
-}
 
 .nav-item--web:hover {
   background-color: #926fb1;
@@ -16453,15 +16450,15 @@ readers do not read off random characters that represent icons */
   left: 0;
   z-index: 2;
   list-style: none;
-  width: 100vw;
+  width: 100%;
   height: 45px;
 }
 .hiding::before {
   z-index: -1;
   position: absolute;
   content: "";
-  left: -800px;
-  width: 1000vw;
+  left: calc(-50vw + 50%);
+  width: 100vw;
   height: 100%;
   background-color: inherit;
 }

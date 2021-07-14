@@ -32,10 +32,6 @@
         .hiding {
             //When nav buttons are hovered, remove display:none from each buttons respective menu
             display: flex;
-            &:hover {
-                //when the respective hover menu is hovered, maintain display state (necessary for IE)
-                display: flex;
-            } 
         }
     }
 }
@@ -85,15 +81,15 @@
     left: 0;
     z-index: 2;
     list-style: none;
-    width: 100vw;
+    width: 100%;
     height: 45px;
     &::before {
         //Fills menu bar the whole width
         z-index: -1;
         position: absolute;
         content: '';
-        left: -800px;
-        width: 1000vw;
+        left: calc(-50vw + 50%);
+        width: 100vw;
         height: 100%;
         background-color: inherit;
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
