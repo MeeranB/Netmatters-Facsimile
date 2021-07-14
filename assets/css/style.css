@@ -16533,7 +16533,7 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 100vw;
+  width: 100%;
   flex: 1;
   position: relative;
   background: #000;
