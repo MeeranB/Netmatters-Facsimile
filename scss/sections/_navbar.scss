@@ -32,6 +32,9 @@
         .hiding {
             //When nav buttons are hovered, remove display:none from each buttons respective menu
             display: flex;
+            &::before {
+                display: flex;
+            }
         }
     }
 }
@@ -85,6 +88,7 @@
     height: 45px;
     &::before {
         //Fills menu bar the whole width
+        display: none;
         z-index: -1;
         position: absolute;
         content: '';
