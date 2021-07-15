@@ -16444,22 +16444,7 @@ readers do not read off random characters that represent icons */
   background-color: #f62459;
 }
 
-.nav-link--web:hover + .hiding::before {
-  display: flex;
-}
-.nav-link--it:hover + .hiding::before {
-  display: flex;
-}
-.nav-link--telecoms:hover + .hiding::before {
-  display: flex;
-}
-.nav-link--software:hover + .hiding::before {
-  display: flex;
-}
-.nav-link--marketing:hover + .hiding::before {
-  display: flex;
-}
-.nav-link--security:hover + .hiding::before {
+.nav-link:hover + .hiding {
   display: flex;
 }
 

@@ -73,50 +73,8 @@
     }
 }
 
-.nav-link {
-    //TODO: Sass loop to create these styles.
-    &--web {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            }
-        }
-    }
-    &--it {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            } 
-        }
-    }
-    &--telecoms {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            }
-        }
-    }
-    &--software {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            }
-        }
-    }
-    &--marketing {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            }
-        }
-    }
-    &--security {
-        &:hover {
-            & + .hiding::before {
-                display: flex;
-            }
-        }
-    }
+.nav-link:hover + .hiding {
+    display: flex;
 }
 
 .hiding {
