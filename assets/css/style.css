@@ -16546,6 +16546,7 @@ readers do not read off random characters that represent icons */
   flex: 1;
   position: relative;
   background: #000;
+  overflow: hidden;
 }
 .container--slider::after {
   content: "";
@@ -16565,6 +16566,16 @@ readers do not read off random characters that represent icons */
   border-top: solid 1px #666;
   width: 100%;
   opacity: 0.5;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .slide--marketing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+  }
 }
 
 .slide-caption {
