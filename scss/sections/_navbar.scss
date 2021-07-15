@@ -73,7 +73,8 @@
     }
 }
 
-.nav-link:hover + .hiding {
+.nav-link:hover + .hiding,
+.nav-link:hover + .hiding::before {
     display: flex;
 }
 
