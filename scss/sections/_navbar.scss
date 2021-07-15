@@ -43,7 +43,7 @@
     //TODO: Sass loop to create these styles.
     &--web {
         &:hover {
-            background-color: $web-color;   
+            background-color: $web-color;
         }
     }
     &--it {
@@ -69,6 +69,52 @@
     &--security {
         &:hover {
             background-color: $security-color;   
+        }
+    }
+}
+
+.nav-link {
+    //TODO: Sass loop to create these styles.
+    &--web {
+        &:hover {
+            & ~ .hiding--web {
+                display: flex;
+            }
+        }
+    }
+    &--it {
+        &:hover {
+            & ~ .hiding--it {
+                display: flex;
+            } 
+        }
+    }
+    &--telecoms {
+        &:hover {
+            & ~ .hiding--telecoms {
+                display: flex;
+            }
+        }
+    }
+    &--software {
+        &:hover {
+            & ~ .hiding--software {
+                display: flex;
+            }
+        }
+    }
+    &--marketing {
+        &:hover {
+            & ~ .hiding--marketing {
+                display: flex;
+            }
+        }
+    }
+    &--security {
+        &:hover {
+            & ~ .hiding--security {
+                display: flex;
+            }
         }
     }
 }
