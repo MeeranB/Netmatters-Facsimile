@@ -39,38 +39,15 @@
     }
 }
 
+
 .nav-item {
-    //TODO: Sass loop to create these styles.
-    &--web {
-        &:hover {
-            background-color: $web-color;
+    @each $menu, $color in $menu {
+        &--#{$menu} {
+            &:hover {
+                background-color: $color;
+            }
         }
-    }
-    &--it {
-        &:hover {
-            background-color: $it-color;   
-        }
-    }
-    &--telecoms {
-        &:hover {
-            background-color: $telecoms-color;   
-        }
-    }
-    &--software {
-        &:hover {
-            background-color: $software-color;   
-        }
-    }
-    &--marketing {
-        &:hover {
-            background-color: $marketing-color;   
-        }
-    }
-    &--security {
-        &:hover {
-            background-color: $security-color;   
-        }
-    }
+    }    
 }
 
 .nav-link:hover + .hiding,
@@ -93,7 +70,7 @@
     height: 45px;
     &::before {
         //Fills menu bar the whole width
-        display: none;
+        display: inherit;
         z-index: -1;
         position: absolute;
         content: '';

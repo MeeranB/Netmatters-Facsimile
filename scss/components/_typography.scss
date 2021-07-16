@@ -97,22 +97,22 @@ $font-family-sans-serif: Poppins, sans-serif;
 
 .icon {
     &-embed2 {
-        color: $web-color
+        color: map-get($menu, "web");
     }
     &-display {
-        color: $it-color
+        color: map-get($menu, "it");
     }
     &-phone_in_talk {
-        color: $telecoms-color
+        color: map-get($menu, "telecoms");
     }
     &-apps {
-        color: $software-color
+        color: map-get($menu, "software");
     }
     &-bar-graph {
-        color: $marketing-color
+        color: map-get($menu, "marketing");
     }
     &-security {
-        color: $security-color
+        color: map-get($menu, "security");
     }
 }
 

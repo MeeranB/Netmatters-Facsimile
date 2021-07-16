@@ -3,12 +3,21 @@ $primary: #4183d7;
 $secondary: #999aa2;
 
 //custom repeat colors
-$web-color: #926fb1;
-$it-color: #4183d7;
-$telecoms-color: #d64541;
-$software-color: #67809f;
-$marketing-color: #2ecc71;
-$security-color: #f62459;
+$menu: (
+  "web": #926fb1,
+  "it": #4183d7,
+  "telecoms": #d64541,
+  "software": #67809f,
+  "marketing": #2ecc71,
+  "security": #f62459,
+);
+
+// $web-color: #926fb1;
+// $it-color: #4183d7;
+// $telecoms-color: #d64541;
+// $software-color: #67809f;
+// $marketing-color: #2ecc71;
+// $security-color: #f62459;
 
 $menu-dark: (
   "web": #79539a,

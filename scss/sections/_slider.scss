@@ -19,6 +19,11 @@
         height: 100%;
         background: linear-gradient(270deg,transparent 25%,#000);
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        background-image: url("/images/marketing-slide.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .slide--marketing {
@@ -30,14 +35,7 @@
     width: 100%;
     opacity: 0.5;
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 100%;
-        width: auto;
-        // height: auto;
-        // width: 100%;
+        display: none;
     }
 }
 
@@ -67,6 +65,23 @@
     pointer-events: none;
 }
 
+.slide-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    left: 100px;
+    bottom: 20px;
+    border: red 2px dotted;
+}
+
+.slide-button {
+    width: 11px;
+    height: 11px;
+    background-color: hsla(0,0%,100%,.5);
+}
 // .hero {
 //     background: cyan;
 //     min-height: 60vw;
