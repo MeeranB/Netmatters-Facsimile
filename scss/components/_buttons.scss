@@ -75,4 +75,21 @@
 
   // </upperheader>
 
-  
+  // <slider>
+
+  .btn-marketing {
+    color: white;
+    background-color: map-get($menu, "marketing");
+    border-color: map-get($menu, "marketing");
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 3px;
+    padding-bottom: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:hover {
+      color: white;
+      background-color: map-get($menu-dark, "marketing");
+      border-color: map-get($menu-dark, "marketing")
+    }
+  }

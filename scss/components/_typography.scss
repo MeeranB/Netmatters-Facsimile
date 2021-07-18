@@ -1,7 +1,5 @@
 @use '../custom' as *;
 
-$font-family-sans-serif: Poppins, sans-serif;
-
 @font-face {
     font-family: 'icomoon';
     src:  url('../../assets/webfonts/icomoon.eot?63vkm');
@@ -144,5 +142,15 @@ $font-family-sans-serif: Poppins, sans-serif;
 }
 
 .h1 {
+    font-size: 3rem;
     text-transform: uppercase;
+    &-caption {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
+    margin-bottom: 2px;
+}
+
+.vertical-center {
+    vertical-align: middle;
 }

@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1260px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: Poppins, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5522,7 +5522,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5624,7 +5624,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -16112,6 +16112,23 @@ readers do not read off random characters that represent icons */
   }
 }
 
+.btn-marketing {
+  color: white;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  padding-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-marketing:hover {
+  color: white;
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../../assets/webfonts/icomoon.eot?63vkm");
@@ -16246,7 +16263,17 @@ readers do not read off random characters that represent icons */
 }
 
 .h1 {
+  font-size: 3rem;
   text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.h1-caption {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+
+.vertical-center {
+  vertical-align: middle;
 }
 
 .initial-view {
@@ -16606,24 +16633,6 @@ readers do not read off random characters that represent icons */
 .h1,
 .h1-caption {
   pointer-events: none;
-}
-
-.slide-controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: absolute;
-  z-index: 5;
-  width: 100px;
-  left: 100px;
-  bottom: 20px;
-  border: red 2px dotted;
-}
-
-.slide-button {
-  width: 11px;
-  height: 11px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

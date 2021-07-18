@@ -65,63 +65,24 @@
     pointer-events: none;
 }
 
-.slide-controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: absolute;
-    z-index: 5;
-    width: 100px;
-    left: 100px;
-    bottom: 20px;
-    border: red 2px dotted;
-}
+// .slide-controls {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     position: absolute;
+//     z-index: 5;
+//     bottom: 44px;
+//     border: red 2px dotted;
+// }
 
-.slide-button {
-    width: 11px;
-    height: 11px;
-    background-color: hsla(0,0%,100%,.5);
-}
-// .hero {
-//     background: cyan;
-//     min-height: 60vw;
-//     overflow: hidden;
-//     position: relative;
-    
-//     &:after {
-//       background: linear-gradient(
-//         180deg,
-//         rgba(0, 0, 0, 0) 0%,
-//         rgba(0, 0, 0, 0.58) 57.99%,
-//         #000000 100%
-//       );
-//       content: '';
-//       height: 100%;
-//       left: 0;
-//       position: absolute;
-//       top: 0;
-//       width: 100%;
+// .slide-button {
+//     margin: 0px 10px;
+//     width: 11px;
+//     height: 11px;
+//     border-radius: 100%;
+//     cursor: pointer;
+//     background-color: hsla(0,0%,100%,.5);
+//     :hover {
+//         background-color: #d6d6d6;
 //     }
-  
-//     img {
-//       object-fit: cover;
-//       position: absolute;
-//       top: 0;
-//       width: 100%;
-//       height: 100%;
-//     }
-    
-    
-//     @media (min-width: 577px) {
-//       min-height: 40vw;
-      
-//       // IE11 does not support object-fit, using the below on tablet/desktop instead for that
-//       img {
-//         height: auto;
-//         object-fit: unset;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         z-index: 0;
-//       }
-//     }
-//   }
+// }
