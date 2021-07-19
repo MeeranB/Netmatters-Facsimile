@@ -1,0 +1,20 @@
+@use '../custom' as *;
+
+.info-card-container {
+    border: 2px dotted red;
+    height: 700px;
+    margin: 22px auto;
+    .col {
+        height: 100%;
+        border: 2px dotted blue;
+    }
+}
+
+.info-card {
+    border: 2px dotted green;
+    margin-left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+//TODO; research appropriate way to deal with negative margins, as they have a use in counteracting the margins in between columns.

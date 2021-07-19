@@ -122,11 +122,13 @@
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         min-width: 530px;
     }
+
+    .row {
+        @media (max-width: map-get($grid-breakpoints, "md" )) {
+            margin-left: 0;
+            height: 70px;
+        }
+     }
  }
 
- .row {
-    @media (max-width: map-get($grid-breakpoints, "md" )) {
-        margin-left: 0;
-        height: 70px;
-    }
- }
+
