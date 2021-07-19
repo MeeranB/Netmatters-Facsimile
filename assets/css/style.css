@@ -16129,6 +16129,10 @@ readers do not read off random characters that represent icons */
   border-color: #25a25a;
 }
 
+body {
+  letter-spacing: 0.4px;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../../assets/webfonts/icomoon.eot?63vkm");
@@ -16406,6 +16410,11 @@ readers do not read off random characters that represent icons */
 @media (max-width: 768px) {
   #uhead-container {
     padding-left: 0;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #uhead-container {
+    min-width: 530px;
   }
 }
 

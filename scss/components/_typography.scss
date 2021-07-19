@@ -1,5 +1,9 @@
 @use '../custom' as *;
 
+body {
+    letter-spacing: 0.4px;
+}
+
 @font-face {
     font-family: 'icomoon';
     src:  url('../../assets/webfonts/icomoon.eot?63vkm');

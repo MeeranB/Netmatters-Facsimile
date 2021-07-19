@@ -119,6 +119,9 @@
     @media (max-width: map-get($grid-breakpoints, "md" )) {
         padding-left: 0;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        min-width: 530px;
+    }
  }
 
  .row {
