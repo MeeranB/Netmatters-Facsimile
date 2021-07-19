@@ -16129,6 +16129,26 @@ readers do not read off random characters that represent icons */
   border-color: #25a25a;
 }
 
+.btn-software {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  background-color: #67809f;
+  border-color: #67809f;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-software span {
+  vertical-align: middle;
+  width: 100%;
+}
+
 body {
   letter-spacing: 0.4px;
 }
@@ -16278,6 +16298,36 @@ body {
 
 .vertical-center {
   vertical-align: middle;
+}
+
+.icon-container--apps {
+  font-size: 1.438rem;
+  line-height: 58px;
+  margin-bottom: 17px;
+}
+
+.info-card .h2 {
+  color: #333645;
+  font-size: 1.125rem;
+  position: relative;
+}
+.info-card .h2::after {
+  content: "";
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: calc(1.125rem + 17px);
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 3px;
+  background-color: #333645;
+}
+
+.info-card .p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #333645;
 }
 
 .initial-view {
@@ -16643,21 +16693,59 @@ body {
   pointer-events: none;
 }
 
-.info-card-container {
-  border: 2px dotted red;
-  height: 700px;
-  margin: 22px auto;
+.info-card-section-container {
+  margin: 2.25rem auto;
 }
-.info-card-container .col {
+.info-card-section-container .col {
   height: 100%;
-  border: 2px dotted blue;
+}
+.info-card-section-container a {
+  text-decoration: none;
+}
+
+.info-card-container {
+  width: 100%;
+  height: auto;
+  margin: 0.9375rem auto;
 }
 
 .info-card {
-  border: 2px dotted green;
-  margin-left: 0;
-  width: 100%;
-  height: 100px;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.icon-container--apps {
+  text-align: center;
+  position: relative;
+}
+.icon-container--apps .icon-apps {
+  color: white;
+}
+.icon-container--apps .icon-apps::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px);
+  z-index: -1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 17px;
+  background-color: #67809f;
+}
+
+.info-title-container,
+.info-subtitle-container,
+.btn-container {
+  text-align: center;
+}
+
+.info-title-container {
+  margin-bottom: calc(1.125rem + 5px);
+}
+
+.info-subtitle-container {
+  margin-bottom: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */

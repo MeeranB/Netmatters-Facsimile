@@ -93,3 +93,23 @@
       border-color: map-get($menu-dark, "marketing")
     }
   }
+
+  .btn-software {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
+    background-color: map-get($menu, "software");
+    border-color: map-get($menu, "software");
+    text-align: center;
+    border-radius: 3px;
+    height: 45px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    span {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }

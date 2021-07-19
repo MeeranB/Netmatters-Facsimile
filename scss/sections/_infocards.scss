@@ -1,20 +1,59 @@
 @use '../custom' as *;
 
-.info-card-container {
-    border: 2px dotted red;
-    height: 700px;
-    margin: 22px auto;
+.info-card-section-container {
+    // border: 2px dotted red;
+    margin: 2.25rem auto;
     .col {
         height: 100%;
-        border: 2px dotted blue;
+        // border: 2px dotted blue;
+    }
+    a {
+        text-decoration: none;
     }
 }
 
-.info-card {
-    border: 2px dotted green;
-    margin-left: 0;
+.info-card-container {
+    // border: 2px dotted green;
     width: 100%;
-    height: 100px;
+    height: auto;
+    margin: 0.9375rem auto;
 }
 
-//TODO; research appropriate way to deal with negative margins, as they have a use in counteracting the margins in between columns.
+.info-card {
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.icon-container--apps {
+    text-align: center;
+    position: relative;
+    .icon-apps {
+        color: white;
+    }
+    .icon-apps::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(50% - 30px);
+        z-index: -1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0 auto 17px;
+        background-color: map-get($menu, "software" );
+    }
+}
+
+.info-title-container,
+.info-subtitle-container,
+.btn-container {
+    text-align: center;
+}
+
+.info-title-container {
+    margin-bottom: calc(1.125rem + 5px);
+}
+
+.info-subtitle-container {
+    margin-bottom: 13px;
+}

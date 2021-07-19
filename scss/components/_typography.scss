@@ -158,3 +158,35 @@ body {
 .vertical-center {
     vertical-align: middle;
 }
+
+//<infocards>
+
+.icon-container--apps {
+    font-size: 1.438rem;
+    line-height: 58px;
+    margin-bottom: 17px;
+}
+
+.info-card .h2 {
+    color: #333645;
+    font-size: 1.125rem;
+    position: relative;
+    &::after {
+        content: "";
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: calc(1.125rem + 17px);
+        left: calc(50% - 14px);
+        width: 28px;
+        height: 3px;
+        background-color: #333645;
+    }
+}
+
+.info-card .p {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #333645;
+}
