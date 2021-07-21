@@ -18,12 +18,50 @@
     width: 100%;
     height: auto;
     margin: 0.9375rem auto;
+    .info-card {
+        &:hover {
+            //These styles remove color from elements that lose color on hover
+            .h2,
+            .p {
+                color: white;
+            }
+            .h2::after,
+            .btn,
+            span[class^="icon-"]::after {
+                //This rule refers to the circle span behind the icon
+                background-color: white;
+                z-index: 0;
+            }
+            span[class^="icon-"]::before {
+                //This rule refers to the icon itself
+                position: relative;
+                z-index: 1;
+                // color: map-get($icon-colorscheme, "apps");
+            }
+            .btn {
+                border-color: white;
+            }
+
+        }
+        @each $card-type, $color in $icon-colorscheme {
+            //These styles apply the respective inverted color scheme to each info-card
+            &--#{$card-type}:hover {
+                background-color: $color;
+                .btn,
+                span[class^="icon-"]::before {
+                    color: $color;
+                }
+            }
+        }
+    }
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
     padding: 30px;
     min-height: 100%;
     .btn-container {
@@ -57,23 +95,26 @@
     }
 }
 
-.icon-container--apps {
-    text-align: center;
-    position: relative;
-    .icon-apps {
-        color: white;
-    }
-    .icon-apps::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: calc(50% - 30px);
-        z-index: -1;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin: 0 auto 17px;
-        background-color: map-get($menu, "software" );
+
+@each $icon, $color in $icon-colorscheme {
+    .icon-container--#{$icon} {
+        text-align: center;
+        position: relative;
+        .icon-#{$icon} {
+            color: white;
+        }
+        .icon-#{$icon}::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(50% - 30px);
+            z-index: -1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 17px;
+            background-color: $color;
+        }
     }
 }
 

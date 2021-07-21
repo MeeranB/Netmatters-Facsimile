@@ -25,6 +25,18 @@ $menu-dark: (
   "security": #de093f
 );
 
+//icon-colorscheme mapping
+
+$icon-colorscheme: (
+  "apps": #67809f,
+  "display": #4183d7,
+  "bar-graph": #25a25a,
+  "phone_in_talk": #d64541,
+  "embed2": #926fb1,
+  "security": #f62459,
+  "school": #926fb1
+);
+
 //custom CSS breakpoints
 $grid-breakpoints: (
     xs: 0,
