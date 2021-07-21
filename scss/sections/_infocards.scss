@@ -9,6 +9,7 @@
     }
     a {
         text-decoration: none;
+        height: 100%;
     }
 }
 
@@ -20,8 +21,40 @@
 }
 
 .info-card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     padding: 30px;
+    min-height: 100%;
+    .btn-container {
+        margin-top: auto;
+    }
+}
+
+.info-link {
+    display: flex;
+    flex-direction: column;
+    //These queries allow info-card content to fill the info-card-container as required so that the call-to-action buttons are consistently positioned.
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+        &--security,
+        &--telecoms {
+            height: 252px;
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+        &--security,
+        &--telecoms {
+            height: auto;
+        }
+        &--it {
+            height: 299.33px;
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
+        &--it {
+            height: auto;
+        }
+    }
 }
 
 .icon-container--apps {

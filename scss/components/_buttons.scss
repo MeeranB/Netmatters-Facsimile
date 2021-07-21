@@ -27,89 +27,109 @@
 
 // Menu icon styling
 .menu-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-    border-radius: 3px;
-    min-width: 63px;
-    height: 56px;
-    cursor: pointer;
-    background-color:#333645;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  border-radius: 3px;
+  min-width: 63px;
+  height: 56px;
+  cursor: pointer;
+  background-color:#333645;
+}
 
-  .menu-btn__burger {
-    width: 33px;
-    height: 3px;
-    background: white;
-    border-radius: 1px;
-  }
+.menu-btn__burger {
+  width: 33px;
+  height: 3px;
+  background: white;
+  border-radius: 1px;
+}
 
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 33px;
-    height: 3px;
-    background: white;
-    border-radius: 1px;
-  }
-  .menu-btn__burger::before {
-    transform: translateY(-8px);
-  }
-  .menu-btn__burger::after {
-    transform: translateY(-16px);
-  }
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 3px;
+  background: white;
+  border-radius: 1px;
+}
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(-16px);
+}
 
-  .title {
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    top: 33px;
+.title {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  top: 33px;
+  color: white;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      left: 15.5px;
+  }
+}
+
+// </upperheader>
+
+// <slider>
+
+.btn-marketing {
+  color: white;
+  background-color: map-get($menu, "marketing");
+  border-color: map-get($menu, "marketing");
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  padding-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:hover {
     color: white;
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        left: 15.5px;
-    }
+    background-color: map-get($menu-dark, "marketing");
+    border-color: map-get($menu-dark, "marketing")
   }
+}
 
-  // </upperheader>
+// .btn-software {
+//   display: inline-flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin: 0 auto;
+//   color: white;
+//   background-color: map-get($menu, "software");
+//   border-color: map-get($menu, "software");
+//   text-align: center;
+//   border-radius: 3px;
+//   height: 45px;
+//   padding: 5px 15px;
+//   font-size: 1.063rem;
+//   span {
+//     vertical-align: middle;
+//     width: 100%;
+//   }
+// }
 
-  // <slider>
-
-  .btn-marketing {
-    color: white;
-    background-color: map-get($menu, "marketing");
-    border-color: map-get($menu, "marketing");
-    text-align: center;
-    font-size: 1.25rem;
-    border-radius: 3px;
-    padding-bottom: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    &:hover {
+@each $menu, $color in $menu {
+    .btn-#{$menu} {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
       color: white;
-      background-color: map-get($menu-dark, "marketing");
-      border-color: map-get($menu-dark, "marketing")
+      background-color: $color;
+      border-color: $color;
+      text-align: center;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px 15px;
+      font-size: 1.063rem;
+      span {
+        vertical-align: middle;
+        width: 100%;
+      }
     }
-  }
-
-  .btn-software {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    margin: 0 auto;
-    color: white;
-    background-color: map-get($menu, "software");
-    border-color: map-get($menu, "software");
-    text-align: center;
-    border-radius: 3px;
-    height: 45px;
-    padding: 5px 15px;
-    font-size: 1.063rem;
-    span {
-      vertical-align: middle;
-      width: 100%;
-    }
-  }
+}    

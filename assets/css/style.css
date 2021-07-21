@@ -16129,11 +16129,67 @@ readers do not read off random characters that represent icons */
   border-color: #25a25a;
 }
 
-.btn-software {
-  display: flex;
+.btn-web {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  background-color: #926fb1;
+  border-color: #926fb1;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-web span {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-it {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  background-color: #4183d7;
+  border-color: #4183d7;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-it span {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-telecoms {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  background-color: #d64541;
+  border-color: #d64541;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-telecoms span {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-software {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   color: white;
   background-color: #67809f;
@@ -16145,6 +16201,44 @@ readers do not read off random characters that represent icons */
   font-size: 1.063rem;
 }
 .btn-software span {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-marketing {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-marketing span {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-security {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  background-color: #f62459;
+  border-color: #f62459;
+  text-align: center;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+}
+.btn-security span {
   vertical-align: middle;
   width: 100%;
 }
@@ -16701,6 +16795,7 @@ body {
 }
 .info-card-section-container a {
   text-decoration: none;
+  height: 100%;
 }
 
 .info-card-container {
@@ -16710,8 +16805,37 @@ body {
 }
 
 .info-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
   padding: 30px;
+  min-height: 100%;
+}
+.info-card .btn-container {
+  margin-top: auto;
+}
+
+.info-link {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .info-link--security, .info-link--telecoms {
+    height: 252px;
+  }
+}
+@media (min-width: 992px) {
+  .info-link--security, .info-link--telecoms {
+    height: auto;
+  }
+  .info-link--it {
+    height: 299.33px;
+  }
+}
+@media (min-width: 1260px) {
+  .info-link--it {
+    height: auto;
+  }
 }
 
 .icon-container--apps {
