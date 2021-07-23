@@ -1,0 +1,16 @@
+@use '../custom' as *;
+
+.culture-bg {
+    width: 100%;
+    height: auto;
+    background-color: #333645;
+    padding: 50px 0px;
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+        background-image: url(https://www.netmatters.co.uk/assets/images/branded.png);
+        //bg-image sticks to right side of the viewport, and is centered vertically
+        background-position: right center;
+        background-repeat: no-repeat;
+        //bg-image fills height of container, width is set so as to maintain aspect ratio
+        background-size: auto 100%;
+    }
+}

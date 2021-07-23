@@ -16,3 +16,9 @@ Address hover submenus sometimes not extending the whole viewport width
 ### Slider:
 Fix padding-top in call-to-action in slider\
 Implement alternate image gradient on larger view ports
+
+### Info-cards:
+Implement relative unit solution for info-card buttons not touching bottom of container.
+
+### Culture:
+Fix non-bold subtitle
