@@ -16476,6 +16476,7 @@ body {
 }
 
 .info-card .h2 {
+  display: block;
   color: #333645;
   font-size: 1.125rem;
   position: relative;
@@ -16913,11 +16914,11 @@ body {
   color: #4183d7;
 }
 .info-card-container .info-card--bar-graph:hover {
-  background-color: #25a25a;
+  background-color: #2ecc71;
 }
 .info-card-container .info-card--bar-graph:hover .btn,
 .info-card-container .info-card--bar-graph:hover span[class^=icon-]::before {
-  color: #25a25a;
+  color: #2ecc71;
 }
 .info-card-container .info-card--phone_in_talk:hover {
   background-color: #d64541;
@@ -17041,7 +17042,7 @@ body {
   height: 60px;
   border-radius: 50%;
   margin: 0 auto 17px;
-  background-color: #25a25a;
+  background-color: #2ecc71;
 }
 
 .icon-container--phone_in_talk {
