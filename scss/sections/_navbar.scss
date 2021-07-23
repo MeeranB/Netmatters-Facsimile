@@ -83,15 +83,22 @@
         }
     }
 
-    li:not(:last-child)::after {
+    li:not(:last-child) {
         //These styles add the appropriate spacing and break characters for the hidden menus
-        content: '-';
-        padding-left: 22px;
-        @media (min-width: map-get($grid-breakpoints, "xl" )) {
-            padding-left: 32px;
+        a::after {
+            //For any menu items that aren't the last, extend the respective anchor link forwards
+            content: '';
+            padding-left: 22px;
+            @media (min-width: map-get($grid-breakpoints, "xl" )) {
+                padding-left: 32px;
+            }
+        }
+        &::after {
+            content: '-';
         }
     }
-    li:not(:first-child)::before {
+    li:not(:first-child) a::before{
+        //For any menu items that aren't the first, extend the respective anchor link backwards
         content: '';
         padding-right: 22px;
         @media (min-width: map-get($grid-breakpoints, "xl" )) {

@@ -1,11 +1,9 @@
 @use '../custom' as *;
 
 .info-card-section-container {
-    // border: 2px dotted red;
     margin: 2.25rem auto;
     .col {
         height: 100%;
-        // border: 2px dotted blue;
     }
     a {
         text-decoration: none;
@@ -14,7 +12,6 @@
 }
 
 .info-card-container {
-    // border: 2px dotted green;
     width: 100%;
     height: auto;
     margin: 0.9375rem auto;
@@ -36,7 +33,6 @@
                 //This rule refers to the icon itself
                 position: relative;
                 z-index: 1;
-                // color: map-get($icon-colorscheme, "apps");
             }
             .btn {
                 border-color: white;

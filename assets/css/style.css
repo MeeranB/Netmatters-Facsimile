@@ -16730,21 +16730,24 @@ body {
     top: 0px;
   }
 }
-.hiding li:not(:last-child)::after {
-  content: "-";
+.hiding li:not(:last-child) a::after {
+  content: "";
   padding-left: 22px;
 }
 @media (min-width: 1260px) {
-  .hiding li:not(:last-child)::after {
+  .hiding li:not(:last-child) a::after {
     padding-left: 32px;
   }
 }
-.hiding li:not(:first-child)::before {
+.hiding li:not(:last-child)::after {
+  content: "-";
+}
+.hiding li:not(:first-child) a::before {
   content: "";
   padding-right: 22px;
 }
 @media (min-width: 1260px) {
-  .hiding li:not(:first-child)::before {
+  .hiding li:not(:first-child) a::before {
     padding-right: 32px;
   }
 }
