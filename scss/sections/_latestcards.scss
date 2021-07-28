@@ -1,0 +1,92 @@
+@use '../custom' as *;
+
+.latest-intro-container {
+    box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
+}
+
+.latest-intro-container .container{
+    height: 104px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 40px 15px 0px 15px;
+}
+
+.latest-intro {
+    position: relative;
+}
+
+.latest-intro-underline {
+    position: absolute;
+    height: 5px;
+    left: 0px;
+    bottom: -35px;
+    width: 100%;
+    background-color: #333645;
+}
+
+
+.img-container {
+    overflow: hidden;
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+        img {
+            transition: all .25s cubic-bezier(.215,.61,.355,1);
+            &:hover {
+                opacity: 0.75;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.img-link {
+    position: relative;
+}
+
+.img-label-container {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 0 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.438rem;
+    &--it {
+        background-color: map-get($menu, "it");
+    }
+    &--web {
+        background-color: map-get($menu, "web");
+    }
+    a {
+        color: white;
+    }
+}
+
+.card-title--web {
+    color: map-get($menu, "web");
+}
+
+.card-owner {
+    display: flex;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    font-size: 0.875rem;
+    &-img {
+        height: 47px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    p {
+        line-height: 1.375rem;
+        margin-bottom: 0px;
+    }
+    &-title {
+        line-height: 1.5rem;
+        color: #333645;
+        font-weight: 600;
+    }
+    &-date {
+        color: #666666;
+    }
+}

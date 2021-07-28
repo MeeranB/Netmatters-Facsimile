@@ -4328,7 +4328,7 @@ input[type=button].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1.875rem;
 }
 
 .card-title {
@@ -4348,11 +4348,11 @@ input[type=button].btn-block {
   text-decoration: none;
 }
 .card-link + .card-link {
-  margin-left: 1.25rem;
+  margin-left: 1.875rem;
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.875rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -4362,7 +4362,7 @@ input[type=button].btn-block {
 }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.875rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -4371,15 +4371,15 @@ input[type=button].btn-block {
 }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -0.9375rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -0.9375rem;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 .card-img-overlay {
@@ -16552,6 +16552,11 @@ body {
   font-weight: 600;
 }
 
+.card-text {
+  font-size: 0.8125rem;
+  color: #666;
+}
+
 .initial-view {
   height: 100vh;
   min-height: 700px;
@@ -17207,6 +17212,96 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
   }
+}
+
+.latest-intro-container {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+.latest-intro-container .container {
+  height: 104px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 40px 15px 0px 15px;
+}
+
+.latest-intro {
+  position: relative;
+}
+
+.latest-intro-underline {
+  position: absolute;
+  height: 5px;
+  left: 0px;
+  bottom: -35px;
+  width: 100%;
+  background-color: #333645;
+}
+
+.img-container {
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .img-container img {
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .img-container img:hover {
+    opacity: 0.75;
+    transform: scale(1.1);
+  }
+}
+
+.img-link {
+  position: relative;
+}
+
+.img-label-container {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.438rem;
+}
+.img-label-container--it {
+  background-color: #4183d7;
+}
+.img-label-container--web {
+  background-color: #926fb1;
+}
+.img-label-container a {
+  color: white;
+}
+
+.card-title--web {
+  color: #926fb1;
+}
+
+.card-owner {
+  display: flex;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  font-size: 0.875rem;
+}
+.card-owner-img {
+  height: 47px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.card-owner p {
+  line-height: 1.375rem;
+  margin-bottom: 0px;
+}
+.card-owner-title {
+  line-height: 1.5rem;
+  color: #333645;
+  font-weight: 600;
+}
+.card-owner-date {
+  color: #666666;
 }
 
 /*# sourceMappingURL=style.css.map */

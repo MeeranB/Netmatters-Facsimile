@@ -54,5 +54,8 @@ $grid-breakpoints: (
   xl: 1200px,
 );
 
+//custom cards
+$card-spacer-x: 1.875rem;
+
 //Import Bootstrap (import location irrelevant due to use of default flags)
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
