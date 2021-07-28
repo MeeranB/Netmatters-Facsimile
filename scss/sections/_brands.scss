@@ -1,0 +1,38 @@
+@use '../custom' as *;
+
+.brands-container {
+    border-top: 1px solid black;
+    padding: 50px 0px;
+    @media (min-width: map-get($grid-breakpoints, "xl" )) {
+        padding: 50px 0px;
+    }
+}
+
+.brands-container .container{
+    display: flex;
+    img {
+        max-width: 100%;
+    }
+    .logo-div {
+        text-align: center;
+        padding: 0 20px;
+        &:hover {
+            .colored {
+                display: block;
+            }
+            .greyscale {
+                display: none;
+            }
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
+        height: 70px;
+        .logo-div {
+            flex-grow: 1;
+        }
+    }
+    .colored {
+        display: none;
+        margin: auto;
+    }
+}

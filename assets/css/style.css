@@ -17304,4 +17304,43 @@ body {
   color: #666666;
 }
 
+.brands-container {
+  border-top: 1px solid black;
+  padding: 50px 0px;
+}
+@media (min-width: 1260px) {
+  .brands-container {
+    padding: 50px 0px;
+  }
+}
+
+.brands-container .container {
+  display: flex;
+}
+.brands-container .container img {
+  max-width: 100%;
+}
+.brands-container .container .logo-div {
+  text-align: center;
+  padding: 0 20px;
+}
+.brands-container .container .logo-div:hover .colored {
+  display: block;
+}
+.brands-container .container .logo-div:hover .greyscale {
+  display: none;
+}
+@media (min-width: 1260px) {
+  .brands-container .container {
+    height: 70px;
+  }
+  .brands-container .container .logo-div {
+    flex-grow: 1;
+  }
+}
+.brands-container .container .colored {
+  display: none;
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
