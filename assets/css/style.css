@@ -17305,13 +17305,16 @@ body {
 }
 
 .brands-container {
-  border-top: 1px solid black;
+  box-shadow: inset 0 5px 35px rgba(0, 0, 0, 0.1);
   padding: 50px 0px;
 }
 @media (min-width: 1260px) {
   .brands-container {
     padding: 50px 0px;
   }
+}
+.brands-container p {
+  margin-bottom: 0;
 }
 
 .brands-container .container {
@@ -17331,7 +17334,7 @@ body {
 .brands-container .container .logo-div:hover .greyscale {
   display: none;
 }
-.brands-container .container .logo-div:hover .hovertip {
+.brands-container .container .logo-div:hover .hovercontainer {
   display: block;
 }
 @media (min-width: 1260px) {
@@ -17347,8 +17350,11 @@ body {
   margin: auto;
 }
 
-.hovertip {
+.hovercontainer {
   display: none;
+}
+
+.hovertip {
   position: absolute;
   color: white;
   background-color: #333645;
@@ -17359,10 +17365,34 @@ body {
   padding: 20px;
 }
 .hovertip .hover-subtitle {
+  margin-top: 10px;
   font-size: 0.8125rem;
 }
 .hovertip .hover-title {
   font-size: 1.125rem;
+  padding-bottom: 11px;
+  position: relative;
+}
+
+.underline {
+  display: block;
+  background-color: white;
+  text-align: center;
+  width: 28px;
+  height: 3px;
+  margin: auto;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 37px;
+  border-style: solid;
+  border-color: #333645 transparent transparent transparent;
+  top: 100%;
+  left: calc(33.333333333% + 5px);
+  border-radius: 0 0 100% 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
