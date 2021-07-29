@@ -17323,10 +17323,20 @@ body {
 .brands-container .container img {
   max-width: 100%;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .brands-container .container img {
+    flex-shrink: 0;
+  }
+}
 .brands-container .container .logo-div {
   position: relative;
   text-align: center;
   padding: 0 20px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .brands-container .container .logo-div {
+    padding: 0 15px;
+  }
 }
 .brands-container .container .logo-div:hover .colored {
   display: block;
@@ -17336,6 +17346,12 @@ body {
 }
 .brands-container .container .logo-div:hover .hovercontainer {
   display: block;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .brands-container .container .logo-div {
+    display: flex;
+    flex-grow: 1;
+  }
 }
 @media (min-width: 1260px) {
   .brands-container .container {
@@ -17348,6 +17364,11 @@ body {
 .brands-container .container .colored {
   display: none;
   margin: auto;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .brands-container .container .colored {
+    margin: 0;
+  }
 }
 
 .hovercontainer {
@@ -17372,6 +17393,11 @@ body {
   font-size: 1.125rem;
   padding-bottom: 11px;
   position: relative;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .hovertip {
+    left: calc(20px - ((260px - (100% - 40px))) / 2);
+  }
 }
 
 .underline {

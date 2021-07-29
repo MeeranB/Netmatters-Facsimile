@@ -15,11 +15,17 @@
     display: flex;
     img {
         max-width: 100%;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            flex-shrink: 0;
+        }
     }
     .logo-div {
         position: relative;
         text-align: center;
         padding: 0 20px;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            padding: 0 15px;
+        }
         &:hover {
             .colored {
                 display: block;
@@ -31,6 +37,10 @@
                 display: block;
             }
         }
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: flex;
+            flex-grow: 1;
+        }
     }
     @media (min-width: map-get($grid-breakpoints, "xl")) {
         height: 70px;
@@ -40,6 +50,9 @@
     }
     .colored {
         display: none;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin: 0;
+        }
         margin: auto;
     }
 }
@@ -71,6 +84,9 @@
         font-size: 1.125rem;
         padding-bottom: 11px;
         position: relative;
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(20px - ((260px - (100% - 40px))) / 2);
     }
 }
 
