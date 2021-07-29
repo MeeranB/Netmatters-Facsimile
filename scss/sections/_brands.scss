@@ -1,6 +1,7 @@
 @use '../custom' as *;
 
 .brands-container {
+    
     border-top: 1px solid black;
     padding: 50px 0px;
     @media (min-width: map-get($grid-breakpoints, "xl" )) {
@@ -14,6 +15,7 @@
         max-width: 100%;
     }
     .logo-div {
+        position: relative;
         text-align: center;
         padding: 0 20px;
         &:hover {
@@ -22,6 +24,9 @@
             }
             .greyscale {
                 display: none;
+            }
+            .hovertip {
+                display: block;
             }
         }
     }
@@ -34,5 +39,29 @@
     .colored {
         display: none;
         margin: auto;
+    }
+}
+
+.hovertip {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: #333645;
+    width: 260px;
+    min-width: 260px;
+    //Shifting 20px to left aligns tooltip to image (as the logo div has 20px padding
+    //Width of the image is 100% of the logo div, minus the 40px total padding
+    //Difference between logo width and image width is (260px - width of image)
+    //In order to centre tooltip, the tooltip must be shifted by half the difference of the image and logo width difference
+    //This will provide the layout [half of tooltip and image difference] [image] [other half of tooltip difference]
+    left: calc(20px - calc(calc(260px - calc(100% - 40px))) / 2);
+    //Logo div height + container padding-top
+    bottom: calc(100% + 50px);
+    padding: 20px;
+    .hover-subtitle {
+        font-size: 0.8125rem;
+    }
+    .hover-title {
+        font-size: 1.125rem;
     }
 }

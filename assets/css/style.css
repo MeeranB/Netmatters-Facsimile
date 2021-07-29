@@ -17321,6 +17321,7 @@ body {
   max-width: 100%;
 }
 .brands-container .container .logo-div {
+  position: relative;
   text-align: center;
   padding: 0 20px;
 }
@@ -17329,6 +17330,9 @@ body {
 }
 .brands-container .container .logo-div:hover .greyscale {
   display: none;
+}
+.brands-container .container .logo-div:hover .hovertip {
+  display: block;
 }
 @media (min-width: 1260px) {
   .brands-container .container {
@@ -17341,6 +17345,24 @@ body {
 .brands-container .container .colored {
   display: none;
   margin: auto;
+}
+
+.hovertip {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: #333645;
+  width: 260px;
+  min-width: 260px;
+  left: calc(20px - calc(calc(260px - calc(100% - 40px))) / 2);
+  bottom: calc(100% + 50px);
+  padding: 20px;
+}
+.hovertip .hover-subtitle {
+  font-size: 0.8125rem;
+}
+.hovertip .hover-title {
+  font-size: 1.125rem;
 }
 
 /*# sourceMappingURL=style.css.map */
