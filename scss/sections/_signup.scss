@@ -1,0 +1,90 @@
+@use '../custom' as *;
+
+.signup {
+    background-color: #DDDDDD;
+}
+
+form {
+    h2 {
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+    padding: 50px 30px;
+    .name,
+    .email {
+        font-weight: 600;
+        &::after {
+            content: ' *';
+            color: red;
+        }
+    }
+    .marketing-check {
+        display: flex;
+        font-weight: 600;
+        .checker {
+            display: inline-block;
+            border: 3px solid #333645;
+            border-radius: 3px;
+            min-width: 32px;
+            height: 32px;
+            position: relative;
+            margin-right: 20px;
+            &::after {
+                content: "";
+                position: absolute;
+                opacity: 0;
+                height: 9px;
+                width: 16px;
+                border-right: 2px solid white;
+                border-bottom: 2px solid white;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(130deg) rotateX(180deg);
+            }
+        }
+        p {
+            font-weight: 600;
+            display: inline;
+            line-height: 2em;
+        }
+    }
+
+    .btn {
+        background-color: #333645;
+        border-color: #333645;
+        color: white;
+        margin-left: 5px;
+        &:hover {
+            color: white;
+            background-color: #22242e;
+            border-color: #191a22;
+        }
+    }
+
+    #marketing:checked ~ .marketing-check {
+        .checker {
+            background-color: #333645;
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .clickarea {
+        display: flex;
+        flex-direction: row;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .form-control {
+        height: 47px;
+        border-radius: 2px;
+        @media (min-width: map-get($grid-breakpoints, "lg" )) {
+            width: 425px;
+        }
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            width: 540px;
+        }
+    }
+}
