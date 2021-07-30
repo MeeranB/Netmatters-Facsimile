@@ -17476,6 +17476,10 @@ form .marketing-check p {
   display: inline;
   line-height: 2em;
 }
+form .marketing-check p a {
+  color: #212529;
+  text-decoration: underline;
+}
 form .btn {
   background-color: #333645;
   border-color: #333645;
