@@ -17614,4 +17614,20 @@ footer p a:hover {
   z-index: 1;
 }
 
+.endorsements-container .container {
+  padding: 50px 0px;
+}
+.endorsements-container .container .colored {
+  display: none;
+}
+.endorsements-container .container .first-row {
+  margin-bottom: 20px;
+}
+.endorsements-container .container .logo-div:hover .colored {
+  display: block;
+}
+.endorsements-container .container .logo-div:hover .greyscale {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

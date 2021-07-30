@@ -1,0 +1,21 @@
+@use '../custom' as *;
+
+.endorsements-container .container{
+    padding: 50px 0px;
+    .colored {
+        display: none;
+    }
+    .first-row {
+        margin-bottom: 20px;
+    }
+    .logo-div {
+        &:hover {
+            .colored {
+                display: block;
+            }
+            .greyscale {
+                display: none;
+            }
+        }
+    }
+}
