@@ -25,6 +25,10 @@ footer {
     .row {
         margin-left: 15px;
         margin-right: 15px;
+        @media (min-width: (map-get($grid-breakpoints, "md" ))) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
     address,
     p {

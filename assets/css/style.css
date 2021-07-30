@@ -17545,6 +17545,12 @@ footer .row {
   margin-left: 15px;
   margin-right: 15px;
 }
+@media (min-width: 768px) {
+  footer .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
 footer address,
 footer p {
   line-height: 1.375rem;
