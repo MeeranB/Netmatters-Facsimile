@@ -9,7 +9,6 @@
 }
 
 .search-bar-container {
-    margin-left: 20px;
     .btn {
         width: 63px;
     }
@@ -17,11 +16,30 @@
 
 .navbar {
   //Refers to upper header
-    .btn-primary {
-        margin-right: 20px;
+    .nav-item {
+      margin: auto 0;
     }
-    .btn-secondary {
-        color: white;
+    .nav-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+      border-radius: 3px;
+      padding: 5px 15px;
+      &--blue {
+        margin-right: 20px;
+        background-color: map-get($menu, "it");
+        border-color: map-get($menu, "it")
+      }
+      &--grey {
+        background-color: #999aa2;
+        border-color: #999aa2;
+        &:hover {
+          background-color: #84858f;
+          border-color: #797a85;
+        }
+      }
     }
 }
 

@@ -1,6 +1,3 @@
-//Imports custom sass
-@use 'custom';
-
 //Imports fonts
 @use '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
@@ -21,3 +18,6 @@
 @use 'sections/signup';
 @use 'sections/footer';
 @use 'sections/endorsements';
+
+//Imports custom sass
+@use 'custom';

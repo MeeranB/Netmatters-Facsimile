@@ -16,6 +16,7 @@
 .search-bar-container {
     width: 303px;
     height: 56px;
+    margin-left: 20px;
     input {
         height: 100%;
     }
@@ -59,6 +60,9 @@
 }
 
 .actions {
+    .nav-btn--container {
+        height: 100%;
+    }
     @media (max-width: map-get($grid-breakpoints, "sm" )) {
         width: 120px;
         padding-left: 0;
