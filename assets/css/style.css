@@ -16061,6 +16061,8 @@ h3 {
   cursor: pointer;
   color: white;
   border-radius: 3px;
+}
+.navbar .nav-btn--blue, .navbar .nav-btn--grey {
   padding: 5px 15px;
 }
 .navbar .nav-btn--blue {
@@ -16068,13 +16070,23 @@ h3 {
   background-color: #4183d7;
   border-color: #4183d7;
 }
-.navbar .nav-btn--grey {
+.navbar .nav-btn--blue:hover {
+  background-color: #2a6ec6;
+  border-color: #2665b5;
+}
+.navbar .nav-btn--grey, .navbar .nav-btn--search {
   background-color: #999aa2;
   border-color: #999aa2;
 }
-.navbar .nav-btn--grey:hover {
+.navbar .nav-btn--grey:hover, .navbar .nav-btn--search:hover {
   background-color: #84858f;
   border-color: #797a85;
+}
+.navbar .nav-btn--search {
+  padding: 7px 20px 3px;
+}
+.navbar .nav-btn--search:hover {
+  text-decoration: none;
 }
 
 .menu-btn {
@@ -16397,6 +16409,10 @@ body {
 
 .fa-mouse {
   font-size: 1.2rem;
+}
+
+.fa-search {
+  font-size: 1.4375rem;
 }
 
 .nav-ul {

@@ -26,18 +26,30 @@
       cursor: pointer;
       color: white;
       border-radius: 3px;
-      padding: 5px 15px;
+      &--blue, &--grey {
+        padding: 5px 15px;
+      }
       &--blue {
         margin-right: 20px;
         background-color: map-get($menu, "it");
-        border-color: map-get($menu, "it")
+        border-color: map-get($menu, "it");
+        &:hover {
+          background-color: #2a6ec6;
+          border-color: #2665b5;
+        }
       }
-      &--grey {
+      &--grey, &--search {
         background-color: #999aa2;
         border-color: #999aa2;
         &:hover {
           background-color: #84858f;
           border-color: #797a85;
+        }
+      }
+      &--search {
+        padding: 7px 20px 3px;
+        &:hover {
+          text-decoration: none;
         }
       }
     }
