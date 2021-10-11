@@ -87,12 +87,15 @@
     @media (max-width: map-get($grid-breakpoints, "md" )) {
         flex: initial;
     }
+    display: flex;
+    align-items: center;
     padding: 0;
     margin-right: 0px;
     //TODO: fix smallest viewports to have a responsive logo and fixed margins
     .logo {
         @media (max-width: map-get($grid-breakpoints, "sm" )) {
             @include img-fluid;
+            max-height: 100%;
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 max-width: none;
             }

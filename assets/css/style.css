@@ -16675,6 +16675,8 @@ body {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
   padding: 0;
   margin-right: 0px;
 }
@@ -16687,6 +16689,7 @@ body {
   .navbar-brand .logo {
     max-width: 100%;
     height: auto;
+    max-height: 100%;
   }
 }
 @media (max-width: 576px) and (-ms-high-contrast: none), (max-width: 576px) and (-ms-high-contrast: active) {
