@@ -16412,7 +16412,7 @@ body {
 }
 
 .fa-search {
-  font-size: 1.4375rem;
+  font-size: 1.2rem;
 }
 
 .nav-ul {
@@ -16620,24 +16620,31 @@ body {
   width: 100%;
   margin-top: 11px;
   height: 47px;
-  background-color: rgba(229, 229, 229, 0.1);
-  outline: 1px solid rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 .search-bar-container-mobile input,
 .search-bar-container-mobile #search-field-mobile {
   font-size: 0.875rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e5e5e5;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
   height: 100%;
+  border-radius: 2px;
 }
-.search-bar-container-mobile #search-mobile,
-.search-bar-container-mobile .input-group-append {
+.search-bar-container-mobile #search-mobile {
   border: none;
-  outline: none;
+  border-radius: 0;
   height: 100%;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-  background-color: rgba(229, 229, 229, 0.1);
+  background-color: #e5e5e5;
+}
+.search-bar-container-mobile .input-group-append {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  margin-left: 0;
 }
 
 .header-navbar {
