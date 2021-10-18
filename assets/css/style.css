@@ -16870,6 +16870,7 @@ body {
 }
 .hiding::before {
   display: inherit;
+  overflow-x: hidden;
   z-index: -1;
   position: absolute;
   content: "";

@@ -71,6 +71,7 @@
     &::before {
         //Fills menu bar the whole width
         display: inherit;
+        overflow-x: hidden;
         z-index: -1;
         position: absolute;
         content: '';
