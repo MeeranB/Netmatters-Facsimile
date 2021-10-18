@@ -42,10 +42,11 @@ form {
                 transform: translate(-50%, -50%) rotateZ(130deg) rotateX(180deg);
             }
         }
-        p {
+        span {
             font-weight: 600;
             display: inline;
             line-height: 2em;
+            margin-bottom: 30px;
             a {
                 color: #212529;
                 text-decoration: underline;

@@ -27,6 +27,7 @@
 
 .img-container {
     overflow: hidden;
+    position: relative;
     @media (min-width: map-get($grid-breakpoints, "lg")) {
         img {
             transition: all .25s cubic-bezier(.215,.61,.355,1);
@@ -36,10 +37,6 @@
             }
         }
     }
-}
-
-.img-link {
-    position: relative;
 }
 
 .img-label-container {
@@ -57,13 +54,37 @@
     &--web {
         background-color: map-get($menu, "web");
     }
-    a {
+    span {
         color: white;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
 .card-title--web {
     color: map-get($menu, "web");
+}
+
+.card {
+    height: 100%;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--short-header {
+            justify-content: flex-start;
+            .card-title-link {
+                margin-bottom: auto;
+                .card-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .card-text {
+            margin-bottom: 25px;
+        }
+    }
 }
 
 .card-owner {

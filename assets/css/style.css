@@ -16101,6 +16101,9 @@ h3 {
   cursor: pointer;
   background-color: #333645;
 }
+.menu-btn:hover {
+  background-color: #22242e;
+}
 
 .menu-btn__burger {
   width: 33px;
@@ -16140,21 +16143,34 @@ h3 {
   }
 }
 
-.btn-marketing {
+.btn-marketing,
+.btn-slider {
   color: white;
   background-color: #2ecc71;
   border-color: #2ecc71;
   text-align: center;
   font-size: 1.25rem;
   border-radius: 3px;
+}
+.btn-marketing:hover,
+.btn-slider:hover {
+  color: white;
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+
+.btn-marketing {
   padding-bottom: 1rem;
   padding-left: 20px;
   padding-right: 20px;
 }
-.btn-marketing:hover {
-  color: white;
-  background-color: #25a25a;
-  border-color: #25a25a;
+
+.btn-slider {
+  height: 60px;
+  padding: 5px 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .btn-web {
@@ -16310,6 +16326,22 @@ h3 {
 .btn-culture:hover {
   background-color: #ebebeb;
   border-color: #e0e0e0;
+}
+
+.card-body .btn-it, .card-body .btn-web {
+  align-self: flex-start;
+  margin: 0;
+}
+.card-body .btn-it:hover, .card-body .btn-web:hover {
+  color: white;
+}
+.card-body .btn-it:hover {
+  background-color: #286abd;
+  border-color: #286abd;
+}
+.card-body .btn-web:hover {
+  background-color: #79539a;
+  border-color: #79539a;
 }
 
 body {
@@ -16772,8 +16804,8 @@ body {
 
 .nav-ul {
   position: relative;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
   width: 940px;
   height: 100%;
 }
@@ -17300,6 +17332,7 @@ body {
 
 .img-container {
   overflow: hidden;
+  position: relative;
 }
 @media (min-width: 992px) {
   .img-container img {
@@ -17309,10 +17342,6 @@ body {
     opacity: 0.75;
     transform: scale(1.1);
   }
-}
-
-.img-link {
-  position: relative;
 }
 
 .img-label-container {
@@ -17331,12 +17360,36 @@ body {
 .img-label-container--web {
   background-color: #926fb1;
 }
-.img-label-container a {
+.img-label-container span {
   color: white;
+}
+.img-label-container span:hover {
+  text-decoration: underline;
 }
 
 .card-title--web {
   color: #926fb1;
+}
+
+.card {
+  height: 100%;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-body--short-header {
+  justify-content: flex-start;
+}
+.card .card-body--short-header .card-title-link {
+  margin-bottom: auto;
+}
+.card .card-body--short-header .card-title-link .card-title {
+  margin-bottom: 0;
+}
+.card .card-body .card-text {
+  margin-bottom: 25px;
 }
 
 .card-owner {
@@ -17526,12 +17579,13 @@ form .marketing-check .checker::after {
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(130deg) rotateX(180deg);
 }
-form .marketing-check p {
+form .marketing-check span {
   font-weight: 600;
   display: inline;
   line-height: 2em;
+  margin-bottom: 30px;
 }
-form .marketing-check p a {
+form .marketing-check span a {
   color: #212529;
   text-decoration: underline;
 }
@@ -17577,6 +17631,21 @@ footer {
   padding: 47px 0px 43px;
   background-color: #333645;
 }
+footer .ul-sm-center {
+  width: 90%;
+  display: inline-block;
+  float: right;
+}
+@media (min-width: 768px) {
+  footer .ul-md-center {
+    width: 70%;
+  }
+}
+@media (min-width: 1260px) {
+  footer .ul-md-center {
+    width: 100%;
+  }
+}
 footer h4 {
   font-size: 1rem;
   color: white;
@@ -17584,6 +17653,7 @@ footer h4 {
   margin-bottom: 26px;
 }
 footer ul {
+  display: inline-block;
   line-height: 1.375rem;
   font-size: 0.8125rem;
   color: white;
@@ -17628,16 +17698,20 @@ footer p a:hover {
 .sub-footer {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
+  padding-top: 15px;
   justify-content: space-between;
   border-top: 1px solid #888;
 }
 .sub-footer p {
+  max-width: 50%;
   margin-bottom: 0;
 }
 
-.footer-icons {
+.footer-icons .footer-link {
   color: white;
+}
+.footer-icons .footer-link:hover {
+  text-decoration: none;
 }
 .footer-icons .icon-facebook::after {
   background-color: #3B5998;
@@ -17662,9 +17736,9 @@ footer p a:hover {
   content: "";
   position: absolute;
   width: 34px;
-  height: 34px;
+  height: 38px;
   border-radius: 50%;
-  top: 0;
+  top: -5px;
   left: calc(50% - 17px);
   z-index: -1;
 }

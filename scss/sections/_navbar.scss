@@ -12,8 +12,8 @@
 
 .nav-ul {
     position: relative;
-    border-right: 1px solid hsla(0,0%,100%,.1);
-    border-left: 1px solid rgba(0,0,0,.25);
+    border-left: 1px solid hsla(0,0%,100%,.1);
+    border-right: 1px solid rgba(0,0,0,.25);
     width: 940px;
     height: 100%;
     @media (min-width: map-get($grid-breakpoints, "xl" )) {

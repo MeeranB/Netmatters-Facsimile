@@ -7,7 +7,7 @@
     <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <style type="text/css">
+    <style>
     /* Embedded CSS to fix bug in IE11 where li menus with display: none do not comply to list-style rules. */
         ul li {
             list-style: none;
@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                         <div class="input-group search-bar-container align-self-center d-none d-md-inline-flex">
-                            <input type="text" id="search-field" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+                            <input type="text" id="search-field" class="form-control" placeholder="Search..." aria-label="Search">
                             <div class="input-group-append"><a href="#" class="nav-btn nav-btn--search"><i class="fas fa-search fa-lg"></i></a></div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="d-md-none align-self-center" height="32px" viewBox="0 0 24 24" width="32px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
@@ -156,20 +156,11 @@
                     <div class="marketing-caption container">
                         <p class="h1">Digital Marketing</p><br>
                         <p class="h1-caption">Generating you new business through <br class="h1-caption-br"> results-driven marketing activities.</p><br>
-                        <a href="#" class="btn btn-lg btn-marketing"><span class="vertical-center">See how we can help you &#8594;</span></a>
+                        <a href="#" class="btn btn-lg btn-slider"><span class="vertical-center">See how we can help you &#8594;</span></a>
                     </div>
                 </div>
-                <!-- <div class="slide-controls w-100">
-                    <span class="slide-button"></span>
-                    <span class="slide-button"></span>
-                    <span class="slide-button"></span>
-                    <span class="slide-button"></span>
-                    <span class="slide-button"></span>
-                    <span class="slide-button"></span>
-                </div> -->
-            <img>
+            </div>
         </div>
-    </div>
     <!-- /slider -->
     <!-- infocards-->
     <div class="container info-card-section-container">
@@ -367,13 +358,13 @@
                     <div class="card">
                         <div class="img-container">
                             <a href="#" class="img-link"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/business-development-pAAs.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--it"><a href="#">Careers</a></div>
+                                <div class="img-label-container img-label-container--it"><span>Careers</span></div>
                             </a>
                         </div>
                         <div class="card-body">
                             <a href="#"><h6 class="card-title">Business Development / Account Manager</h6></a>
                             <p class="card-text">Salary Range £25k+ per annum + Bonus + Benefits Hours 40 hours per week, Monday – Friday Location Wy...</p>
-                            <button type="button" class="btn btn-primary text-uppercase">Read more</button>
+                            <button type="button" class="btn btn-it text-uppercase">Read more</button>
                             <div class="card-owner">
                                 <img class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/elliott-peacock-w8vu.jpg" alt="">
                                 <div class="card-owner-details">
@@ -388,7 +379,7 @@
                     <div class="card">
                         <div class="img-container">
                             <a href="#"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/why-shopify-is-vewi.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--web"><a href="#">Insights</a></div>
+                                <div class="img-label-container img-label-container--web"><span>Insights</span></div>
                             </a>
                         </div>
                         <div class="card-body">
@@ -409,11 +400,11 @@
                     <div class="card">
                         <div class="img-container">
                             <a href="#"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/office-administrator-X2vz.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--web"><a href="#">Careers</a></div>
+                                <div class="img-label-container img-label-container--web"><span>Careers</span></div>
                             </a>
                         </div>
-                        <div class="card-body">
-                            <a href="#"><h6 class="card-title card-title--web">Office Administrator / Receptionist</h6></a>
+                        <div class="card-body card-body--short-header">
+                            <a href="#" class="card-title-link"><h6 class="card-title card-title--web">Office Administrator / Receptionist</h6></a>
                             <p class="card-text">Salary Range £18k-£24k + Bonuses + Pension Hours 40 hours per week, Monday – Friday Location Wymondh...</p>
                             <a href="#" class="btn btn-web"><span>Read more</span></a>
                             <div class="card-owner">
@@ -501,8 +492,8 @@
                     <div class="clickarea">
                         <input type="checkbox" id="marketing" hidden>
                         <label class="marketing-check" for="marketing">
-                            <div class="checker"></div>
-                            <p>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we use your data.</p>
+                            <span class="checker"></span>
+                            <span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we use your data.</span>
                         </label>
                     </div>
                     <a href="#" class="btn btn-culture"><span>Subscribe</span></a>
@@ -515,103 +506,113 @@
     <footer>
         <div class="footer-container container">
             <div class="row">
-                <div class="footer-section col-6 px-0 col-xl px-md-3">
-                    <h4>About netmatters</h4>
-                    <ul>
-                        <li>
-                            <a href="#">News</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Careers</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Team</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Office Tour</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Cookie Policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="#">Environmental Policy</a>
-                        </li>
-                    </ul>
+                <div class="footer-section col-12 col-sm-6 px-0 col-xl px-md-3">
+                    <div class="ul-sm-center ul-md-center">
+                        <h4>About netmatters</h4>
+                        <ul>
+                            <li>
+                                <a href="#">News</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Careers</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Office Tour</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#">Environmental Policy</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-section col-6 px-0 col-xl">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li>
-                            <a href="#">Bespoke Software</a>
-                        </li>
-                        <li>
-                            <a href="#">IT Support</a>
-                        </li>
-                        <li>
-                            <a href="#">Digital Marketing</a>
-                        </li>
-                        <li>
-                            <a href="#">Telecoms Services</a>
-                        </li>
-                        <li>
-                            <a href="">Web Design</a>
-                        </li>
-                        <li>
-                            <a href="">Cyber Security</a>
-                        </li>
-                        <li>
-                            <a href="">Developer Training</a>
-                        </li>
-                    </ul>
+                <div class="footer-section col-12 col-sm-6 px-0 col-xl">
+                    <div class="ul-sm-center ul-md-center">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Bespoke Software</a>
+                            </li>
+                            <li>
+                                <a href="#">IT Support</a>
+                            </li>
+                            <li>
+                                <a href="#">Digital Marketing</a>
+                            </li>
+                            <li>
+                                <a href="#">Telecoms Services</a>
+                            </li>
+                            <li>
+                                <a href="">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="">Cyber Security</a>
+                            </li>
+                            <li>
+                                <a href="">Developer Training</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-section col-6 px-0 col-md-4 col-xl px-md-3">
-                    <h4>Cambridge Office</h4>
-                    <address>
-                        Unit 1.28, <br>
-                        St John's Innovation Center, <br>
-                        Cowley road, Milton, <br>
-                        Cambridge, <br>
-                        CB4 0WS
-                    </address>
-                    <p>Tel: <a href="tel:01223375772">01223 37 57 72</a></p>
+                <div class="footer-section col-12 col-sm-6 px-0 col-md-4 col-xl px-md-3">
+                    <div class="ul-sm-center">
+                        <h4>Cambridge Office</h4>
+                        <address>
+                            Unit 1.28, <br>
+                            St John's Innovation Center, <br>
+                            Cowley road, Milton, <br>
+                            Cambridge, <br>
+                            CB4 0WS
+                        </address>
+                        <p>Tel: <a href="tel:01223375772">01223 37 57 72</a></p>
+                    </div>
                 </div>
-                <div class="footer-section col-6 px-0 col-md-4 col-xl">
-                    <h4>Wymondham Office</h4>
-                    <address>
-                        Unit 15, <br>
-                        Penfold Drive, <br>
-                        Gateway 11 Business Park, <br>
-                        Wymondham, Norfolk, <br>
-                        NR18 0WZ
-                    </address>
-                    <p>Tel: <a href="tel:01603704020">01603 70 40 20</a></p>
+                <div class="footer-section col-12 col-sm-6 px-0 col-md-4 col-xl">
+                    <div class="ul-sm-center">
+                        <h4>Wymondham Office</h4>
+                        <address>
+                            Unit 15, <br>
+                            Penfold Drive, <br>
+                            Gateway 11 Business Park, <br>
+                            Wymondham, Norfolk, <br>
+                            NR18 0WZ
+                        </address>
+                        <p>Tel: <a href="tel:01603704020">01603 70 40 20</a></p>
+                    </div>
                 </div>
                 <div class="footer-section col-12 px-0 col-md-4 col-xl">
-                    <h4>Great Yarmouth Office</h4>
-                    <address>
-                        Suite F23, <br>
-                        Beacon Innovation Centre, <br>
-                        Beacon Park, Gorleston, <br>
-                        Great Yarmouth, Norfolk, <br>
-                        NR31 7RA
-                    </address>
-                    <p>Tel: <a href="tel:01493603204">01493 60 32 04</a></p>
+                    <div class="ul-sm-center">
+                        <h4>Great Yarmouth Office</h4>
+                        <address>
+                            Suite F23, <br>
+                            Beacon Innovation Centre, <br>
+                            Beacon Park, Gorleston, <br>
+                            Great Yarmouth, Norfolk, <br>
+                            NR31 7RA
+                        </address>
+                        <p>Tel: <a href="tel:01493603204">01493 60 32 04</a></p>
+                    </div>
                 </div>
             </div>
             <div class="sub-footer">
-                <p>© Copyright Netmatters Ltd. 2021. All rights reserved.<span class="sitemap-link"> - <a href="#">Sitemap</a></p>
-                </span>
+                <p>© Copyright Netmatters Ltd. 2021. All rights reserved.<span class="sitemap-link"> - <a href="#">Sitemap</a></span>
+                </p>
                 <div class="footer-icons">
-                    <span class="icon-facebook"></span>
-                    <span class="icon-twitter"></span>
-                    <span class="icon-instagram"></span>
-                    <span class="icon-linkedin"></span>
+                    <a class="footer-link" href="#"><span class="icon-facebook"></span></a>
+                    <a class="footer-link" href="#"><span class="icon-twitter"></span></a>
+                    <a class="footer-link" href="#"><span class="icon-instagram"></span></a>
+                    <a class="footer-link" href="#"><span class="icon-linkedin"></span></a>
                 </div>
             </div>
         </div>
