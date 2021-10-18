@@ -4,14 +4,26 @@ footer {
     .ul {
         &-sm-center {
             width: 90%;
-            display: inline-block;
             float: right;
+            @media (min-width: (map-get($grid-breakpoints, "xl" ))) {
+                width: 100%
+            }
         }
         &-md-center {
             @media (min-width: (map-get($grid-breakpoints, "md" ))) {
                 width: 70%;
             }
             @media (min-width: (map-get($grid-breakpoints, "xl" ))) {
+                width: 100%
+            }
+        }
+        &-alt-center {
+            width: 90%;
+            float: right;
+            @media (min-width: (map-get($grid-breakpoints, "sm" ))) {
+                width: 70%
+            }
+            @media (min-width: (map-get($grid-breakpoints, "md" ))) {
                 width: 100%
             }
         }

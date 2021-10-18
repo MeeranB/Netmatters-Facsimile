@@ -17633,8 +17633,12 @@ footer {
 }
 footer .ul-sm-center {
   width: 90%;
-  display: inline-block;
   float: right;
+}
+@media (min-width: 1260px) {
+  footer .ul-sm-center {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   footer .ul-md-center {
@@ -17643,6 +17647,20 @@ footer .ul-sm-center {
 }
 @media (min-width: 1260px) {
   footer .ul-md-center {
+    width: 100%;
+  }
+}
+footer .ul-alt-center {
+  width: 90%;
+  float: right;
+}
+@media (min-width: 576px) {
+  footer .ul-alt-center {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  footer .ul-alt-center {
     width: 100%;
   }
 }
