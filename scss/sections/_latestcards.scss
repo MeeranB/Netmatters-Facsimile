@@ -27,6 +27,7 @@
 
 .img-container {
     overflow: hidden;
+    position: relative;
     @media (min-width: map-get($grid-breakpoints, "lg")) {
         img {
             transition: all .25s cubic-bezier(.215,.61,.355,1);
@@ -36,10 +37,6 @@
             }
         }
     }
-}
-
-.img-link {
-    position: relative;
 }
 
 .img-label-container {
@@ -57,8 +54,11 @@
     &--web {
         background-color: map-get($menu, "web");
     }
-    a {
+    span {
         color: white;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -66,13 +66,42 @@
     color: map-get($menu, "web");
 }
 
+.card {
+    height: 100%;
+    box-shadow: 35px 0px 20px 7px rgb(0 0 0 / 8%);
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--short-header {
+            justify-content: flex-start;
+            .card-title-link {
+                margin-bottom: auto;
+                .card-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .card-text {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
 .card-owner {
     display: flex;
+    position: relative;
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
     font-size: 0.875rem;
     &-img {
+        // position: absolute;
+        // bottom: 0;
         height: 47px;
         border-radius: 50%;
         margin-right: 20px;
@@ -88,5 +117,8 @@
     }
     &-date {
         color: #666666;
+    }
+    &-details {
+        white-space: nowrap;
     }
 }

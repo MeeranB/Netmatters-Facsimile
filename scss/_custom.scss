@@ -57,5 +57,9 @@ $grid-breakpoints: (
 //custom cards
 $card-spacer-x: 1.875rem;
 
+//nav overrides
+$navbar-light-color: white;
+$navbar-light-hover-color: white;
+
 //Import Bootstrap (import location irrelevant due to use of default flags)
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

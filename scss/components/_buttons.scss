@@ -9,7 +9,6 @@
 }
 
 .search-bar-container {
-    margin-left: 20px;
     .btn {
         width: 63px;
     }
@@ -17,11 +16,42 @@
 
 .navbar {
   //Refers to upper header
-    .btn-primary {
-        margin-right: 20px;
+    .nav-item {
+      margin: auto 0;
     }
-    .btn-secondary {
-        color: white;
+    .nav-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+      border-radius: 3px;
+      &--blue, &--grey {
+        padding: 5px 15px;
+      }
+      &--blue {
+        margin-right: 20px;
+        background-color: map-get($menu, "it");
+        border-color: map-get($menu, "it");
+        &:hover {
+          background-color: #2a6ec6;
+          border-color: #2665b5;
+        }
+      }
+      &--grey, &--search {
+        background-color: #999aa2;
+        border-color: #999aa2;
+        &:hover {
+          background-color: #84858f;
+          border-color: #797a85;
+        }
+      }
+      &--search {
+        padding: 7px 20px 3px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 }
 
@@ -37,6 +67,9 @@
   height: 56px;
   cursor: pointer;
   background-color:#333645;
+  &:hover {
+    background-color: #22242e;
+  }
 }
 
 .menu-btn__burger {
@@ -77,21 +110,33 @@
 
 // <slider>
 
-.btn-marketing {
+.btn-marketing,
+.btn-slider {
   color: white;
   background-color: map-get($menu, "marketing");
   border-color: map-get($menu, "marketing");
   text-align: center;
   font-size: 1.25rem;
   border-radius: 3px;
-  padding-bottom: 1rem;
-  padding-left: 20px;
-  padding-right: 20px;
   &:hover {
     color: white;
     background-color: map-get($menu-dark, "marketing");
     border-color: map-get($menu-dark, "marketing")
   }
+}
+
+.btn-marketing {
+  padding-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-slider {
+  height: 60px;
+  padding: 5px 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 //<infocards>
@@ -138,3 +183,27 @@
 }
 
 //</culture>
+
+//<latest>
+
+.card-body {
+    .btn-it, .btn-web {
+      align-self: flex-start;
+      margin: 0;
+      &:hover {
+        color: white;
+      }
+    }
+    .btn-it {
+      &:hover {
+        background-color: map-get($menu-dark, "it");
+        border-color: map-get($menu-dark, "it")
+      }
+    }
+    .btn-web {
+      &:hover {
+        background-color: map-get($menu-dark, "web");
+        border-color: map-get($menu-dark, "web")
+      }
+    }
+}

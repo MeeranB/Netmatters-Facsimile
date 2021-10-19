@@ -14,14 +14,16 @@
 }
 
 .search-bar-container {
-    width: 303px;
+    width: auto;
     height: 56px;
+    margin-left: 20px;
+    justify-content: center;
     input {
         height: 100%;
     }
-    @media (max-width: map-get($grid-breakpoints, "xl")) {
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
         justify-content: center;
-        width: auto;
+        width: 303px;
     }
 }
 
@@ -29,36 +31,46 @@
     width: 100%;
     margin-top: 11px;
     height: 47px;
-    background-color: rgba(229,229,229,.1);
-    outline: 1px solid hsla(0,0%,100%,.2);
-    border: 2px solid rgba(0,0,0,.1);
     input,
     #search-field-mobile {
         font-size: 0.875rem;
-        background-color: rgba(0,0,0,.1);
+        background-color: rgb(229, 229, 229);
+        border-top: 2px solid rgba(0,0,0,.1);
+        border-bottom: 2px solid rgba(0,0,0,.1);
+        border-left: 2px solid rgba(0,0,0,.1);
+        border-right: none;
         box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
         height: 100%;
+        border-radius: 2px;
     }
-    #search-mobile,
-    .input-group-append {
+    #search-mobile {
         border: none;
-        outline: none;
+        border-radius: 0;
         height: 100%;
         box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-        background-color: rgba(229,229,229,.1);
+        background-color: rgb(229, 229, 229);
+    }
+    .input-group-append {
+        border-top: 2px solid rgba(0,0,0,.1);
+        border-bottom: 2px solid rgba(0,0,0,.1);
+        border-right: 2px solid rgba(0,0,0,.1);
+        margin-left: 0;
     }
 }
 
 .header-navbar {
-    height: 110px;
+    height: 168px;
     padding-top: 20px;
     padding-bottom: 20px;
-    @media (max-width: map-get($grid-breakpoints, "md")) {
-        height: 168px;
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+        height: 110px;
     }
 }
 
 .actions {
+    .nav-btn--container {
+        height: 100%;
+    }
     @media (max-width: map-get($grid-breakpoints, "sm" )) {
         width: 120px;
         padding-left: 0;
@@ -73,18 +85,23 @@
 
 
 .navbar-brand {
-    @media (max-width: map-get($grid-breakpoints, "md" )) {
-        flex: initial;
-    }
+    display: flex;
+    align-items: center;
     padding: 0;
     margin-right: 0px;
-    //TODO: fix smallest viewports to have a responsive logo and fixed margins
+    @media (max-width: 767px) {
+      flex: initial;
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @media (min-width: map-get($grid-breakpoints, "xl")) {
+            flex-grow: 1;
+        }
+    }
     .logo {
-        @media (max-width: map-get($grid-breakpoints, "sm" )) {
-            @include img-fluid;
-            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                max-width: none;
-            }
+        @include img-fluid;
+        max-height: 100%;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            max-width: none;
         }
         @media (min-width: map-get($grid-breakpoints, "sm" )) {
             width: 402px;
@@ -105,18 +122,17 @@
             height: 64.2px;
         }
     }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @media (min-width: map-get($grid-breakpoints, "xl")) {
-            flex-grow: 1;
-        }
-    }
 }
 
 #search-field,
 #search-field-mobile {
     //between extra large and medium screensizes
-    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
+    display: inline-block;
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
         display: none;
+    }
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
+        display: inline-block;
     }
 }
 

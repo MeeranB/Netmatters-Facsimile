@@ -1,6 +1,33 @@
 @use '../custom' as *;
 
 footer {
+    .ul {
+        &-sm-center {
+            width: 90%;
+            float: right;
+            @media (min-width: (map-get($grid-breakpoints, "xl" ))) {
+                width: 100%
+            }
+        }
+        &-md-center {
+            @media (min-width: (map-get($grid-breakpoints, "md" ))) {
+                width: 70%;
+            }
+            @media (min-width: (map-get($grid-breakpoints, "xl" ))) {
+                width: 100%
+            }
+        }
+        &-alt-center {
+            width: 90%;
+            float: right;
+            @media (min-width: (map-get($grid-breakpoints, "sm" ))) {
+                width: 70%
+            }
+            @media (min-width: (map-get($grid-breakpoints, "md" ))) {
+                width: 100%
+            }
+        }
+    }
     padding: 47px 0px 43px;
     background-color: #333645;
     h4 {
@@ -10,6 +37,7 @@ footer {
         margin-bottom: 26px;
     }
     ul {
+        display: inline-block;
         line-height: 1.375rem;
         font-size: 0.8125rem;
         color: white;
@@ -53,16 +81,22 @@ footer {
 .sub-footer {
     display: flex;
     flex-direction: row;
-    padding-top: 10px;
+    padding-top: 15px;
     justify-content: space-between;
     border-top: 1px solid #888;
     p {
+        max-width: 50%;
         margin-bottom: 0;
     }
 }
 
 .footer-icons {
-    color: white;
+    .footer-link {
+        color: white;
+        &:hover {
+            text-decoration: none;
+        }
+    }
     .icon-facebook::after {
         background-color: #3B5998;
     }
@@ -88,9 +122,9 @@ footer {
             content: '';
             position: absolute;
             width: 34px;
-            height: 34px;
+            height: 38px;
             border-radius: 50%;
-            top: 0;
+            top: -5px;
             left: calc(50% - 17px);
             z-index: -1;
         }
