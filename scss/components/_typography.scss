@@ -249,6 +249,14 @@ body {
 .card-text {
   font-size: 0.8125rem;
   color: #666;
+  line-height: 1.5rem;
+}
+
+.card-body {
+    .card-title {
+      line-height: 1.5rem;
+      font-weight: 600;
+    }
 }
 
 // </latest-cards>

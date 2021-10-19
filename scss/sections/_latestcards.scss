@@ -68,6 +68,7 @@
 
 .card {
     height: 100%;
+    box-shadow: 35px 0px 20px 7px rgb(0 0 0 / 8%);
     .card-body {
         display: flex;
         flex-direction: column;
@@ -87,13 +88,20 @@
     }
 }
 
+.no-shadow {
+    box-shadow: none;
+}
+
 .card-owner {
     display: flex;
+    position: relative;
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
     font-size: 0.875rem;
     &-img {
+        // position: absolute;
+        // bottom: 0;
         height: 47px;
         border-radius: 50%;
         margin-right: 20px;
@@ -109,5 +117,8 @@
     }
     &-date {
         color: #666666;
+    }
+    &-details {
+        white-space: nowrap;
     }
 }

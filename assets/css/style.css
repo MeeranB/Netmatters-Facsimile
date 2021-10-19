@@ -16619,6 +16619,12 @@ body {
 .card-text {
   font-size: 0.8125rem;
   color: #666;
+  line-height: 1.5rem;
+}
+
+.card-body .card-title {
+  line-height: 1.5rem;
+  font-weight: 600;
 }
 
 .initial-view {
@@ -17374,6 +17380,7 @@ body {
 
 .card {
   height: 100%;
+  box-shadow: 35px 0px 20px 7px rgba(0, 0, 0, 0.08);
 }
 .card .card-body {
   display: flex;
@@ -17393,8 +17400,13 @@ body {
   margin-bottom: 25px;
 }
 
+.no-shadow {
+  box-shadow: none;
+}
+
 .card-owner {
   display: flex;
+  position: relative;
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #ccc;
@@ -17416,6 +17428,9 @@ body {
 }
 .card-owner-date {
   color: #666666;
+}
+.card-owner-details {
+  white-space: nowrap;
 }
 
 .brands-container {
