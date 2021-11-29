@@ -17422,6 +17422,7 @@ body {
   margin-bottom: 0px;
 }
 .card-owner-title {
+  white-space: normal;
   line-height: 1.5rem;
   color: #333645;
   font-weight: 600;
