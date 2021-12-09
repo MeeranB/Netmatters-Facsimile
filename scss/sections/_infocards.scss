@@ -16,6 +16,16 @@
     height: auto;
     margin: 0.9375rem auto;
     .info-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+        padding: 30px;
+        min-height: 100%;
+        .btn-container {
+            margin-top: auto;
+        }
         &:hover {
             //These styles remove color from elements that lose color on hover
             .h2,
@@ -49,19 +59,6 @@
                 }
             }
         }
-    }
-}
-
-.info-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
-    padding: 30px;
-    min-height: 100%;
-    .btn-container {
-        margin-top: auto;
     }
 }
 

@@ -17045,6 +17045,18 @@ body {
   height: auto;
   margin: 0.9375rem auto;
 }
+.info-card-container .info-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  min-height: 100%;
+}
+.info-card-container .info-card .btn-container {
+  margin-top: auto;
+}
 .info-card-container .info-card:hover .h2,
 .info-card-container .info-card:hover .p {
   color: white;
@@ -17110,19 +17122,6 @@ body {
 .info-card-container .info-card--school:hover .btn,
 .info-card-container .info-card--school:hover span[class^=icon-]::before {
   color: #926fb1;
-}
-
-.info-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  min-height: 100%;
-}
-.info-card .btn-container {
-  margin-top: auto;
 }
 
 .info-link {
