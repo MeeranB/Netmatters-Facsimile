@@ -125,27 +125,6 @@ body {
     }
 }
 
-.icon {
-    &-embed2 {
-        color: map-get($menu, "web");
-    }
-    &-display {
-        color: map-get($menu, "it");
-    }
-    &-phone_in_talk {
-        color: map-get($menu, "telecoms");
-    }
-    &-apps {
-        color: map-get($menu, "software");
-    }
-    &-bar-graph {
-        color: map-get($menu, "marketing");
-    }
-    &-security {
-        color: map-get($menu, "security");
-    }
-}
-
 .nav-item:hover {
     .nav-link span {
         color: white;

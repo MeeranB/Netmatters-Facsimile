@@ -16474,25 +16474,6 @@ body {
   line-height: 1.7;
 }
 
-.icon-embed2 {
-  color: #926fb1;
-}
-.icon-display {
-  color: #4183d7;
-}
-.icon-phone_in_talk {
-  color: #d64541;
-}
-.icon-apps {
-  color: #67809f;
-}
-.icon-bar-graph {
-  color: #2ecc71;
-}
-.icon-security {
-  color: #f62459;
-}
-
 .nav-item:hover .nav-link span {
   color: white;
 }
@@ -17041,9 +17022,45 @@ body {
 }
 
 .info-card-container {
-  width: 100%;
-  height: auto;
   margin: 0.9375rem auto;
+}
+.info-card-container .info-card {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+}
+.info-card-container .info-card .btn-container {
+  margin-top: auto;
+}
+.info-card-container .info-card .info-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.info-card-container .info-card .icon-container {
+  text-align: center;
+  position: relative;
+}
+.info-card-container .info-card .icon-container .card-icon {
+  color: white;
+}
+.info-card-container .info-card .icon-container .card-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.info-card-container .info-card .icon-container .card-icon::before {
+  position: relative;
+  z-index: 1;
+}
+.info-card-container .info-card:hover {
+  cursor: pointer;
 }
 .info-card-container .info-card:hover .h2,
 .info-card-container .info-card:hover .p {
@@ -17051,13 +17068,8 @@ body {
 }
 .info-card-container .info-card:hover .h2::after,
 .info-card-container .info-card:hover .btn,
-.info-card-container .info-card:hover span[class^=icon-]::after {
+.info-card-container .info-card:hover .card-icon::after {
   background-color: white;
-  z-index: 0;
-}
-.info-card-container .info-card:hover span[class^=icon-]::before {
-  position: relative;
-  z-index: 1;
 }
 .info-card-container .info-card:hover .btn {
   border-color: white;
@@ -17066,225 +17078,70 @@ body {
   background-color: #67809f;
 }
 .info-card-container .info-card--apps:hover .btn,
-.info-card-container .info-card--apps:hover span[class^=icon-]::before {
+.info-card-container .info-card--apps:hover .icon-apps::before {
   color: #67809f;
+}
+.info-card-container .info-card .icon-apps::after {
+  background-color: #67809f;
 }
 .info-card-container .info-card--display:hover {
   background-color: #4183d7;
 }
 .info-card-container .info-card--display:hover .btn,
-.info-card-container .info-card--display:hover span[class^=icon-]::before {
+.info-card-container .info-card--display:hover .icon-display::before {
   color: #4183d7;
+}
+.info-card-container .info-card .icon-display::after {
+  background-color: #4183d7;
 }
 .info-card-container .info-card--bar-graph:hover {
   background-color: #2ecc71;
 }
 .info-card-container .info-card--bar-graph:hover .btn,
-.info-card-container .info-card--bar-graph:hover span[class^=icon-]::before {
+.info-card-container .info-card--bar-graph:hover .icon-bar-graph::before {
   color: #2ecc71;
+}
+.info-card-container .info-card .icon-bar-graph::after {
+  background-color: #2ecc71;
 }
 .info-card-container .info-card--phone_in_talk:hover {
   background-color: #d64541;
 }
 .info-card-container .info-card--phone_in_talk:hover .btn,
-.info-card-container .info-card--phone_in_talk:hover span[class^=icon-]::before {
+.info-card-container .info-card--phone_in_talk:hover .icon-phone_in_talk::before {
   color: #d64541;
+}
+.info-card-container .info-card .icon-phone_in_talk::after {
+  background-color: #d64541;
 }
 .info-card-container .info-card--embed2:hover {
   background-color: #926fb1;
 }
 .info-card-container .info-card--embed2:hover .btn,
-.info-card-container .info-card--embed2:hover span[class^=icon-]::before {
+.info-card-container .info-card--embed2:hover .icon-embed2::before {
   color: #926fb1;
+}
+.info-card-container .info-card .icon-embed2::after {
+  background-color: #926fb1;
 }
 .info-card-container .info-card--security:hover {
   background-color: #f62459;
 }
 .info-card-container .info-card--security:hover .btn,
-.info-card-container .info-card--security:hover span[class^=icon-]::before {
+.info-card-container .info-card--security:hover .icon-security::before {
   color: #f62459;
+}
+.info-card-container .info-card .icon-security::after {
+  background-color: #f62459;
 }
 .info-card-container .info-card--school:hover {
   background-color: #926fb1;
 }
 .info-card-container .info-card--school:hover .btn,
-.info-card-container .info-card--school:hover span[class^=icon-]::before {
+.info-card-container .info-card--school:hover .icon-school::before {
   color: #926fb1;
 }
-
-.info-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  min-height: 100%;
-}
-.info-card .btn-container {
-  margin-top: auto;
-}
-
-.info-link {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .info-link--security, .info-link--telecoms {
-    height: 252px;
-  }
-}
-@media (min-width: 992px) {
-  .info-link--security, .info-link--telecoms {
-    height: auto;
-  }
-  .info-link--it {
-    height: 299.33px;
-  }
-}
-@media (min-width: 1260px) {
-  .info-link--it {
-    height: auto;
-  }
-}
-
-.icon-container--apps {
-  text-align: center;
-  position: relative;
-}
-.icon-container--apps .icon-apps {
-  color: white;
-}
-.icon-container--apps .icon-apps::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #67809f;
-}
-
-.icon-container--display {
-  text-align: center;
-  position: relative;
-}
-.icon-container--display .icon-display {
-  color: white;
-}
-.icon-container--display .icon-display::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #4183d7;
-}
-
-.icon-container--bar-graph {
-  text-align: center;
-  position: relative;
-}
-.icon-container--bar-graph .icon-bar-graph {
-  color: white;
-}
-.icon-container--bar-graph .icon-bar-graph::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #2ecc71;
-}
-
-.icon-container--phone_in_talk {
-  text-align: center;
-  position: relative;
-}
-.icon-container--phone_in_talk .icon-phone_in_talk {
-  color: white;
-}
-.icon-container--phone_in_talk .icon-phone_in_talk::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #d64541;
-}
-
-.icon-container--embed2 {
-  text-align: center;
-  position: relative;
-}
-.icon-container--embed2 .icon-embed2 {
-  color: white;
-}
-.icon-container--embed2 .icon-embed2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #926fb1;
-}
-
-.icon-container--security {
-  text-align: center;
-  position: relative;
-}
-.icon-container--security .icon-security {
-  color: white;
-}
-.icon-container--security .icon-security::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
-  background-color: #f62459;
-}
-
-.icon-container--school {
-  text-align: center;
-  position: relative;
-}
-.icon-container--school .icon-school {
-  color: white;
-}
-.icon-container--school .icon-school::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 30px);
-  z-index: -1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 17px;
+.info-card-container .info-card .icon-school::after {
   background-color: #926fb1;
 }
 
