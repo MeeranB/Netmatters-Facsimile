@@ -12,21 +12,44 @@
 }
 
 .info-card-container {
-    width: 100%;
-    height: auto;
     margin: 0.9375rem auto;
     .info-card {
-        display: flex;
-        flex-direction: column;
         border: 1px solid #ccc;
         border-radius: 3px;
         box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
         padding: 30px;
-        min-height: 100%;
+        height: 100%;
         .btn-container {
             margin-top: auto;
         }
+        .info-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .icon-container {
+            text-align: center;
+            position: relative;
+            .card-icon {
+                color: white;
+            }
+            .card-icon::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: calc(50% - 30px);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+            .card-icon::before {
+                //This rule places the icon font above it's containing span
+                position: relative;
+                z-index: 1;
+            }
+        }
         &:hover {
+            cursor: pointer;
             //These styles remove color from elements that lose color on hover
             .h2,
             .p {
@@ -34,82 +57,34 @@
             }
             .h2::after,
             .btn,
-            span[class^="icon-"]::after {
-                //This rule refers to the circle span behind the icon
+            .card-icon::after {
+                //This rule refers to the circle span behind the icon, the text separator and the button
                 background-color: white;
-                z-index: 0;
-            }
-            span[class^="icon-"]::before {
-                //This rule refers to the icon itself
-                position: relative;
-                z-index: 1;
             }
             .btn {
                 border-color: white;
             }
-
         }
         @each $card-type, $color in $icon-colorscheme {
             //These styles apply the respective inverted color scheme to each info-card
             &--#{$card-type}:hover {
+                //Sets info-card background color
                 background-color: $color;
                 .btn,
-                span[class^="icon-"]::before {
+                .icon-#{$card-type}::before {
+                    //Sets icon and buttons hover font
                     color: $color;
                 }
             }
+            .icon-#{$card-type}::after {
+                //Sets icon circle correctly
+                background-color: $color;
+            }
+
         }
     }
 }
 
-.info-link {
-    display: flex;
-    flex-direction: column;
-    //These queries allow info-card content to fill the info-card-container as required so that the call-to-action buttons are consistently positioned.
-    @media (min-width: map-get($grid-breakpoints, "md")) {
-        &--security,
-        &--telecoms {
-            height: 252px;
-        }
-    }
-    @media (min-width: map-get($grid-breakpoints, "lg")) {
-        &--security,
-        &--telecoms {
-            height: auto;
-        }
-        &--it {
-            height: 299.33px;
-        }
-    }
-    @media (min-width: map-get($grid-breakpoints, "xl")) {
-        &--it {
-            height: auto;
-        }
-    }
-}
-
-
-@each $icon, $color in $icon-colorscheme {
-    .icon-container--#{$icon} {
-        text-align: center;
-        position: relative;
-        .icon-#{$icon} {
-            color: white;
-        }
-        .icon-#{$icon}::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: calc(50% - 30px);
-            z-index: -1;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin: 0 auto 17px;
-            background-color: $color;
-        }
-    }
-}
 
 .info-title-container,
 .info-subtitle-container,
