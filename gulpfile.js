@@ -22,5 +22,9 @@ function minifyCSS() {
 }
 
 exports.default = function () {
-    gulp.watch("./app/scss/**/*.scss", gulp.series(compileSass, minifyCSS));
+    gulp.watch(
+        "./app/scss/**/*.scss",
+        { ignoreInitial: false },
+        gulp.series(compileSass, minifyCSS)
+    );
 };
