@@ -2,10 +2,10 @@
 
 .initial-view {
     //Header and slider to be entirely in view upon page load.
-    height: 100vh;
-    min-height: 700px;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    min-height: 700px;
 }
 
 .form-control:focus {

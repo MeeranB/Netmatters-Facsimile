@@ -6,6 +6,8 @@ const sass = require("gulp-sass")(require("sass"));
 const uglifycss = require("gulp-uglifycss");
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
+const autoprefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
 
 function compileSass() {
     return gulp
@@ -16,10 +18,13 @@ function compileSass() {
         .pipe(gulp.dest("./app/assets/css"));
 }
 
-function minifyCSS() {
+function processCSS() {
     return gulp
         .src("./app/assets/css/*.css")
+        .pipe(sourcemaps.init())
+        .pipe(postcss([autoprefixer()]))
         .pipe(uglifycss({ uglyComments: true }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest("./dist/"));
 }
 
@@ -42,7 +47,7 @@ exports.default = gulp.parallel(
         gulp.watch(
             "./app/scss/**/*.scss",
             { ignoreInitial: false },
-            gulp.series(compileSass, minifyCSS)
+            gulp.series(compileSass, processCSS)
         );
     },
     function watchJS() {
