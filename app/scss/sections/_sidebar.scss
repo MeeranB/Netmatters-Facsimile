@@ -1,0 +1,28 @@
+@use '../custom' as *;
+
+.hidden-nav-container {
+    display: none;
+    position: absolute;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 275px;
+    right: -275px;
+    background-color: #333645;
+    color: white;
+    text-transform: uppercase;
+    padding: 21px;
+    nav {
+        height: 200vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 18px 0px 18px;
+        box-shadow:
+        0 0 0 1px hsla(0,0%,100%,.17),
+        0 0 0 2px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        font-size: 1.125rem;
+    }
+}
+
