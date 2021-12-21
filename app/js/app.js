@@ -3,17 +3,43 @@ $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
 });
 
-const checkMenuBtnState = () =>
-    document.querySelector(".is-active") !== null ? true : false;
+const checkWidth = () => $(window).width();
+
+const useMobileSidebar = () => {
+    $(".hamburger").off("click");
+    $(".hamburger").on("click", () => {
+        $(".hamburger").toggleClass("is-active");
+        $("body").addClass("shift-left-mobile");
+        $(".lightbox").show();
+        $(".hidden-nav-container").show();
+    });
+};
+
+const useDesktopSidebar = () => {
+    $(".hamburger").off("click");
+    $(".hamburger").on("click", () => {
+        $(".hamburger").toggleClass("is-active");
+        $("body").addClass("shift-left");
+        $(".lightbox").show();
+        $(".hidden-nav-container").show();
+    });
+};
 
 $(() => {
     const cookieConsent = localStorage.getItem("cookie-consent");
+    const windowWidth = checkWidth();
     if (!cookieConsent) {
         $(".lightbox").show().css("display", "flex");
         $(".cookie-modal").show();
         $("body").css("overflow", "hidden");
     } else if (cookieConsent) {
         $(".lightbox").hide();
+    }
+
+    if (windowWidth < 992) {
+        useMobileSidebar();
+    } else if (windowWidth >= 992) {
+        useDesktopSidebar();
     }
 });
 
@@ -23,11 +49,27 @@ $(".cookie-consent").on("click", () => {
     localStorage.setItem("cookie-consent", true);
 });
 
-$(".hamburger").on("click", () => {
+$(".lightbox").on("click", () => {
     $(".hamburger").toggleClass("is-active");
-    $("body").css("position", "relative");
-    $("body").css("left", "-275px");
-    $("body").css("overflow", "hidden");
-    $(".lightbox").show();
-    $(".hidden-nav-container").show();
+    $("body").removeClass("shift-left");
+    $("body").removeClass("shift-left-mobile");
+    $(".hidden-nav-container").hide();
+    $(".lightbox").hide();
+});
+
+$(window).on("resize", () => {
+    const windowWidth = checkWidth();
+    if (windowWidth < 992) {
+        if ($("body").hasClass("shift-left")) {
+            $("body").removeClass("shift-left");
+            $("body").addClass("shift-left-mobile");
+        }
+        useMobileSidebar();
+    } else if (windowWidth >= 992) {
+        if ($("body").hasClass("shift-left-mobile")) {
+            $("body").removeClass("shift-left-mobile");
+            $("body").addClass("shift-left");
+        }
+        useDesktopSidebar();
+    }
 });

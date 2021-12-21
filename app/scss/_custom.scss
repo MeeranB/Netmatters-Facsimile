@@ -3,6 +3,24 @@ body {
   height: 100%;
 }
 
+.shift-left-mobile {
+  position: relative;
+  left: -275px;
+  overflow: hidden;
+}
+
+.shift-left {
+  position: relative;
+  left: -310px;
+  overflow: hidden;
+}
+
+.shift-right {
+  position: static;
+  left: auto;
+  overflow: visible;
+}
+
 //custom button colors
 $primary: #4183d7;
 $secondary: #999aa2;
