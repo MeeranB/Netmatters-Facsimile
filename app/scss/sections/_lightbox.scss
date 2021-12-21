@@ -1,0 +1,44 @@
+@use '../custom' as *;
+
+.lightbox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    .cookie-modal {
+        display: none;
+        position: fixed;
+        z-index: 1001;
+        background-color: white;
+        font-family: Poppins, sans-serif;
+        color: #666;
+        header {
+            font-size: 26px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e5e5e5;
+            min-height: 16.42857143px;
+        }
+        .modal-body {
+            padding: 20px;
+            margin-bottom: 25px;
+            span {
+                line-height: 1.875rem;
+            }
+        }
+        .options-container {
+            margin-top: 15px;
+            border-top: 1px solid #e5e5e5;
+            padding: 20px;
+            button {
+                align-items: center;
+            }
+        }
+        @media (min-width: map-get($grid-breakpoints, "md" )) {
+            width: 600px;
+        }
+    }
+}

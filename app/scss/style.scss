@@ -1,6 +1,3 @@
-//Imports fonts
-@use '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-
 //Import components
 @use 'components/animations';
 @use 'components/buttons';
@@ -8,6 +5,8 @@
 @use 'components/typography';
 
 //Import sections
+@use 'sections/sidebar';
+@use 'sections/lightbox';
 @use 'sections/upperheader';
 @use 'sections/navbar';
 @use 'sections/slider';

@@ -1,5 +1,24 @@
 body {
   overflow-x: hidden;
+  height: 100%;
+}
+
+.shift-left-mobile {
+  position: relative;
+  left: -275px;
+  overflow: hidden;
+}
+
+.shift-left {
+  position: relative;
+  left: -350px;
+  overflow: hidden;
+}
+
+.shift-right {
+  position: static;
+  left: auto;
+  overflow: visible;
 }
 
 //custom button colors
@@ -66,4 +85,4 @@ $navbar-light-color: white;
 $navbar-light-hover-color: white;
 
 //Import Bootstrap (import location irrelevant due to use of default flags)
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
