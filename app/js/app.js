@@ -19,6 +19,15 @@ const useSidebar = sidebarType => {
     });
 };
 
+const addLightboxSidebarListener = () => {
+    $(".lightbox").on("click", () => {
+        $(".hamburger").removeClass("is-active");
+        $("body").removeClass("shift-left shift-left-mobile");
+        $(".hidden-nav-container").hide();
+        $(".lightbox").hide();
+    });
+};
+
 $(() => {
     const cookieConsent = localStorage.getItem("cookie-consent");
     const windowWidth = checkWidth();
@@ -28,6 +37,7 @@ $(() => {
         $("body").css("overflow", "hidden");
     } else if (cookieConsent) {
         $(".lightbox").hide();
+        addLightboxSidebarListener();
     }
 
     if (windowWidth < 992) {
@@ -39,16 +49,9 @@ $(() => {
 
 $(".cookie-consent").on("click", () => {
     $(".lightbox").hide();
+    addLightboxSidebarListener();
     $("body").css("overflow", "auto");
     localStorage.setItem("cookie-consent", true);
-});
-
-$(".lightbox").on("click", () => {
-    $(".hamburger").toggleClass("is-active");
-    $("body").removeClass("shift-left");
-    $("body").removeClass("shift-left-mobile");
-    $(".hidden-nav-container").hide();
-    $(".lightbox").hide();
 });
 
 $(window).on("resize", () => {
