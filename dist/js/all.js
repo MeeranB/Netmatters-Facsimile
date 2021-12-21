@@ -29,6 +29,20 @@ var useDesktopSidebar = function useDesktopSidebar() {
   });
 };
 
+var useSidebar = function useSidebar(sidebarType) {
+  var bodyStyleMap = {
+    desktop: "shift-left",
+    mobile: "shift-left-mobile"
+  };
+  $(".hamburger").off("click");
+  $(".hamburger").on("click", function () {
+    $(".hamburger").toggleClass("is-active");
+    $("body").addClass(bodyStyleMap[sidebarType]);
+    $(".lightbox").show();
+    $(".hidden-nav-container").show();
+  });
+};
+
 $(function () {
   var cookieConsent = localStorage.getItem("cookie-consent");
   var windowWidth = checkWidth();
@@ -42,9 +56,9 @@ $(function () {
   }
 
   if (windowWidth < 992) {
-    useMobileSidebar();
+    useSidebar("mobile");
   } else if (windowWidth >= 992) {
-    useDesktopSidebar();
+    useSidebar("desktop");
   }
 });
 $(".cookie-consent").on("click", function () {
@@ -68,14 +82,14 @@ $(window).on("resize", function () {
       $("body").addClass("shift-left-mobile");
     }
 
-    useMobileSidebar();
+    useSidebar("mobile");
   } else if (windowWidth >= 992) {
     if ($("body").hasClass("shift-left-mobile")) {
       $("body").removeClass("shift-left-mobile");
       $("body").addClass("shift-left");
     }
 
-    useDesktopSidebar();
+    useSidebar("desktop");
   }
 });
 //# sourceMappingURL=all.js.map
