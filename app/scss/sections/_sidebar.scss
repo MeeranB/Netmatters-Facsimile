@@ -83,5 +83,9 @@
             }
         }
     }
+    @media (min-width: map-get($grid-breakpoints, "lg" )) {
+        width: 350px;
+        right: -350px;
+    }
 }
 

@@ -5,26 +5,6 @@ $(window).on("beforeunload", function () {
 
 const checkWidth = () => $(window).width();
 
-const useMobileSidebar = () => {
-    $(".hamburger").off("click");
-    $(".hamburger").on("click", () => {
-        $(".hamburger").toggleClass("is-active");
-        $("body").addClass("shift-left-mobile");
-        $(".lightbox").show();
-        $(".hidden-nav-container").show();
-    });
-};
-
-const useDesktopSidebar = () => {
-    $(".hamburger").off("click");
-    $(".hamburger").on("click", () => {
-        $(".hamburger").toggleClass("is-active");
-        $("body").addClass("shift-left");
-        $(".lightbox").show();
-        $(".hidden-nav-container").show();
-    });
-};
-
 const useSidebar = sidebarType => {
     const bodyStyleMap = {
         desktop: "shift-left",

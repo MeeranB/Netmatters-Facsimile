@@ -9,26 +9,6 @@ var checkWidth = function checkWidth() {
   return $(window).width();
 };
 
-var useMobileSidebar = function useMobileSidebar() {
-  $(".hamburger").off("click");
-  $(".hamburger").on("click", function () {
-    $(".hamburger").toggleClass("is-active");
-    $("body").addClass("shift-left-mobile");
-    $(".lightbox").show();
-    $(".hidden-nav-container").show();
-  });
-};
-
-var useDesktopSidebar = function useDesktopSidebar() {
-  $(".hamburger").off("click");
-  $(".hamburger").on("click", function () {
-    $(".hamburger").toggleClass("is-active");
-    $("body").addClass("shift-left");
-    $(".lightbox").show();
-    $(".hidden-nav-container").show();
-  });
-};
-
 var useSidebar = function useSidebar(sidebarType) {
   var bodyStyleMap = {
     desktop: "shift-left",
