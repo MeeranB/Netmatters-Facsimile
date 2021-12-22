@@ -2,11 +2,12 @@
 
 .hidden-nav-container {
     display: none;
-    position: absolute;
+    position: fixed;
     overflow-y: scroll;
     height: 100vh;
     width: 275px;
-    right: -275px;
+    top: 0;
+    right: 0;
     background-color: #333645;
     color: white;
     text-transform: uppercase;
@@ -85,7 +86,7 @@
     }
     @media (min-width: map-get($grid-breakpoints, "lg" )) {
         width: 350px;
-        right: -350px;
+        right: 0;
     }
 }
 

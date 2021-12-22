@@ -4,6 +4,7 @@
 $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
 });
+$.scrollDirection.init();
 
 var checkWidth = function checkWidth() {
   return $(window).width();
@@ -76,4 +77,25 @@ $(window).on("resize", function () {
     useSidebar("desktop");
   }
 });
+var header = $(".main-header");
+var scrollingHeader = header.clone({
+  withDataAndEvents: true
+}).addClass("scrolling-header");
+var hoverMenu = $("#hover-nav-container")[0];
+var options = {
+  threshold: 0
+};
+var observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      console.log("header has left the screen");
+      $("body").prepend(scrollingHeader);
+      useSidebar("desktop");
+    } else if (entry.isIntersecting) {
+      console.log("header has entered the screen");
+      scrollingHeader.remove();
+    }
+  });
+}, options);
+observer.observe(hoverMenu);
 //# sourceMappingURL=all.js.map

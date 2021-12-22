@@ -3,6 +3,8 @@ $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
 });
 
+$.scrollDirection.init();
+
 const checkWidth = () => $(window).width();
 
 const useSidebar = sidebarType => {
@@ -70,3 +72,26 @@ $(window).on("resize", () => {
         useSidebar("desktop");
     }
 });
+
+const header = $(".main-header");
+const scrollingHeader = header
+    .clone({ withDataAndEvents: true })
+    .addClass("scrolling-header");
+const hoverMenu = $("#hover-nav-container")[0];
+
+const options = { threshold: 0 };
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            console.log("header has left the screen");
+            $("body").prepend(scrollingHeader);
+            useSidebar("desktop");
+        } else if (entry.isIntersecting) {
+            console.log("header has entered the screen");
+            scrollingHeader.remove();
+        }
+    });
+}, options);
+
+observer.observe(hoverMenu);
