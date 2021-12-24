@@ -89,13 +89,47 @@ var observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
       console.log("header has left the screen");
-      $("body").prepend(scrollingHeader);
+      scrollHeaderHander();
       useSidebar("desktop");
     } else if (entry.isIntersecting) {
       console.log("header has entered the screen");
+      $(window).off("scrollDirection");
       scrollingHeader.remove();
     }
   });
 }, options);
-observer.observe(hoverMenu);
+$.scrollDirection.init({// options
+});
+
+var scrollHeaderHander = function scrollHeaderHander() {
+  var currentScrollDirection;
+  $(window).on("scrollDirection", function () {
+    if ($.scrollDirection.isScrollDown) {
+      scrollingHeader.addClass("scrolling-header-removed");
+      setTimeout(function () {
+        scrollingHeader.remove();
+        currentScrollDirection = "down";
+      }, 800);
+    } else if ($.scrollDirection.isScrollUp) {
+      if (currentScrollDirection == "down") {
+        setTimeout(function () {
+          scrollingHeader.removeClass("scrolling-header-removed");
+          scrollingHeader.addClass("scrolling-header-added");
+          var windowWidth = checkWidth();
+          $("body").prepend(scrollingHeader);
+
+          if (windowWidth < 992) {
+            useSidebar("mobile");
+          } else if (windowWidth >= 992) {
+            useSidebar("desktop");
+          }
+        }, 250);
+        currentScrollDirection = "up";
+      }
+    }
+  });
+};
+
+observer.observe(hoverMenu); //TODO: handle case when main header intersects with scrolling header correctly
+//refactor scrolling code
 //# sourceMappingURL=all.js.map
