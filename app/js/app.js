@@ -47,6 +47,19 @@ $(() => {
     } else if (windowWidth >= 992) {
         useSidebar("desktop");
     }
+
+    $(".slider").slick({
+        autoplay: true,
+        arrows: false,
+        dots: true,
+        appendDots: $(".container--slider"),
+    });
+});
+
+$(".slider").on("init", function (event, slick) {
+    $(".slick-track").css("height", "100%");
+    $(".slick-list").css("height", "100%");
+    $(".slick-dots").addClass("adjustdots");
 });
 
 $(".cookie-consent").on("click", () => {

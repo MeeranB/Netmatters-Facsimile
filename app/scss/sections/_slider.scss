@@ -1,41 +1,40 @@
 @use '../custom' as *;
 
 .container--slider {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    flex: 1;
-    position: relative;
-    background: #000;
-    overflow: hidden;
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(270deg,transparent 25%,#000);
-    }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        background-image: url("/images/marketing-slide.jpeg");
-        background-size: cover;
-        background-position: center;
-    }
 }
 
-.slide--marketing {
-    position: relative;
-    flex: 1;
-    object-fit: cover;
-    object-position: center bottom;
-    border-top: solid 1px #666;
+.adjustdots {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    width: 30%;
+    justify-content: center;
+    bottom: 0;
+}
+
+.slider {
+    height: 100%;
     width: 100%;
-    opacity: 0.5;
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        display: none;
+    flex: 1;
+    position: relative;
+    background: black;
+    overflow: hidden;
+    .slide {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        background-position: center top;
+        background-size: cover;
+        &--marketing {
+            background-image: url("/app/images/marketing-slide.jpeg");
+        }
+        &-it {
+            background-image: url("/app/images/it-support.webp");
+        }
     }
 }
 
@@ -43,21 +42,23 @@
     //Containing div to align marketing caption appropriately
     display: flex;
     width: 100%;
-    position: absolute;
+    height: 100%;
     justify-content: center;
     align-content: center;
-    .marketing-caption {
+    background: linear-gradient(270deg,transparent 25%,#000);
+    &-content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
         color: white;
-        z-index: 1;
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            margin-left: 0;
+        .btn {
+            margin-right: auto;
         }
     }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        //IE specific styles
-        top: 0;
-        left: 0;
-   }
+    .slick-track, .slick-list {
+        height: 100%;
+    }
 }
 
 .h1,
