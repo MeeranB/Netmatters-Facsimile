@@ -3,6 +3,8 @@ $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
 });
 
+$.scrollDirection.init();
+
 const checkWidth = () => $(window).width();
 
 const useSidebar = sidebarType => {
@@ -70,3 +72,62 @@ $(window).on("resize", () => {
         useSidebar("desktop");
     }
 });
+
+const header = $(".main-header");
+const scrollingHeader = header
+    .clone({ withDataAndEvents: true })
+    .addClass("scrolling-header");
+const hoverMenu = $("#hover-nav-container")[0];
+
+const options = { threshold: 0 };
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            console.log("header has left the screen");
+            scrollHeaderHander();
+            useSidebar("desktop");
+        } else if (entry.isIntersecting) {
+            console.log("header has entered the screen");
+            $(window).off("scrollDirection");
+            scrollingHeader.remove();
+        }
+    });
+}, options);
+
+$.scrollDirection.init({
+    // options
+});
+
+const scrollHeaderHander = () => {
+    let currentScrollDirection;
+    $(window).on("scrollDirection", function () {
+        if ($.scrollDirection.isScrollDown) {
+            scrollingHeader.addClass("scrolling-header-removed");
+            setTimeout(() => {
+                scrollingHeader.remove();
+                currentScrollDirection = "down";
+            }, 800);
+        } else if ($.scrollDirection.isScrollUp) {
+            if (currentScrollDirection == "down") {
+                setTimeout(() => {
+                    scrollingHeader.removeClass("scrolling-header-removed");
+                    scrollingHeader.addClass("scrolling-header-added");
+                    const windowWidth = checkWidth();
+                    $("body").prepend(scrollingHeader);
+                    if (windowWidth < 992) {
+                        useSidebar("mobile");
+                    } else if (windowWidth >= 992) {
+                        useSidebar("desktop");
+                    }
+                }, 250);
+                currentScrollDirection = "up";
+            }
+        }
+    });
+};
+
+observer.observe(hoverMenu);
+
+//TODO: handle case when main header intersects with scrolling header correctly
+//refactor scrolling code

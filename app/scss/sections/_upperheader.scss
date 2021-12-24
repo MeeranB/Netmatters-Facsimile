@@ -152,4 +152,42 @@
      }
  }
 
+ .scrolling-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    &-added {
+        animation: slide-down 0.8s ease;
+    }
+    &-removed {
+        animation: slide-up 0.8s ease;
+    }
+  }
+  
+  @keyframes slide-down {
+    0% {
+        transform: translateY(-250px);
+    }
+    50% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(-250px);
+    }
+  }
+
+
 
