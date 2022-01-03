@@ -52,7 +52,7 @@ $(() => {
         autoplay: true,
         arrows: false,
         dots: true,
-        appendDots: $(".container--slider"),
+        appendDots: $(".slider"),
     });
 });
 

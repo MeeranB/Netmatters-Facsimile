@@ -56,7 +56,7 @@ $(function () {
     autoplay: true,
     arrows: false,
     dots: true,
-    appendDots: $(".container--slider")
+    appendDots: $(".slider")
   });
 });
 $(".slider").on("init", function (event, slick) {
