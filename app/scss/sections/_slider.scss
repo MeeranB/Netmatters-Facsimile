@@ -48,22 +48,22 @@
         background-position: center top;
         background-size: cover;
         &--design {
-            background-image: url("/app/images/web-design.jpg");
+            background-image: url("images/web-design.jpg");
         }
         &--it {
-            background-image: url("/app/images/it-support.jpg");
+            background-image: url("images/it-support.jpg");
         }
         &--telecoms {
-            background-image: url("/app/images/telecoms-services.jpg");
+            background-image: url("images/telecoms-services.jpg");
         }
         &--software {
-            background-image: url("/app/images/bespoke-software.jpg");
+            background-image: url("images/bespoke-software.jpg");
         }
         &--marketing {
-            background-image: url("/app/images/marketing-slide.jpeg");
+            background-image: url("images/marketing-slide.jpeg");
         }
         &--security {
-            background-image: url("/app/images/cyber-security.jpg");
+            background-image: url("images/cyber-security.jpg");
         }
     }
 }
