@@ -64,6 +64,7 @@ $(".slider").on("init", function (event, slick) {
 
 $(".cookie-consent").on("click", () => {
     $(".lightbox").hide();
+    $(".cookie-modal").hide();
     addLightboxSidebarListener();
     $("body").css("overflow", "auto");
     localStorage.setItem("cookie-consent", true);
