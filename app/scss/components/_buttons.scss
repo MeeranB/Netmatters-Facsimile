@@ -111,8 +111,7 @@
 
 // <slider>
 
-.btn-marketing,
-.btn-slider {
+.btn-marketing {
   color: white;
   background-color: map-get($menu, "marketing");
   border-color: map-get($menu, "marketing");
@@ -126,13 +125,41 @@
   }
 }
 
+// $menu: (
+//   "web": #926fb1,
+//   "it": #4183d7,
+//   "telecoms": #d64541,
+//   "software": #67809f,
+//   "marketing": #2ecc71,
+//   "security": #f62459,
+//   "culture": white
+// );
+
 .btn-slider {
   height: 60px;
   padding: 5px 20px;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  &:hover {
+    color: white;
+  }
 }
+
+@each $menu, $color in $menu {
+  .btn-slider-#{$menu} {
+    background-color: $color;
+    border-color: $color;
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
 
 //<infocards>
 
