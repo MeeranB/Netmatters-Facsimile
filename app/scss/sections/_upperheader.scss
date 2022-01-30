@@ -58,6 +58,57 @@
     }
 }
 
+.hamburger {
+    margin-top: 9px;
+    margin-left: 20px;
+    border-radius: 3px;
+    width: 63px;
+    height: 56px;
+    cursor: pointer;
+    background-color:#333645;
+    &:hover {
+      background-color: #22242e;
+    }
+    .is-active {
+        background-color: white;
+    }
+    .hamburger-box .hamburger-inner {
+        background-color: white;
+        width: 33px;
+        height: 3px;
+        &::before, &::after {
+            width: 33px;
+            height: 3px;
+            background-color: white;
+        }
+    }
+    .hamburger-inner {
+        position: absolute;
+        top: 5px;
+        border-radius: 0px;
+        &::before {
+            border-radius: 0px;
+            top: -8px;
+        }
+        &::after {
+            border-radius: 0px;
+            bottom: -8px;
+        }
+    }
+  }
+  
+  .title {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    top: 19px;
+    left: 0px;
+    color: white;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: 15.5px;
+    }
+  }
+
 .header-navbar {
     height: 168px;
     padding-top: 20px;

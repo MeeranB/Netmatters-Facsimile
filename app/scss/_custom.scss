@@ -1,24 +1,29 @@
 body {
+  position: relative;
   overflow-x: hidden;
   height: 100%;
+  left: 0;
+  transition-property: left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .shift-left-mobile {
   position: relative;
   left: -275px;
   overflow: hidden;
+  // transition-property: left;
+  // transition-duration: 0.5s;
+  // transition-timing-function: ease-in-out;
 }
 
 .shift-left {
   position: relative;
   left: -350px;
   overflow: hidden;
-}
-
-.shift-right {
-  position: static;
-  left: auto;
-  overflow: visible;
+  // transition-property: left;
+  // transition-duration: 0.5s;
+  // transition-timing-function: ease-in-out;
 }
 
 //custom button colors

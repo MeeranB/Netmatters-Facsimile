@@ -25,7 +25,7 @@ const addLightboxSidebarListener = () => {
     $(".lightbox").on("click", () => {
         $(".hamburger").removeClass("is-active");
         $("body").removeClass("shift-left shift-left-mobile");
-        $(".hidden-nav-container").hide();
+        $(".hidden-nav-container").delay(500).fadeOut(0);
         $(".lightbox").hide();
     });
 };
@@ -97,11 +97,9 @@ const options = { threshold: 0 };
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
-            console.log("header has left the screen");
             scrollHeaderHander();
             useSidebar("desktop");
         } else if (entry.isIntersecting) {
-            console.log("header has entered the screen");
             $(window).off("scrollDirection");
             scrollingHeader.remove();
         }
