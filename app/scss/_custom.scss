@@ -12,18 +12,16 @@ body {
   position: relative;
   left: -275px;
   overflow: hidden;
-  // transition-property: left;
-  // transition-duration: 0.5s;
-  // transition-timing-function: ease-in-out;
 }
 
 .shift-left {
   position: relative;
   left: -350px;
   overflow: hidden;
-  // transition-property: left;
-  // transition-duration: 0.5s;
-  // transition-timing-function: ease-in-out;
+}
+
+.menu-shift-left {
+  right: 0;
 }
 
 //custom button colors

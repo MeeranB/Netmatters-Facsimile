@@ -17,15 +17,26 @@ const useSidebar = sidebarType => {
         $(".hamburger").toggleClass("is-active");
         $("body").addClass(bodyStyleMap[sidebarType]);
         $(".lightbox").show();
-        $(".hidden-nav-container").show();
+        $(".hidden-nav-container").css("right", "0");
     });
 };
 
-const addLightboxSidebarListener = () => {
+const addDesktopLightboxSidebarListener = () => {
+    console.log("using desktop sidebar listener");
     $(".lightbox").on("click", () => {
         $(".hamburger").removeClass("is-active");
         $("body").removeClass("shift-left shift-left-mobile");
-        $(".hidden-nav-container").delay(500).fadeOut(0);
+        $(".hidden-nav-container").css("right", "-350px");
+        $(".lightbox").hide();
+    });
+};
+
+const addMobileLightboxSidebarListener = () => {
+    console.log("using mobile sidebar listener");
+    $(".lightbox").on("click", () => {
+        $(".hamburger").removeClass("is-active");
+        $("body").removeClass("shift-left shift-left-mobile");
+        $(".hidden-nav-container").css("right", "-275px");
         $(".lightbox").hide();
     });
 };
@@ -39,13 +50,16 @@ $(() => {
         $("body").css("overflow", "hidden");
     } else if (cookieConsent) {
         $(".lightbox").hide();
-        addLightboxSidebarListener();
     }
 
     if (windowWidth < 992) {
         useSidebar("mobile");
+        $(".lightbox").off("click");
+        addMobileLightboxSidebarListener();
     } else if (windowWidth >= 992) {
         useSidebar("desktop");
+        $(".lightbox").off("click");
+        addDesktopLightboxSidebarListener();
     }
 
     $(".slider").slick({
@@ -63,11 +77,18 @@ $(".slider").on("init", function (event, slick) {
 });
 
 $(".cookie-consent").on("click", () => {
+    const windowWidth = checkWidth();
+
     $(".lightbox").hide();
     $(".cookie-modal").hide();
-    addLightboxSidebarListener();
     $("body").css("overflow", "auto");
     localStorage.setItem("cookie-consent", true);
+
+    if (windowWidth >= 992) {
+        addDesktopLightboxSidebarListener();
+    } else if (windowWidth < 992) {
+        addMobileLightboxSidebarListener();
+    }
 });
 
 $(window).on("resize", () => {
@@ -77,12 +98,24 @@ $(window).on("resize", () => {
             $("body").removeClass("shift-left");
             $("body").addClass("shift-left-mobile");
         }
+        $(".lightbox").off("click");
+        console.log("removed lightbox event");
+        if ($(".hidden-nav-container").css("right") != 0) {
+            $(".hidden-nav-container").css("right", "-275px");
+        }
+        addMobileLightboxSidebarListener();
         useSidebar("mobile");
     } else if (windowWidth >= 992) {
         if ($("body").hasClass("shift-left-mobile")) {
             $("body").removeClass("shift-left-mobile");
             $("body").addClass("shift-left");
         }
+        $(".lightbox").off("click");
+        console.log("removed lightbox event");
+        if ($(".hidden-nav-container").css("right") != 0) {
+            $(".hidden-nav-container").css("right", "-350px");
+        }
+        addDesktopLightboxSidebarListener();
         useSidebar("desktop");
     }
 });
