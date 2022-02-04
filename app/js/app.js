@@ -50,16 +50,15 @@ $(() => {
         $("body").css("overflow", "hidden");
     } else if (cookieConsent) {
         $(".lightbox").hide();
-    }
-
-    if (windowWidth < 992) {
-        useSidebar("mobile");
-        $(".lightbox").off("click");
-        addMobileLightboxSidebarListener();
-    } else if (windowWidth >= 992) {
-        useSidebar("desktop");
-        $(".lightbox").off("click");
-        addDesktopLightboxSidebarListener();
+        if (windowWidth < 992) {
+            useSidebar("mobile");
+            $(".lightbox").off("click");
+            addMobileLightboxSidebarListener();
+        } else if (windowWidth >= 992) {
+            useSidebar("desktop");
+            $(".lightbox").off("click");
+            addDesktopLightboxSidebarListener();
+        }
     }
 
     $(".slider").slick({

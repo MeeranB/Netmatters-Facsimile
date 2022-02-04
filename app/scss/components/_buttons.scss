@@ -125,15 +125,6 @@
   }
 }
 
-// $menu: (
-//   "web": #926fb1,
-//   "it": #4183d7,
-//   "telecoms": #d64541,
-//   "software": #67809f,
-//   "marketing": #2ecc71,
-//   "security": #f62459,
-//   "culture": white
-// );
 
 .btn-slider {
   height: 60px;
@@ -184,6 +175,26 @@
       }
     }
 }    
+
+
+.btn-settings {
+  margin-bottom: 30px;
+  background-color: #999AA2;
+  @media (min-width: map-get($grid-breakpoints, "sm" )) {
+    margin-bottom:  0px;
+  }
+  &:hover {
+    color: white;
+    background-color: #84858f;
+  }
+}
+
+.btn-consent {
+  &:hover {
+    color: white;
+    background-color: #7e57a0;
+  }
+}
 
 //</infocards>
 
