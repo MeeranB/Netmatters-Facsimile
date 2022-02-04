@@ -22,7 +22,6 @@ const useSidebar = sidebarType => {
 };
 
 const addDesktopLightboxSidebarListener = () => {
-    console.log("using desktop sidebar listener");
     $(".lightbox").on("click", () => {
         $(".hamburger").removeClass("is-active");
         $("body").removeClass("shift-left shift-left-mobile");
@@ -32,7 +31,6 @@ const addDesktopLightboxSidebarListener = () => {
 };
 
 const addMobileLightboxSidebarListener = () => {
-    console.log("using mobile sidebar listener");
     $(".lightbox").on("click", () => {
         $(".hamburger").removeClass("is-active");
         $("body").removeClass("shift-left shift-left-mobile");
@@ -98,7 +96,6 @@ $(window).on("resize", () => {
             $("body").addClass("shift-left-mobile");
         }
         $(".lightbox").off("click");
-        console.log("removed lightbox event");
         if ($(".hidden-nav-container").css("right") != 0) {
             $(".hidden-nav-container").css("right", "-275px");
         }
@@ -110,7 +107,6 @@ $(window).on("resize", () => {
             $("body").addClass("shift-left");
         }
         $(".lightbox").off("click");
-        console.log("removed lightbox event");
         if ($(".hidden-nav-container").css("right") != 0) {
             $(".hidden-nav-container").css("right", "-350px");
         }

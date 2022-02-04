@@ -25,7 +25,6 @@ var useSidebar = function useSidebar(sidebarType) {
 };
 
 var addDesktopLightboxSidebarListener = function addDesktopLightboxSidebarListener() {
-  console.log("using desktop sidebar listener");
   $(".lightbox").on("click", function () {
     $(".hamburger").removeClass("is-active");
     $("body").removeClass("shift-left shift-left-mobile");
@@ -35,7 +34,6 @@ var addDesktopLightboxSidebarListener = function addDesktopLightboxSidebarListen
 };
 
 var addMobileLightboxSidebarListener = function addMobileLightboxSidebarListener() {
-  console.log("using mobile sidebar listener");
   $(".lightbox").on("click", function () {
     $(".hamburger").removeClass("is-active");
     $("body").removeClass("shift-left shift-left-mobile");
@@ -101,7 +99,6 @@ $(window).on("resize", function () {
     }
 
     $(".lightbox").off("click");
-    console.log("removed lightbox event");
 
     if ($(".hidden-nav-container").css("right") != 0) {
       $(".hidden-nav-container").css("right", "-275px");
@@ -116,7 +113,6 @@ $(window).on("resize", function () {
     }
 
     $(".lightbox").off("click");
-    console.log("removed lightbox event");
 
     if ($(".hidden-nav-container").css("right") != 0) {
       $(".hidden-nav-container").css("right", "-350px");
