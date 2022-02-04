@@ -100,7 +100,7 @@ $(window).on("resize", function () {
 
     $(".lightbox").off("click");
 
-    if ($(".hidden-nav-container").css("right") != 0) {
+    if ($(".hidden-nav-container").css("right") != "0px") {
       $(".hidden-nav-container").css("right", "-275px");
     }
 
@@ -114,7 +114,7 @@ $(window).on("resize", function () {
 
     $(".lightbox").off("click");
 
-    if ($(".hidden-nav-container").css("right") != 0) {
+    if ($(".hidden-nav-container").css("right") != "0px") {
       $(".hidden-nav-container").css("right", "-350px");
     }
 

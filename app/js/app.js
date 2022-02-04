@@ -96,7 +96,7 @@ $(window).on("resize", () => {
             $("body").addClass("shift-left-mobile");
         }
         $(".lightbox").off("click");
-        if ($(".hidden-nav-container").css("right") != 0) {
+        if ($(".hidden-nav-container").css("right") != "0px") {
             $(".hidden-nav-container").css("right", "-275px");
         }
         addMobileLightboxSidebarListener();
@@ -107,7 +107,7 @@ $(window).on("resize", () => {
             $("body").addClass("shift-left");
         }
         $(".lightbox").off("click");
-        if ($(".hidden-nav-container").css("right") != 0) {
+        if ($(".hidden-nav-container").css("right") != "0px") {
             $(".hidden-nav-container").css("right", "-350px");
         }
         addDesktopLightboxSidebarListener();
