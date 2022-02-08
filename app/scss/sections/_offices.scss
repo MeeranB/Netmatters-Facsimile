@@ -1,0 +1,9 @@
+@use '../custom' as *;
+
+.compact-nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    color: red;
+}
