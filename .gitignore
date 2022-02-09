@@ -11,8 +11,4 @@ node_modules
 prepros.config
 .vscode
 .env
-<<<<<<< HEAD
 vendor/
-=======
-vendor
->>>>>>> 773e0d977652e0c8391a9211f53d52d909941a73
