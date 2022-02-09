@@ -10,3 +10,4 @@ node_modules
 .bundle
 prepros.config
 .vscode
+.env

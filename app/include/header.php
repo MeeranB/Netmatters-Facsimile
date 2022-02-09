@@ -207,16 +207,16 @@
                 <nav class="navbar navbar-light bg-light header-navbar">
                     <div id="uhead-container" class="container mx-md-auto mx-0 pr-0">
                         <div class="row w-100 flex-nowrap">
-                            <a class="navbar-brand py-0 col" href="/"> <!-- 456 -->
+                            <a class="navbar-brand py-0 col" href="index.php"> <!-- 456 -->
                                 <img class="logo" src="dist/images/nm-logo.png" alt="Netmatters">
                             </a>
                             <div id="actions" class="actions d-inline-flex justify-content-end align-items-start pr-0 col"> <!-- 876 -->
                                 <ul class="nav-btn--container navbar-nav d-none d-lg-inline-flex flex-row">
                                     <li class="nav-item">
-                                    <a class="nav-link nav-btn nav-btn--blue text-uppercase btn btn-lg" href="#"><i class="fas fa-mouse d-inline"></i>&nbsp;&nbsp;Support<span class="sr-only">(current)</span></a>
+                                    <a class="nav-link nav-btn nav-btn--blue text-uppercase btn btn-lg" href="index.php"><i class="fas fa-mouse d-inline"></i>&nbsp;&nbsp;Support<span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link nav-btn nav-btn--grey text-uppercase btn btn-lg" href="/contact.php"><i class="far fa-paper-plane fa-lg d-inline"></i>&nbsp;&nbsp;Contact</a>
+                                    <a class="nav-link nav-btn nav-btn--grey text-uppercase btn btn-lg" href="contact.php"><i class="far fa-paper-plane fa-lg d-inline"></i>&nbsp;&nbsp;Contact</a>
                                     </li>
                                 </ul>
                                 <div class="input-group search-bar-container align-self-center d-none d-md-inline-flex">
