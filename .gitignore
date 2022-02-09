@@ -11,4 +11,4 @@ node_modules
 prepros.config
 .vscode
 .env
-vendor
+vendor/
