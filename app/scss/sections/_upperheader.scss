@@ -207,7 +207,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 5000;
     &-added {
         animation: slide-down 0.8s ease;
     }
