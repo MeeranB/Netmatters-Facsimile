@@ -265,5 +265,9 @@ NR31 7RA`);
 
 new L.Control.Zoom({ position: "bottomright" }).addTo(yarmouthMap);
 
+$("#summary").on("click", () => {
+    $("#details").slideToggle(400);
+});
+
 //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code

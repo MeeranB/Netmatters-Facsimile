@@ -92,6 +92,62 @@ include("app/include/header.php");
         </div>
     </div>
 </div>
+<div class="contact-section-container container d-flex">
+    <div class="contact-prompt">
+        <span>Email us on:</span>
+        <p><a href="mailto:sales@netmatters.com">sales@netmatters.com</a></p>
+        <span>Business hours:</span>
+        <span>Monday - Friday 07:00 - 18:00</span>
+        <a class="summary" id="summary" role="button">Out of Hours IT Support</a>
+        <div id="details" class="details">
+            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+            <span>
+                Monday - Friday 18:00 - 22:00<br>
+                Saturday 08:00 - 16:00<br>
+                Sunday 10:00 - 18:00
+            </span>
+            <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
+        </div>
+    </div>
+    <div class="contact-form-container">
+        <form action="">
+            <div class="form-row">
+                <div class="form-group col-12 col-lg-6">
+                    <label class="name" for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="name" for="companyName">Company Name</label>
+                    <input type="text" class="form-control" id="companyName">
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="email" for="email">Your Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="name" for="telNumber">Your Telephone Number</label>
+                    <input type="tel" class="form-control" id="telNumber">
+                </div>
+                <div class="form-group col-12">
+                    <label class="name" for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject">
+                </div>
+                <div class="form-group col-12">
+                    <label class="name" for="message">Message</label>
+                    <textarea rows="3" type="text" class="form-control" id="message"></textarea>
+                </div>
+                <div class="clickarea">
+                    <input type="checkbox" id="marketing" hidden>
+                    <label class="marketing-check" for="marketing">
+                        <span class="checker"></span>
+                        <span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we use your data.</span>
+                    </label>
+                </div>
+                <a href="#" class="btn btn-culture"><span>Send enquiry</span></a>
+            </div>
+        </form>
+    </div>
+</div>
 <?php
 // ini_set('display_errors', 'on');
 

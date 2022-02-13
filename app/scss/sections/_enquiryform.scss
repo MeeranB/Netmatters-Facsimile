@@ -1,0 +1,78 @@
+@use '../custom' as *;
+
+.contact-section-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    @media (min-width: map-get($grid-breakpoints, "xl" )) {
+        flex-direction: row;
+    }
+    .contact-prompt {
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            width: 33.33333%;
+            order: 2;
+            margin-left: 15px;
+        }
+    }
+    .contact-form-container {
+        @media (min-width: map-get($grid-breakpoints, "xl" )) {
+            width: 66.66666%;
+            order: 1;
+            margin-right: 15px;
+        }
+    }
+}
+
+.contact-prompt {
+    span {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    p {
+        margin-bottom: 20px;
+        font-size: 1.625rem;
+        font-weight: 600;
+        a {
+            color: #926fb1;
+        }
+    }
+    .summary {
+        display: block;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 25px;
+    }
+    .details {
+        display: none;
+        p {
+            color: #666;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+    }
+}
+
+.contact-form-container {
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    form {
+        padding: 30px 30px;
+        .form-control {
+            width: 100%;
+            @media (min-width: map-get($grid-breakpoints, "lg" )) {
+                width: 95%;
+            }
+        }
+        #subject, #message {
+            width: 100%;
+            @media (min-width: map-get($grid-breakpoints, "xl" )) {
+                width: 97.5%;
+            }
+        }
+        #message {
+            height: auto;
+            resize: both;
+        }
+    }
+}

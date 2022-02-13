@@ -236,6 +236,9 @@ var yarmouthMarker = L.marker(yarmouthLoc).addTo(yarmouthMap);
 var yarmouthPopup = yarmouthMarker.bindPopup("Suite F23, <br>\nBeacon Innovation Centre, <br>\nBeacon Park, Gorleston, <br>\nGreat Yarmouth, Norfolk,<br>\nNR31 7RA");
 new L.Control.Zoom({
   position: "bottomright"
-}).addTo(yarmouthMap); //TODO: handle case when main header intersects with scrolling header correctly
+}).addTo(yarmouthMap);
+$("#summary").on("click", function () {
+  $("#details").slideToggle(400);
+}); //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code
 //# sourceMappingURL=all.js.map
