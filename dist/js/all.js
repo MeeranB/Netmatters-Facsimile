@@ -56,9 +56,19 @@ var addMobileLightboxSidebarListener = function addMobileLightboxSidebarListener
   });
 };
 
+var getNewsPosts = function getNewsPosts() {
+  return axios.get("newsposts.php").then(function (response) {
+    // console.log(response.data);
+    return response.data;
+  })["catch"](function (error) {
+    return console.error(error.data);
+  });
+};
+
 $(function () {
   var cookieConsent = localStorage.getItem("cookie-consent");
   var windowWidth = checkWidth();
+  displayNewsPosts();
 
   if (!cookieConsent) {
     $(".lightbox").show().css("display", "flex");
@@ -316,9 +326,34 @@ function postData() {
   }
 
   axios.post("submit.php", submittedData).then(function (response) {
-    return console.log(response.data);
+    return console.log(response);
   })["catch"](function (error) {
     return console.error(error.data);
+  });
+}
+
+function displayNewsPosts() {
+  var newsPosts = getNewsPosts();
+  newsPosts.then(function (results) {
+    results.forEach(function (post) {
+      var content = post["content"];
+      var length = 100;
+      var trimmedContent = content.length > length ? "".concat(content.substring(0, length - 3), "...") : string.substring(0, length);
+      var date = new Date(post["date"]);
+      var options = {
+        month: "long"
+      };
+      console.log(post);
+      $("#post".concat(post["ID"], "-thumbnail")).attr("src", post["image"]);
+      $("#post".concat(post["ID"], "-tagstyle")).addClass("img-label-container--".concat(post["style"]));
+      $("#post".concat(post["ID"], "-tag")).text(post["tag"]);
+      $("#post".concat(post["ID"], "-title")).text(post["title"]);
+      $("#post".concat(post["ID"], "-content")).text(trimmedContent);
+      $("#post".concat(post["ID"], "-ownerimage")).attr("src", post["author_image"]);
+      $("#post".concat(post["ID"], "-btn")).addClass("btn-".concat(post["style"]));
+      $("#post".concat(post["ID"], "-owner")).text("Posted by ".concat(post["author"]));
+      $("#post".concat(post["ID"], "-date")).text("".concat(date.getDate(), "th ").concat(new Intl.DateTimeFormat("en-US", options).format(date), " ").concat(date.getFullYear()));
+    });
   });
 } //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code

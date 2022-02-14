@@ -2,6 +2,8 @@
 $currentPage = "index";
 
 include("app/include/header.php"); 
+
+
 ?>
             <!-- slider -->
             <div class="container--slider">
@@ -261,19 +263,19 @@ include("app/include/header.php");
                 <div class="col mb-4">
                     <div class="card">
                         <div class="img-container">
-                            <a href="#" class="img-link"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/business-development-pAAs.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--it"><span>Careers</span></div>
+                            <a href="#" class="img-link"><img id="post1-thumbnail" src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/business-development-pAAs.jpg" class="card-img-top" alt="...">
+                                <div id="post1-tagstyle" class="img-label-container"><span id="post1-tag">Careers</span></div>
                             </a>
                         </div>
                         <div class="card-body">
-                            <a href="#"><h6 class="card-title">Business Development / Account Manager</h6></a>
-                            <p class="card-text">Salary Range £25k+ per annum + Bonus + Benefits Hours 40 hours per week, Monday – Friday Location Wy...</p>
-                            <button type="button" class="btn btn-it text-uppercase">Read more</button>
+                            <a href="#"><h6 id="post1-title" class="card-title">Business Development / Account Manager</h6></a>
+                            <p id="post1-content" class="card-text">Salary Range £25k+ per annum + Bonus + Benefits Hours 40 hours per week, Monday – Friday Location Wy...</p>
+                            <button type="button" id="post1-btn" class="btn text-uppercase">Read more</button>
                             <div class="card-owner">
-                                <img class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/elliott-peacock-w8vu.jpg" alt="">
+                                <img id="post1-ownerimage" class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/elliott-peacock-w8vu.jpg" alt="">
                                 <div class="card-owner-details">
-                                    <p class="card-owner-title">Posted by Elliott Peacock</p>
-                                    <p class="card-owner-date">22nd July 2021</p>
+                                    <p id="post1-owner" class="card-owner-title">Posted by Elliott Peacock</p>
+                                    <p id="post1-date" class="card-owner-date">22nd July 2021</p>
                                 </div>
                             </div>
                         </div>
@@ -282,19 +284,19 @@ include("app/include/header.php");
                 <div class="col mb-4">
                     <div class="card">
                         <div class="img-container">
-                            <a href="#"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/why-shopify-is-vewi.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--web"><span>Insights</span></div>
+                            <a href="#" class="img-link"><img id="post2-thumbnail" src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/business-development-pAAs.jpg" class="card-img-top" alt="...">
+                                <div id="post2-tagstyle" class="img-label-container"><span id="post2-tag">Careers</span></div>
                             </a>
                         </div>
                         <div class="card-body">
-                            <a href="#"><h6 class="card-title card-title--web">Why Shopify Is The Right Ecommerce Platform f...</h6></a>
-                            <p class="card-text">Shopify is an all-in-one eCommerce platform to start, run and grow a business. It currently powers o...</p>
-                            <a href="#" class="btn btn-web"><span>Read more</span></a>
+                            <a href="#"><h6 id="post2-title" class="card-title">Business Development / Account Manager</h6></a>
+                            <p id="post2-content" class="card-text">Salary Range £25k+ per annum + Bonus + Benefits Hours 40 hours per week, Monday – Friday Location Wy...</p>
+                            <button type="button" id="post2-btn" class="btn text-uppercase">Read more</button>
                             <div class="card-owner">
-                                <img class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/netmatters-ltd-VXAv.png" alt="">
+                                <img id="post2-ownerimage" class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/elliott-peacock-w8vu.jpg" alt="">
                                 <div class="card-owner-details">
-                                    <p class="card-owner-title">Posted by Netmatters Ltd</p>
-                                    <p class="card-owner-date">20th July 2021</p>
+                                    <p id="post2-owner" class="card-owner-title">Posted by Elliott Peacock</p>
+                                    <p id="post2-date" class="card-owner-date">22nd July 2021</p>
                                 </div>
                             </div>
                         </div>
@@ -302,20 +304,20 @@ include("app/include/header.php");
                 </div>
                 <div class="col mb-4 d-md-none d-xl-inline-block">
                     <div class="card no-shadow">
-                        <div class="img-container">
-                            <a href="#"><img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/office-administrator-X2vz.jpg" class="card-img-top" alt="...">
-                                <div class="img-label-container img-label-container--web"><span>Careers</span></div>
+                    <div class="img-container">
+                            <a href="#" class="img-link"><img id="post3-thumbnail" src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/business-development-pAAs.jpg" class="card-img-top" alt="...">
+                                <div id="post3-tagstyle" class="img-label-container"><span id="post3-tag">Careers</span></div>
                             </a>
                         </div>
-                        <div class="card-body card-body--short-header">
-                            <a href="#" class="card-title-link"><h6 class="card-title card-title--web">Office Administrator / Receptionist</h6></a>
-                            <p class="card-text">Salary Range £18k-£24k + Bonuses + Pension Hours 40 hours per week, Monday – Friday Location Wymondh...</p>
-                            <a href="#" class="btn btn-web"><span>Read more</span></a>
+                        <div class="card-body">
+                            <a href="#"><h6 id="post3-title" class="card-title">Business Development / Account Manager</h6></a>
+                            <p id="post3-content" class="card-text">Salary Range £25k+ per annum + Bonus + Benefits Hours 40 hours per week, Monday – Friday Location Wy...</p>
+                            <button type="button" id="post3-btn" class="btn text-uppercase">Read more</button>
                             <div class="card-owner">
-                                <img class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/bethany-shakespeare-F6Iu.jpg" alt="">
+                                <img id="post3-ownerimage" class="card-owner-img" src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/elliott-peacock-w8vu.jpg" alt="">
                                 <div class="card-owner-details">
-                                    <p class="card-owner-title">Posted by Bethany Shakespeare</p>
-                                    <p class="card-owner-date">13th July 2021</p>
+                                    <p id="post3-owner" class="card-owner-title">Posted by Elliott Peacock</p>
+                                    <p id="post3-date" class="card-owner-date">22nd July 2021</p>
                                 </div>
                             </div>
                         </div>

@@ -81,6 +81,8 @@ try {
         $stmt->bindParam(':marketing', $marketing, PDO::PARAM_STR); 
         $stmt->execute();
     }
+
+    echo 'success';
 } catch(PDOException $e) {
     $error_message = $e->getMessage();
     echo $error_message;

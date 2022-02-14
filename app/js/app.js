@@ -39,9 +39,20 @@ const addMobileLightboxSidebarListener = () => {
     });
 };
 
+const getNewsPosts = () => {
+    return axios
+        .get("newsposts.php")
+        .then(response => {
+            // console.log(response.data);
+            return response.data;
+        })
+        .catch(error => console.error(error.data));
+};
+
 $(() => {
     const cookieConsent = localStorage.getItem("cookie-consent");
     const windowWidth = checkWidth();
+    displayNewsPosts();
     if (!cookieConsent) {
         $(".lightbox").show().css("display", "flex");
         $(".cookie-modal").show();
@@ -328,8 +339,46 @@ function postData() {
     }
     axios
         .post("submit.php", submittedData)
-        .then(response => console.log(response.data))
+        .then(response => console.log(response))
         .catch(error => console.error(error.data));
+}
+
+function displayNewsPosts() {
+    const newsPosts = getNewsPosts();
+    newsPosts.then(results => {
+        results.forEach(post => {
+            const content = post["content"];
+            const length = 100;
+            const trimmedContent =
+                content.length > length
+                    ? `${content.substring(0, length - 3)}...`
+                    : string.substring(0, length);
+            const date = new Date(post["date"]);
+            const options = { month: "long" };
+
+            console.log(post);
+
+            $(`#post${post["ID"]}-thumbnail`).attr("src", post["image"]);
+            $(`#post${post["ID"]}-tagstyle`).addClass(
+                `img-label-container--${post["style"]}`
+            );
+            $(`#post${post["ID"]}-tag`).text(post["tag"]);
+            $(`#post${post["ID"]}-title`).text(post["title"]);
+            $(`#post${post["ID"]}-content`).text(trimmedContent);
+            $(`#post${post["ID"]}-ownerimage`).attr(
+                "src",
+                post["author_image"]
+            );
+            $(`#post${post["ID"]}-btn`).addClass(`btn-${post["style"]}`);
+            $(`#post${post["ID"]}-owner`).text(`Posted by ${post["author"]}`);
+            $(`#post${post["ID"]}-date`).text(
+                `${date.getDate()}th ${new Intl.DateTimeFormat(
+                    "en-US",
+                    options
+                ).format(date)} ${date.getFullYear()}`
+            );
+        });
+    });
 }
 
 //TODO: handle case when main header intersects with scrolling header correctly
