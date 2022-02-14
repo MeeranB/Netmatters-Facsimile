@@ -56,8 +56,38 @@
 .contact-form-container {
     background-color: #e6e7e9;
     border-radius: 10px;
+    .success {
+        background-color: #2ecc71;
+    }
+    .fail {
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        color: #a94442;
+    }
+    .form-feedback {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        padding: 10px;
+        margin: 20px 20px 0px 20px;
+        .alert-text {
+            padding: 0px 5px;
+        }
+        button {
+            border: none;
+            margin: 0;
+            text-decoration: 0;
+            background-color: #2ecc71;
+            text-shadow: 0 1px 0 #fff;
+            opacity: 0.2;
+            color: black;
+            font-weight: 700;
+        }
+    }
+
     form {
-        padding: 30px 30px;
+        padding: 25px 30px 30px 30px;
         .hasError {
             border-color: #d64541;
         }

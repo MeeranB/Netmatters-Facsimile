@@ -326,11 +326,23 @@ function postData() {
   }
 
   axios.post("submit.php", submittedData).then(function (response) {
-    return console.log(response);
+    if (response.data == "success") {
+      $("#form-feedback").removeClass("d-none").removeClass("fail").addClass("success");
+      $("#alert-text").text("Your message has been sent.").css("color", "white");
+    } else {
+      throw new Error("There was a server error");
+    }
   })["catch"](function (error) {
-    return console.error(error.data);
+    console.log(error);
+    $("#form-feedback").removeClass("d-none").removeClass("success").addClass("fail");
+    $("#alert-text").text(error.message).css("color", "#a94442");
+    $("#form-feedback button").css("background-color", "transparent");
   });
 }
+
+$("#form-feedback button").on("click", function () {
+  $("#form-feedback").addClass("d-none");
+});
 
 function displayNewsPosts() {
   var newsPosts = getNewsPosts();
@@ -343,7 +355,6 @@ function displayNewsPosts() {
       var options = {
         month: "long"
       };
-      console.log(post);
       $("#post".concat(post["ID"], "-thumbnail")).attr("src", post["image"]);
       $("#post".concat(post["ID"], "-tagstyle")).addClass("img-label-container--".concat(post["style"]));
       $("#post".concat(post["ID"], "-tag")).text(post["tag"]);

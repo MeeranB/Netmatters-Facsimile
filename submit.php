@@ -2,11 +2,7 @@
 
 include("app/include/bootstrap.php");
 
-ini_set('display_errors', 'on');
-
-$dsn = "mysql:host=localhost;dbname=netmatters_contact";
-$username = $_ENV['USERNAME'];
-$password = "";
+// ini_set('display_errors', 'on');
 
 $name = $companyName = $email = $telNumber = $subject = $message = $marketing = "";
 
@@ -16,6 +12,19 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+try {
+    $dsn = "mysql:host=localhost;dbname=netmatters_contact";
+    $username = $_ENV['USERNAME'];
+    $password = "";
+    $db = new PDO($dsn, $username, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    $error_message = $e->getMessage();
+    echo $error_message;
+    exit();
+}
+
 
 try {
     $_POST = json_decode(file_get_contents("php://input"),true);
@@ -54,8 +63,6 @@ try {
             $companyName = test_input($_POST['companyName']);
         }
 
-        $db = new PDO($dsn, $username, $password);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $db->prepare('INSERT INTO messages VALUES (id, :name, :companyName, :email, :phone, :subject, :message, :marketing);');
         $name = filter_var($name, FILTER_SANITIZE_STRING);
         if ($companyName != "") {
@@ -83,7 +90,7 @@ try {
     }
 
     echo 'success';
-} catch(PDOException $e) {
+} catch(Exception $e) {
     $error_message = $e->getMessage();
     echo $error_message;
     exit();

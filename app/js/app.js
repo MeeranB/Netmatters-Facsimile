@@ -339,9 +339,33 @@ function postData() {
     }
     axios
         .post("submit.php", submittedData)
-        .then(response => console.log(response))
-        .catch(error => console.error(error.data));
+        .then(response => {
+            if (response.data == "success") {
+                $("#form-feedback")
+                    .removeClass("d-none")
+                    .removeClass("fail")
+                    .addClass("success");
+                $("#alert-text")
+                    .text("Your message has been sent.")
+                    .css("color", "white");
+            } else {
+                throw new Error("There was a server error");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            $("#form-feedback")
+                .removeClass("d-none")
+                .removeClass("success")
+                .addClass("fail");
+            $("#alert-text").text(error.message).css("color", "#a94442");
+            $("#form-feedback button").css("background-color", "transparent");
+        });
 }
+
+$("#form-feedback button").on("click", () => {
+    $("#form-feedback").addClass("d-none");
+});
 
 function displayNewsPosts() {
     const newsPosts = getNewsPosts();
@@ -355,8 +379,6 @@ function displayNewsPosts() {
                     : string.substring(0, length);
             const date = new Date(post["date"]);
             const options = { month: "long" };
-
-            console.log(post);
 
             $(`#post${post["ID"]}-thumbnail`).attr("src", post["image"]);
             $(`#post${post["ID"]}-tagstyle`).addClass(

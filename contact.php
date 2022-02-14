@@ -108,6 +108,10 @@ include("app/include/header.php");
         </div>
     </div>
     <div class="contact-form-container">
+        <div id="form-feedback" class="form-feedback d-none">
+            <span id="alert-text" class="alert-text"></span>
+            <button>x</button>
+        </div>
         <form action="" method="POST" id="contact-form">
             <div class="form-row">
                 <div class="form-group col-12 col-lg-6">
