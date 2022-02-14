@@ -288,9 +288,7 @@ $("#contact-form").validate({
         subject: "required",
         message: "required",
     },
-    submitHandler: () => {
-        $("#contact-form").trigger("reset");
-    },
+    submitHandler: postData,
     unhighlight: (element, errorClass) => {
         $(element).removeClass(errorClass);
     },
@@ -320,6 +318,19 @@ jQuery.validator.addMethod(
     },
     ""
 );
+
+function postData() {
+    const formString = $("#contact-form").serialize();
+    const formUrlSearchParams = new URLSearchParams(formString);
+    const submittedData = {};
+    for (const [key, value] of formUrlSearchParams) {
+        submittedData[key] = value;
+    }
+    axios
+        .post("submit.php", submittedData)
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error.data));
+}
 
 //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code
