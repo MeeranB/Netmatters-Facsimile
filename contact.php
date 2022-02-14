@@ -110,40 +110,40 @@ include("app/include/header.php");
         </div>
     </div>
     <div class="contact-form-container">
-        <form action="">
+        <form action="" method="POST" id="contact-form">
             <div class="form-row">
                 <div class="form-group col-12 col-lg-6">
                     <label class="name" for="name">Your Name</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group col-12 col-lg-6">
                     <label class="name" for="companyName">Company Name</label>
-                    <input type="text" class="form-control" id="companyName">
+                    <input type="text" class="form-control" id="companyName" name="companyName">
                 </div>
                 <div class="form-group col-12 col-lg-6">
                     <label class="email" for="email">Your Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group col-12 col-lg-6">
                     <label class="name" for="telNumber">Your Telephone Number</label>
-                    <input type="tel" class="form-control" id="telNumber">
+                    <input type="tel" class="form-control" id="telNumber" name="telNumber" required>
                 </div>
                 <div class="form-group col-12">
                     <label class="name" for="subject">Subject</label>
-                    <input type="text" class="form-control" id="subject">
+                    <input type="text" class="form-control" id="subject" name="subject" required>
                 </div>
                 <div class="form-group col-12">
                     <label class="name" for="message">Message</label>
-                    <textarea rows="3" type="text" class="form-control" id="message"></textarea>
+                    <textarea rows="3" type="text" class="form-control" id="message" name="message" required></textarea>
                 </div>
                 <div class="clickarea">
-                    <input type="checkbox" id="marketing" hidden>
+                    <input type="checkbox" id="marketing" name="marketing" hidden>
                     <label class="marketing-check" for="marketing">
                         <span class="checker"></span>
                         <span>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we use your data.</span>
                     </label>
                 </div>
-                <a href="#" class="btn btn-culture"><span>Send enquiry</span></a>
+                <input type="submit" value="Send Enquiry" class="btn btn-culture">
             </div>
         </form>
     </div>
@@ -166,6 +166,7 @@ include("app/include/header.php");
 // ?>
 
 <?php
+$currentPage = "contact";
 include("app/include/newsletter.php");
 include("app/include/footer.php");
 ?>

@@ -91,7 +91,7 @@
                     <div class="ul-alt-center">
                         <h4>Great Yarmouth Office</h4>
                         <address>
-                            Suite F23, <br>
+                            Suite F23,<br>
                             Beacon Innovation Centre, <br>
                             Beacon Park, Gorleston, <br>
                             Great Yarmouth, Norfolk, <br>
@@ -168,6 +168,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
+    <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js'></script>
     <script src="dist/js/all.js"></script>
 </body>
 </html>

@@ -269,5 +269,57 @@ $("#summary").on("click", () => {
     $("#details").slideToggle(400);
 });
 
+$("#contact-form").validate({
+    errorElement: null,
+    errorClass: "hasError",
+    highlight: (element, errorClass) => {
+        $(element).addClass(errorClass);
+    },
+    rules: {
+        name: "required",
+        email: {
+            required: true,
+            validEmail: true,
+        },
+        telNumber: {
+            required: true,
+            validPhone: true,
+        },
+        subject: "required",
+        message: "required",
+    },
+    submitHandler: () => {
+        $("#contact-form").trigger("reset");
+    },
+    unhighlight: (element, errorClass) => {
+        $(element).removeClass(errorClass);
+    },
+});
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "",
+    email: "",
+});
+
+jQuery.validator.addMethod(
+    "validPhone",
+    function (value, element) {
+        // prettier-ignore
+        const phoneRegex = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
+        return this.optional(element) || phoneRegex.test(value);
+    },
+    ""
+);
+
+jQuery.validator.addMethod(
+    "validEmail",
+    function (value, element) {
+        // prettier-ignore
+        const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return this.optional(element) || emailRegex.test(value);
+    },
+    ""
+);
+
 //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code
