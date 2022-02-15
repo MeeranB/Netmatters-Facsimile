@@ -58,7 +58,7 @@ var addMobileLightboxSidebarListener = function addMobileLightboxSidebarListener
 
 var getNewsPosts = function getNewsPosts() {
   return axios.get("newsposts.php").then(function (response) {
-    // console.log(response.data);
+    console.log(response.data);
     return response.data;
   })["catch"](function (error) {
     return console.error(error.data);
@@ -326,14 +326,16 @@ function postData() {
   }
 
   axios.post("submit.php", submittedData).then(function (response) {
+    console.log(response);
+
     if (response.data == "success") {
       $("#form-feedback").removeClass("d-none").removeClass("fail").addClass("success");
       $("#alert-text").text("Your message has been sent.").css("color", "white");
     } else {
-      throw new Error("There was a server error");
+      throw new Error(response.data);
     }
   })["catch"](function (error) {
-    console.log(error);
+    // console.log(error);
     $("#form-feedback").removeClass("d-none").removeClass("success").addClass("fail");
     $("#alert-text").text(error.message).css("color", "#a94442");
     $("#form-feedback button").css("background-color", "transparent");

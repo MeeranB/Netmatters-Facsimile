@@ -14,9 +14,9 @@ function test_input($data) {
 }
 
 try {
-    $dsn = "mysql:host=localhost;dbname=netmatters_contact";
+    $dsn = "mysql:host=localhost:3306;dbname=meeranba_netmatters_contact";
     $username = $_ENV['USERNAME'];
-    $password = "";
+    $password = $_ENV['PASSWORD'];
     $db = new PDO($dsn, $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {

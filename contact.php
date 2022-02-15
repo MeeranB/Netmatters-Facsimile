@@ -31,7 +31,7 @@ include("app/include/header.php");
         <div class="office">
             <div class="preview">
                 <a href="#">
-                    <img src="app/images/cambridge.jpeg" alt="cambridge office">
+                    <img src="dist/images/cambridge.jpeg" alt="cambridge office">
                 </a>
             </div>
             <div class="address">
@@ -51,7 +51,7 @@ include("app/include/header.php");
         <div class="office">
         <div class="preview">
                 <a href="#">
-                    <img src="app/images/wymondham.jpeg" alt="cambridge office">
+                    <img src="dist/images/wymondham.jpeg" alt="cambridge office">
                 </a>
             </div>
             <div class="address">
@@ -71,7 +71,7 @@ include("app/include/header.php");
         <div class="office">
         <div class="preview">
                 <a href="#">
-                    <img src="app/images/yarmouth.jpeg" alt="yarmouth office">
+                    <img src="dist/images/yarmouth.jpeg" alt="yarmouth office">
                 </a>
             </div>
             <div class="address">

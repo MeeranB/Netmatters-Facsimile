@@ -43,7 +43,6 @@ const getNewsPosts = () => {
     return axios
         .get("newsposts.php")
         .then(response => {
-            // console.log(response.data);
             return response.data;
         })
         .catch(error => console.error(error.data));
@@ -349,11 +348,10 @@ function postData() {
                     .text("Your message has been sent.")
                     .css("color", "white");
             } else {
-                throw new Error("There was a server error");
+                throw new Error(response.data);
             }
         })
         .catch(error => {
-            console.log(error);
             $("#form-feedback")
                 .removeClass("d-none")
                 .removeClass("success")
