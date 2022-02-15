@@ -39,9 +39,19 @@ const addMobileLightboxSidebarListener = () => {
     });
 };
 
+const getNewsPosts = () => {
+    return axios
+        .get("newsposts.php")
+        .then(response => {
+            return response.data;
+        })
+        .catch(error => console.error(error.data));
+};
+
 $(() => {
     const cookieConsent = localStorage.getItem("cookie-consent");
     const windowWidth = checkWidth();
+    displayNewsPosts();
     if (!cookieConsent) {
         $(".lightbox").show().css("display", "flex");
         $(".cookie-modal").show();
@@ -168,6 +178,228 @@ const scrollHeaderHander = () => {
 };
 
 observer.observe(hoverMenu);
+
+const cambridgeLoc = [52.23535372699674, 0.15384150556855017];
+
+const cambridgeMap = L.map("cambridgeMap", {
+    center: cambridgeLoc,
+    preferCanvas: true,
+    zoom: 17,
+    zoomControl: false,
+    scrollWheelZoom: false,
+});
+
+L.tileLayer(
+    "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw",
+    {
+        attribution:
+            "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: "your.mapbox.access.token",
+    }
+).addTo(cambridgeMap);
+
+const cambridgeMarker = L.marker(cambridgeLoc).addTo(cambridgeMap);
+const cambridgePopup = cambridgeMarker.bindPopup(`Unit 1.28, <br>
+St John's Innovation Centre, <br>
+Cowley Road, Milton, <br>
+Cambridge,<br>
+CB4 0WS`);
+
+new L.Control.Zoom({ position: "bottomright" }).addTo(cambridgeMap);
+
+const wymondhamLoc = [52.57604207982481, 1.136548940521879];
+
+const wymondhamMap = L.map("wymondhamMap", {
+    center: wymondhamLoc,
+    preferCanvas: true,
+    zoom: 17,
+    zoomControl: false,
+    scrollWheelZoom: false,
+});
+
+L.tileLayer(
+    "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw",
+    {
+        attribution:
+            "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: "your.mapbox.access.token",
+    }
+).addTo(wymondhamMap);
+
+const wymondhamMarker = L.marker(wymondhamLoc).addTo(wymondhamMap);
+const wymondhamPopup = wymondhamMarker.bindPopup(`Unit 15, <br>
+Penfold Drive, <br>
+Gateway 11 Business Park, <br>
+Wymondham, Norfolk,<br>
+NR18 0WZ`);
+
+new L.Control.Zoom({ position: "bottomright" }).addTo(wymondhamMap);
+
+const yarmouthLoc = [52.5559156548259, 1.7132934550676306];
+
+const yarmouthMap = L.map("yarmouthMap", {
+    center: yarmouthLoc,
+    preferCanvas: true,
+    zoom: 17,
+    zoomControl: false,
+    scrollWheelZoom: false,
+});
+
+L.tileLayer(
+    "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw",
+    {
+        attribution:
+            "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: "your.mapbox.access.token",
+    }
+).addTo(yarmouthMap);
+
+const yarmouthMarker = L.marker(yarmouthLoc).addTo(yarmouthMap);
+const yarmouthPopup = yarmouthMarker.bindPopup(`Suite F23, <br>
+Beacon Innovation Centre, <br>
+Beacon Park, Gorleston, <br>
+Great Yarmouth, Norfolk,<br>
+NR31 7RA`);
+
+new L.Control.Zoom({ position: "bottomright" }).addTo(yarmouthMap);
+
+$("#summary").on("click", () => {
+    $("#details").slideToggle(400);
+});
+
+$("#contact-form").validate({
+    errorElement: null,
+    errorClass: "hasError",
+    highlight: (element, errorClass) => {
+        $(element).addClass(errorClass);
+    },
+    rules: {
+        name: "required",
+        email: {
+            required: true,
+            validEmail: true,
+        },
+        telNumber: {
+            required: true,
+            validPhone: true,
+        },
+        subject: "required",
+        message: "required",
+    },
+    submitHandler: postData,
+    unhighlight: (element, errorClass) => {
+        $(element).removeClass(errorClass);
+    },
+});
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "",
+    email: "",
+});
+
+jQuery.validator.addMethod(
+    "validPhone",
+    function (value, element) {
+        // prettier-ignore
+        const phoneRegex = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
+        return this.optional(element) || phoneRegex.test(value);
+    },
+    ""
+);
+
+jQuery.validator.addMethod(
+    "validEmail",
+    function (value, element) {
+        // prettier-ignore
+        const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return this.optional(element) || emailRegex.test(value);
+    },
+    ""
+);
+
+function postData() {
+    const formString = $("#contact-form").serialize();
+    const formUrlSearchParams = new URLSearchParams(formString);
+    const submittedData = {};
+    for (const [key, value] of formUrlSearchParams) {
+        submittedData[key] = value;
+    }
+    axios
+        .post("submit.php", submittedData)
+        .then(response => {
+            if (response.data == "success") {
+                $("#form-feedback")
+                    .removeClass("d-none")
+                    .removeClass("fail")
+                    .addClass("success");
+                $("#alert-text")
+                    .text("Your message has been sent.")
+                    .css("color", "white");
+            } else {
+                throw new Error(response.data);
+            }
+        })
+        .catch(error => {
+            $("#form-feedback")
+                .removeClass("d-none")
+                .removeClass("success")
+                .addClass("fail");
+            $("#alert-text").text(error.message).css("color", "#a94442");
+            $("#form-feedback button").css("background-color", "transparent");
+        });
+}
+
+$("#form-feedback button").on("click", () => {
+    $("#form-feedback").addClass("d-none");
+});
+
+function displayNewsPosts() {
+    const newsPosts = getNewsPosts();
+    newsPosts.then(results => {
+        results.forEach(post => {
+            const content = post["content"];
+            const length = 100;
+            const trimmedContent =
+                content.length > length
+                    ? `${content.substring(0, length - 3)}...`
+                    : string.substring(0, length);
+            const date = new Date(post["date"]);
+            const options = { month: "long" };
+
+            $(`#post${post["ID"]}-thumbnail`).attr("src", post["image"]);
+            $(`#post${post["ID"]}-tagstyle`).addClass(
+                `img-label-container--${post["style"]}`
+            );
+            $(`#post${post["ID"]}-tag`).text(post["tag"]);
+            $(`#post${post["ID"]}-title`).text(post["title"]);
+            $(`#post${post["ID"]}-content`).text(trimmedContent);
+            $(`#post${post["ID"]}-ownerimage`).attr(
+                "src",
+                post["author_image"]
+            );
+            $(`#post${post["ID"]}-btn`).addClass(`btn-${post["style"]}`);
+            $(`#post${post["ID"]}-owner`).text(`Posted by ${post["author"]}`);
+            $(`#post${post["ID"]}-date`).text(
+                `${date.getDate()}th ${new Intl.DateTimeFormat(
+                    "en-US",
+                    options
+                ).format(date)} ${date.getFullYear()}`
+            );
+        });
+    });
+}
 
 //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code

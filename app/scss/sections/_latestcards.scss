@@ -85,6 +85,18 @@
         .card-text {
             margin-bottom: 25px;
         }
+        .btn {
+            margin-right: auto;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            &:hover {
+                color: white;
+            }
+            &-software:hover {
+                background-color: darken(#67809f, 10%);
+            }
+        }
     }
 }
 
