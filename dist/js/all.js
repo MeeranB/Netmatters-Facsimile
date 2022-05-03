@@ -58,7 +58,6 @@ var addMobileLightboxSidebarListener = function addMobileLightboxSidebarListener
 
 var getNewsPosts = function getNewsPosts() {
   return axios.get("newsposts.php").then(function (response) {
-    console.log(response.data);
     return response.data;
   })["catch"](function (error) {
     return console.error(error.data);
@@ -198,69 +197,6 @@ var scrollHeaderHander = function scrollHeaderHander() {
 };
 
 observer.observe(hoverMenu);
-var cambridgeLoc = [52.23535372699674, 0.15384150556855017];
-var cambridgeMap = L.map("cambridgeMap", {
-  center: cambridgeLoc,
-  preferCanvas: true,
-  zoom: 17,
-  zoomControl: false,
-  scrollWheelZoom: false
-});
-L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
-  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
-  maxZoom: 18,
-  id: "mapbox/streets-v11",
-  tileSize: 512,
-  zoomOffset: -1,
-  accessToken: "your.mapbox.access.token"
-}).addTo(cambridgeMap);
-var cambridgeMarker = L.marker(cambridgeLoc).addTo(cambridgeMap);
-var cambridgePopup = cambridgeMarker.bindPopup("Unit 1.28, <br>\nSt John's Innovation Centre, <br>\nCowley Road, Milton, <br>\nCambridge,<br>\nCB4 0WS");
-new L.Control.Zoom({
-  position: "bottomright"
-}).addTo(cambridgeMap);
-var wymondhamLoc = [52.57604207982481, 1.136548940521879];
-var wymondhamMap = L.map("wymondhamMap", {
-  center: wymondhamLoc,
-  preferCanvas: true,
-  zoom: 17,
-  zoomControl: false,
-  scrollWheelZoom: false
-});
-L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
-  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
-  maxZoom: 18,
-  id: "mapbox/streets-v11",
-  tileSize: 512,
-  zoomOffset: -1,
-  accessToken: "your.mapbox.access.token"
-}).addTo(wymondhamMap);
-var wymondhamMarker = L.marker(wymondhamLoc).addTo(wymondhamMap);
-var wymondhamPopup = wymondhamMarker.bindPopup("Unit 15, <br>\nPenfold Drive, <br>\nGateway 11 Business Park, <br>\nWymondham, Norfolk,<br>\nNR18 0WZ");
-new L.Control.Zoom({
-  position: "bottomright"
-}).addTo(wymondhamMap);
-var yarmouthLoc = [52.5559156548259, 1.7132934550676306];
-var yarmouthMap = L.map("yarmouthMap", {
-  center: yarmouthLoc,
-  preferCanvas: true,
-  zoom: 17,
-  zoomControl: false,
-  scrollWheelZoom: false
-});
-L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
-  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
-  maxZoom: 18,
-  id: "mapbox/streets-v11",
-  tileSize: 512,
-  zoomOffset: -1,
-  accessToken: "your.mapbox.access.token"
-}).addTo(yarmouthMap);
-var yarmouthMarker = L.marker(yarmouthLoc).addTo(yarmouthMap);
-var yarmouthPopup = yarmouthMarker.bindPopup("Suite F23, <br>\nBeacon Innovation Centre, <br>\nBeacon Park, Gorleston, <br>\nGreat Yarmouth, Norfolk,<br>\nNR31 7RA");
-new L.Control.Zoom({
-  position: "bottomright"
-}).addTo(yarmouthMap);
 $("#summary").on("click", function () {
   $("#details").slideToggle(400);
 });
@@ -326,8 +262,6 @@ function postData() {
   }
 
   axios.post("submit.php", submittedData).then(function (response) {
-    console.log(response);
-
     if (response.data == "success") {
       $("#form-feedback").removeClass("d-none").removeClass("fail").addClass("success");
       $("#alert-text").text("Your message has been sent.").css("color", "white");
@@ -335,7 +269,6 @@ function postData() {
       throw new Error(response.data);
     }
   })["catch"](function (error) {
-    // console.log(error);
     $("#form-feedback").removeClass("d-none").removeClass("success").addClass("fail");
     $("#alert-text").text(error.message).css("color", "#a94442");
     $("#form-feedback button").css("background-color", "transparent");
@@ -370,4 +303,69 @@ function displayNewsPosts() {
   });
 } //TODO: handle case when main header intersects with scrolling header correctly
 //refactor scrolling code
+"use strict";
+
+var cambridgeLoc = [52.23535372699674, 0.15384150556855017];
+var cambridgeMap = L.map("cambridgeMap", {
+  center: cambridgeLoc,
+  preferCanvas: true,
+  zoom: 17,
+  zoomControl: false,
+  scrollWheelZoom: false
+});
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
+  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+  maxZoom: 18,
+  id: "mapbox/streets-v11",
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken: "your.mapbox.access.token"
+}).addTo(cambridgeMap);
+var cambridgeMarker = L.marker(cambridgeLoc).addTo(cambridgeMap);
+var cambridgePopup = cambridgeMarker.bindPopup("Unit 1.28, <br>\nSt John's Innovation Centre, <br>\nCowley Road, Milton, <br>\nCambridge,<br>\nCB4 0WS");
+new L.Control.Zoom({
+  position: "bottomright"
+}).addTo(cambridgeMap);
+var wymondhamLoc = [52.57604207982481, 1.136548940521879];
+var wymondhamMap = L.map("wymondhamMap", {
+  center: wymondhamLoc,
+  preferCanvas: true,
+  zoom: 17,
+  zoomControl: false,
+  scrollWheelZoom: false
+});
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
+  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+  maxZoom: 18,
+  id: "mapbox/streets-v11",
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken: "your.mapbox.access.token"
+}).addTo(wymondhamMap);
+var wymondhamMarker = L.marker(wymondhamLoc).addTo(wymondhamMap);
+var wymondhamPopup = wymondhamMarker.bindPopup("Unit 15, <br>\nPenfold Drive, <br>\nGateway 11 Business Park, <br>\nWymondham, Norfolk,<br>\nNR18 0WZ");
+new L.Control.Zoom({
+  position: "bottomright"
+}).addTo(wymondhamMap);
+var yarmouthLoc = [52.5559156548259, 1.7132934550676306];
+var yarmouthMap = L.map("yarmouthMap", {
+  center: yarmouthLoc,
+  preferCanvas: true,
+  zoom: 17,
+  zoomControl: false,
+  scrollWheelZoom: false
+});
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWVlcmFuYiIsImEiOiJja3pneW02cWsybGR0MnVvMTZ5ODloaWd2In0.lPFEc0YGCJnkWofXiqoniw", {
+  attribution: "Keyboard shortcuts &nbsp;&nbsp;&nbsp; Map data &copy;2022 &nbsp;&nbsp;&nbsp; Terms of use",
+  maxZoom: 18,
+  id: "mapbox/streets-v11",
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken: "your.mapbox.access.token"
+}).addTo(yarmouthMap);
+var yarmouthMarker = L.marker(yarmouthLoc).addTo(yarmouthMap);
+var yarmouthPopup = yarmouthMarker.bindPopup("Suite F23, <br>\nBeacon Innovation Centre, <br>\nBeacon Park, Gorleston, <br>\nGreat Yarmouth, Norfolk,<br>\nNR31 7RA");
+new L.Control.Zoom({
+  position: "bottomright"
+}).addTo(yarmouthMap);
 //# sourceMappingURL=all.js.map

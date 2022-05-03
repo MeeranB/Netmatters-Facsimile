@@ -161,7 +161,6 @@
     </div>
     <!-- /endorsements -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/app/assets/js/bootstrap.bundle.js"></script>
     <!-- Scroll Direction - v1.1.0 -->
     <script src="https://cdn.jsdelivr.net/gh/phucbm/jquery-scroll-direction-plugin@1.1.0/jquery.scroll-direction.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -170,6 +169,11 @@
    crossorigin=""></script>
     <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js'></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="dist/js/all.js"></script>
+    <script src="app/js/app.js"></script>
+    <?php
+        if ($currentPage == 'contact') {
+            echo '<script src="app/js/displaymap.js"></script>';
+        }
+    ?>
 </body>
 </html>

@@ -96,7 +96,7 @@ include("app/include/header.php");
         <p><a href="mailto:sales@netmatters.com">sales@netmatters.com</a></p>
         <span>Business hours:</span>
         <span>Monday - Friday 07:00 - 18:00</span>
-        <a class="summary" id="summary" role="button">Out of Hours IT Support</a>
+        <a class="summary" id="summary" role="button">Out of Hours IT Support <i class="fas fa-chevron-down"></i></a>
         <div id="details" class="details">
             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
             <span>
@@ -119,7 +119,7 @@ include("app/include/header.php");
                     <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group col-12 col-lg-6">
-                    <label class="name" for="companyName">Company Name</label>
+                    <label class="companyname" for="companyName">Company Name</label>
                     <input type="text" class="form-control" id="companyName" name="companyName">
                 </div>
                 <div class="form-group col-12 col-lg-6">
