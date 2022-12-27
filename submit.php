@@ -14,9 +14,9 @@ function test_input($data) {
 }
 
 try {
-    $dsn = "mysql:host=localhost:3306;dbname=meeranba_netmatters_contact";
-    $username = $_ENV['USERNAME'];
-    $password = $_ENV['PASSWORD'];
+    $dsn = sprintf('mysql:host=%s:%s;dbname=%s', $_ENV['DB_HOST'], $_ENV['DB_PORT'], $_ENV['DB_NAME']);
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];
     $db = new PDO($dsn, $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
@@ -64,21 +64,12 @@ try {
         }
 
         $stmt = $db->prepare('INSERT INTO messages VALUES (id, :name, :companyName, :email, :phone, :subject, :message, :marketing);');
-        $name = filter_var($name, FILTER_SANITIZE_STRING);
-        if ($companyName != "") {
-            $companyName = filter_var($companyName, FILTER_SANITIZE_STRING);
-        } else {
-            $companyName = null;
-        }
+        $companyName = $companyName ? $companyName : null;
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $phone = filter_var($telNumber, FILTER_SANITIZE_SPECIAL_CHARS);
         $subject = filter_var($subject, FILTER_SANITIZE_SPECIAL_CHARS);
         $message = filter_var($message, FILTER_SANITIZE_SPECIAL_CHARS);
-        if ($marketing != "") {
-            $marketing = filter_var($marketing, FILTER_SANITIZE_STRING);
-        } else {
-            $marketing = null;
-        }
+        $marketing = $marketing ? $marketing : null;
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':companyName', $companyName, PDO::PARAM_STR); 
         $stmt->bindParam(':email', $email, PDO::PARAM_STR); 
